@@ -8,7 +8,7 @@
 ## まず見る
 
 ```bash
-open site/index.html
+open docs/index.html
 ```
 
 外部ライブラリ・CDNを一切使わない単一HTMLです。`file://` で直接開けます（ローカルサーバ不要）。
@@ -47,15 +47,16 @@ agile-chaos-map/
 │   ├── prior_art.json       ← 先行マップの収録項目（also_in 判定の原簿）
 │   ├── research_refs.json   ← 設計に使った参照
 │   └── elements.json        ← 生成物。編集しない
-├── docs/
+├── docs/                    ← GitHub Pages の配信元（Settings → Pages: main / docs）
+│   ├── index.html           ← 生成物。編集しない
 │   ├── DESIGN.md            ← 設計・方向性3案・スコアのルーブリック・決定ログ
-│   └── SOURCES.md           ← 生成物。編集しない
-├── scripts/
-│   ├── build.py             ← 結合＋検証＋also_in/crossing の計算
-│   ├── build_sources.py     ← SOURCES.md の生成
-│   ├── build_site.py        ← site/index.html の生成
-│   └── check_urls.py        ← 全出典URLの到達性チェック
-└── site/index.html          ← 生成物。編集しない
+│   ├── SOURCES.md           ← 生成物。編集しない
+│   └── .nojekyll            ← Jekyll を通さず素通しで配信するための空ファイル
+└── scripts/
+    ├── build.py             ← 結合＋検証＋also_in/crossing の計算
+    ├── build_sources.py     ← SOURCES.md の生成
+    ├── build_site.py        ← docs/index.html の生成
+    └── check_urls.py        ← 全出典URLの到達性チェック
 ```
 
 **生成物は手で編集しない**でください（二重管理でズレます）。
@@ -68,7 +69,7 @@ agile-chaos-map/
 ```bash
 python3 scripts/build.py          # 検証 + data/elements.json 生成
 python3 scripts/build_sources.py  # docs/SOURCES.md 生成
-python3 scripts/build_site.py     # site/index.html 生成
+python3 scripts/build_site.py     # docs/index.html 生成
 ```
 
 `build.py` は次を機械的に検査します。**警告が出たら直してから次へ進んでください。**

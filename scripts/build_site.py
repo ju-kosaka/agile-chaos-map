@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""elements.json + categories.json から site/index.html を生成する。
+"""elements.json + categories.json から docs/index.html を生成する。
 
 外部ライブラリ・CDNを一切使わない単一HTML。file:// で直接開ける。
 （データは fetch できないので JSON をページに埋め込む）
@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "site" / "index.html"
+OUT = ROOT / "docs" / "index.html"
 
 HTML = """<!DOCTYPE html>
 <html lang="ja">
