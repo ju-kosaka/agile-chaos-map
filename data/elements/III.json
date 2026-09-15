@@ -1,0 +1,2710 @@
+[
+  {
+    "id": "scrum",
+    "name": "スクラム",
+    "name_en": "Scrum",
+    "aka": [
+      "3-5-3"
+    ],
+    "aka_en": [],
+    "summary": "複雑な問題に取り組むための軽量フレームワーク。3つの責任・5つのイベント・3つの作成物からなる。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技法ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの役割と協働の枠組みを規定する"
+      },
+      "III": {
+        "score": 5,
+        "why": "仕事の進め方そのものを定義するフレームワーク"
+      },
+      "IV": {
+        "score": 3,
+        "why": "プロダクトオーナーを通じて価値の判断を組み込んでいる"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織への導入の単位として語られる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "代替",
+      "score": 2,
+      "why": "枠組み自体は変わらないが、イベントの準備や記録の作業はAIに移りつつある"
+    },
+    "includes": [
+      "スプリントバックログ",
+      "インクリメント",
+      "スプリントゴール",
+      "スクラムの3つの責任",
+      "スプリントプランニング",
+      "スプリントレトロスペクティブ",
+      "プロダクトオーナー",
+      "スクラムマスター",
+      "開発者"
+    ],
+    "sources": [
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "Schwaber と Sutherland による公式の定義。スクラムの目的・責任・イベント・作成物・コミットメントを規定",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/scrum/",
+        "title": "Scrum（Agile Alliance Glossary）",
+        "note": "反復で複雑な製品を開発するフレームワークとしての簡潔な定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "sprint",
+    "name": "スプリント（タイムボックス）",
+    "name_en": "Sprint / Timebox",
+    "aka": [
+      "イテレーション",
+      "反復"
+    ],
+    "aka_en": [
+      "Iteration",
+      "Timebox"
+    ],
+    "summary": "固定の期間を区切り、その中で検査と適応を1周させる箱。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "締切効果として個人の集中に影響する"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームのリズムを作る"
+      },
+      "III": {
+        "score": 5,
+        "why": "反復のリズムを定義する仕組みそのもの"
+      },
+      "IV": {
+        "score": 3,
+        "why": "フィードバックを得る頻度を決め、学習速度を左右する"
+      },
+      "V": {
+        "score": 2,
+        "why": "報告のサイクルとして組織に接続される"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで作業が速くなるほど、区切って立ち止まり方向を確かめる箱の役割が相対的に重くなる"
+    },
+    "includes": [
+      "スプリントゴール",
+      "イテレーションプランニング"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/timebox/",
+        "title": "Timebox（Agile Alliance Glossary）",
+        "note": "あらかじめ決めた時間枠を延長しないという規律の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/iteration/",
+        "title": "Iteration（Agile Alliance Glossary）",
+        "note": "一定期間ごとに動くものを作る反復の単位",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "daily-standup",
+    "name": "デイリースクラム",
+    "name_en": "Daily Scrum / Daily Standup",
+    "aka": [
+      "朝会",
+      "スタンドアップミーティング"
+    ],
+    "aka_en": [
+      "Daily Meeting",
+      "Standup"
+    ],
+    "summary": "毎日短く集まり、ゴールに対する進み方を検査して今日の計画を調整する場。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の作業手順ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの同期をとる日々の場"
+      },
+      "III": {
+        "score": 5,
+        "why": "スプリント内で計画を毎日作り直す仕組み"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "代替",
+      "score": 3,
+      "why": "進捗の共有部分は自動化できるため、残るのは今日どうするかを決める対話に絞られる"
+    },
+    "includes": [
+      "3つの質問"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/daily-meeting/",
+        "title": "Daily Meeting（Agile Alliance Glossary）",
+        "note": "毎日同じ時刻に短時間で行う同期のためのミーティングの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "デイリースクラムは開発者のための15分のイベントであり、進捗報告の場ではないと規定",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "sprint-review",
+    "name": "スプリントレビュー",
+    "name_en": "Sprint Review",
+    "aka": [
+      "成果物のデモとフィードバック"
+    ],
+    "aka_en": [],
+    "summary": "できたものをステークホルダーに見せ、次に何をするかを一緒に見直す場。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームと関係者の協働の場"
+      },
+      "III": {
+        "score": 5,
+        "why": "スプリントの成果を検査する公式のイベント"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値に対するフィードバックを得てバックログを見直す、学習の要"
+      },
+      "V": {
+        "score": 3,
+        "why": "ステークホルダーとの関係づくりの場になる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "作れる量が増えるほど、作ったものが本当に要るかを人に確かめる場が効いてくる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "スプリントレビューは作業結果を検査し今後の適応を決める場であり、単なるデモではないと規定",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "extreme-programming",
+    "name": "エクストリームプログラミング",
+    "name_en": "Extreme Programming",
+    "aka": [
+      "XP"
+    ],
+    "aka_en": [
+      "XP"
+    ],
+    "summary": "良い習慣を極端なまでに徹底することで変更に強く保つ、技術中心の開発手法。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "持続可能なペースなど個人の働き方にも踏み込む"
+      },
+      "II": {
+        "score": 4,
+        "why": "ペア・共同所有などチームの協働の型を多く含む"
+      },
+      "III": {
+        "score": 5,
+        "why": "技術プラクティスの体系そのもの"
+      },
+      "IV": {
+        "score": 2,
+        "why": "オンサイト顧客という形で価値の判断を組み込む"
+      },
+      "V": {
+        "score": 1,
+        "why": "組織論には踏み込まない"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "テストとリファクタリングの実行コストが下がり、極端に徹底する前提が現実的になった"
+    },
+    "includes": [
+      "メタファー",
+      "オンサイト顧客",
+      "小さなリリース"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/xp/",
+        "title": "Extreme Programming（Agile Alliance Glossary）",
+        "note": "Kent Beck らによる、変化する要求に対応するための技術プラクティス群の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "kanban",
+    "name": "カンバン",
+    "name_en": "Kanban",
+    "aka": [
+      "かんばん方式",
+      "カンバンボード"
+    ],
+    "aka_en": [
+      "Kanban Board"
+    ],
+    "summary": "仕事を見える化し、仕掛りを制限して流れを管理する進化的な手法。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人のタスク管理にも応用される"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの働き方の可視化として運用される"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れを管理する手法そのもの"
+      },
+      "IV": {
+        "score": 2,
+        "why": "サービスとしての提供を扱う考え方を含む"
+      },
+      "V": {
+        "score": 3,
+        "why": "部門横断の業務フローにも適用される"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "流れの計測と予測の自動化が容易になり、判断の材料が揃いやすくなった"
+    },
+    "includes": [
+      "カンバンボード",
+      "見える化",
+      "明示的なポリシー"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/kanban/",
+        "title": "Kanban（Agile Alliance Glossary）",
+        "note": "仕掛り制限と可視化によって流れを作る手法の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://kanban.university/kanban-guide/",
+        "title": "The Official Kanban Guide（Kanban University）",
+        "note": "カンバンの実践（可視化・WIP制限・流れの管理・ポリシーの明示・改善）の公式定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "scrumban",
+    "name": "スクラムバン",
+    "name_en": "Scrumban",
+    "aka": [],
+    "aka_en": [],
+    "summary": "スクラムの枠組みにカンバンの流れ管理を重ねた折衷の進め方。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの運用形態の選択"
+      },
+      "III": {
+        "score": 5,
+        "why": "プロセスの構成方法そのもの"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 2,
+        "why": "運用や保守を含むチームの現実解として選ばれる"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "手法の選択そのものは変わらないが、流れの計測と予測が自動化され運用しやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/scrumban/",
+        "title": "Scrumban（Agile Alliance Glossary）",
+        "note": "スクラムの構造とカンバンのフロー管理を組み合わせた進め方の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "definition-of-done",
+    "name": "完成の定義",
+    "name_en": "Definition of Done",
+    "aka": [
+      "DoD"
+    ],
+    "aka_en": [
+      "DoD"
+    ],
+    "summary": "何をもって「終わった」と言えるかのチーム共通の基準。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の基準ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームで合意して守る品質の約束"
+      },
+      "III": {
+        "score": 5,
+        "why": "作業の完了条件を定義するプロセスの中核"
+      },
+      "IV": {
+        "score": 2,
+        "why": "価値が届く条件と接続する"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織の品質基準や監査要件を取り込む器になる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIが素早く「できた風」の成果物を出すため、完了の定義が曖昧だと品質が崩れる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/definition-of-done/",
+        "title": "Definition of Done（Agile Alliance Glossary）",
+        "note": "完了と呼べる状態をチームで明文化する取り決めの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "完成の定義をインクリメントの品質基準として位置づけている",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "definition-of-ready",
+    "name": "準備完了の定義",
+    "name_en": "Definition of Ready",
+    "aka": [
+      "DoR"
+    ],
+    "aka_en": [
+      "DoR"
+    ],
+    "summary": "着手してよい状態かを判断する基準。過剰にすると前工程の待ちを生む。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの合意事項として運用される"
+      },
+      "III": {
+        "score": 5,
+        "why": "着手条件を定義するプロセス上の仕掛け"
+      },
+      "IV": {
+        "score": 3,
+        "why": "要求の記述の充足度と直結する"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "着手前の情報整理をAIが補える一方、判断基準そのものは人が決める"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/definition-of-ready/",
+        "title": "Definition of Ready（Agile Alliance Glossary）",
+        "note": "着手可能とみなす条件の定義。硬直化すると段階的なゲートに戻る危険も指摘されている",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "iterative-incremental",
+    "name": "反復型・漸進型開発",
+    "name_en": "Iterative and Incremental Development",
+    "aka": [
+      "繰り返し作る／少しずつ足す"
+    ],
+    "aka_en": [
+      "Iterative Development",
+      "Incremental Development"
+    ],
+    "summary": "同じものを作り直して洗練させる（反復）と、機能を少しずつ足す（漸進）の2つの軸。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "チーム構成の話ではない"
+      },
+      "III": {
+        "score": 5,
+        "why": "開発の進め方の最も基礎的な区別"
+      },
+      "IV": {
+        "score": 4,
+        "why": "早くフィードバックを得るという価値検証の前提"
+      },
+      "V": {
+        "score": 2,
+        "why": "一括納品を前提とした契約と衝突する"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "作り直しのコストが下がったため、反復して洗練させる進め方が取りやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/iterative-development/",
+        "title": "Iterative Development（Agile Alliance Glossary）",
+        "note": "同じ部分を繰り返し作り直して改善する進め方の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/incremental-development/",
+        "title": "Incremental Development（Agile Alliance Glossary）",
+        "note": "機能を小さな単位で積み増していく進め方の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "littles-law",
+    "name": "リトルの法則",
+    "name_en": "Little's Law",
+    "aka": [
+      "仕掛り÷スループット＝リードタイム"
+    ],
+    "aka_en": [],
+    "summary": "平均リードタイム＝平均仕掛り数÷平均スループット、という待ち行列の基本則。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の作業量管理にもそのまま当てはまる"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームのWIPを絞る根拠になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れを数式で扱うための基礎法則"
+      },
+      "IV": {
+        "score": 2,
+        "why": "市場投入までの時間の議論に接続する"
+      },
+      "V": {
+        "score": 3,
+        "why": "複数プロジェクトの同時進行の是非を定量的に示す"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "着手数を増やしがちな局面が増えるため、仕掛りを絞るとリードタイムが縮むという法則の適用機会が増える"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://kanban.university/kanban-guide/",
+        "title": "The Official Kanban Guide（Kanban University）",
+        "note": "フローの計測指標（WIP・スループット・リードタイム）とその関係を定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "wip-limit",
+    "name": "WIP制限",
+    "name_en": "WIP Limit",
+    "aka": [
+      "仕掛り制限"
+    ],
+    "aka_en": [
+      "Work in Progress Limit"
+    ],
+    "summary": "同時に着手する仕事の数に上限を設け、始めるより終わらせることを優先する規律。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人のコンテキストスイッチを減らす直接の手段でもある"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームで守る運用ルールとして機能する"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れを作るための最も中心的な操作"
+      },
+      "IV": {
+        "score": 2,
+        "why": "価値が早く届くことに間接的に効く"
+      },
+      "V": {
+        "score": 4,
+        "why": "同時並行の案件数を絞るという組織的な判断に拡張される"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C5"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIで並行着手が容易になるほど、人間のレビューと判断が詰まり、制限の重要性が増す"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://kanban.university/kanban-guide/",
+        "title": "The Official Kanban Guide（Kanban University）",
+        "note": "WIPを明示的に制限することをカンバンの必須実践として定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "lead-time",
+    "name": "リードタイムとサイクルタイム",
+    "name_en": "Lead Time / Cycle Time",
+    "aka": [
+      "所要時間"
+    ],
+    "aka_en": [
+      "Lead Time",
+      "Cycle Time"
+    ],
+    "summary": "依頼から提供までの時間（リードタイム）と、着手から完了までの時間（サイクルタイム）。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の指標ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの改善の的として使われる"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れの速さを測る基本指標"
+      },
+      "IV": {
+        "score": 4,
+        "why": "市場投入までの時間として事業指標に直結する"
+      },
+      "V": {
+        "score": 4,
+        "why": "DORAの4指標のひとつとして組織の計測に使われる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "自動計測が容易になり、実測にもとづく改善が回しやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/lead-time/",
+        "title": "Lead Time（Agile Alliance Glossary）",
+        "note": "要求が発生してから提供されるまでの経過時間の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://dora.dev/guides/dora-metrics-four-keys/",
+        "title": "DORA's software delivery metrics: the four keys",
+        "note": "変更のリードタイムを含む4つのデリバリー指標の公式定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "batch-size",
+    "name": "バッチサイズの縮小",
+    "name_en": "Small Batch Size",
+    "aka": [
+      "小さく作って小さく出す"
+    ],
+    "aka_en": [],
+    "summary": "一度に流す量を小さくすると、待ちも手戻りもリスクも小さくなるという原則。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "扱う対象が小さいほど認知負荷も下がる"
+      },
+      "II": {
+        "score": 2,
+        "why": "レビューの負担軽減としてチームに効く"
+      },
+      "III": {
+        "score": 5,
+        "why": "フロー改善の中心的な操作"
+      },
+      "IV": {
+        "score": 4,
+        "why": "小さく試して学ぶという検証戦略の土台"
+      },
+      "V": {
+        "score": 3,
+        "why": "大型プロジェクト前提の予算配分と衝突する"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "小さな変更の作成・検証コストが下がり、細かく流す方式が取りやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://dora.dev/capabilities/working-in-small-batches/",
+        "title": "Working in small batches（DORA）",
+        "note": "小さなバッチで働くことがデリバリー性能を高めるというDORAのケイパビリティ解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "cumulative-flow-diagram",
+    "name": "累積フロー図",
+    "name_en": "Cumulative Flow Diagram",
+    "aka": [
+      "CFD"
+    ],
+    "aka_en": [
+      "CFD"
+    ],
+    "summary": "各工程の滞留量を時系列で積み上げ、詰まりと傾向を読み取る図。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで流れを見るための可視化"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れの状態を診断する道具"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 2,
+        "why": "複数チームの状況把握にも使われる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "図の生成と傾向の読み取りを自動化できる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://kanban.university/kanban-guide/",
+        "title": "The Official Kanban Guide（Kanban University）",
+        "note": "フローの可視化手段として累積フロー図を位置づけている",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "flow-efficiency",
+    "name": "フロー効率とリソース効率",
+    "name_en": "Flow Efficiency vs Resource Efficiency",
+    "aka": [
+      "仕事を待たせるか、人を待たせるか"
+    ],
+    "aka_en": [],
+    "summary": "人の稼働率を上げるか、仕事の待ち時間を減らすか。両立はしないという選択。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の稼働率で評価されることの弊害として現れる"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで余白を持つ判断につながる"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れを設計するときの中心的なトレードオフ"
+      },
+      "IV": {
+        "score": 3,
+        "why": "早く届けることの価値を測る前提になる"
+      },
+      "V": {
+        "score": 5,
+        "why": "稼働率100%を目指す組織の常識を覆す論点"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで作業を詰め込みやすくなるほど、待ちを減らすために余白を残す判断が要る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://thisislean.com/",
+        "title": "This is Lean（Niklas Modig & Pär Åhlström）",
+        "note": "リソース効率とフロー効率の対立（効率性のパラドックス）を提示した書籍の公式サイト",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "theory-of-constraints",
+    "name": "制約理論",
+    "name_en": "Theory of Constraints",
+    "aka": [
+      "TOC",
+      "ボトルネック"
+    ],
+    "aka_en": [
+      "TOC"
+    ],
+    "summary": "全体の速度はもっとも遅い箇所で決まる。そこ以外の改善は全体に効かない。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の作業でも同じ構造が現れる"
+      },
+      "II": {
+        "score": 3,
+        "why": "チーム内の特定メンバーへの集中を解消する視点"
+      },
+      "III": {
+        "score": 5,
+        "why": "どこを直すべきかを決める流れの理論"
+      },
+      "IV": {
+        "score": 3,
+        "why": "投資対象の選択の論拠になる"
+      },
+      "V": {
+        "score": 4,
+        "why": "部門間の受け渡しの詰まりを扱う組織診断に使われる"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが実装のボトルネックを解消すると、制約はレビュー・意思決定・承認へ移る。どこが制約かの再特定が要る"
+    },
+    "includes": [
+      "5段階集中プロセス"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tocinstitute.org/theory-of-constraints.html",
+        "title": "Theory of Constraints（TOC Institute）",
+        "note": "Goldratt の制約理論と、制約を特定し従属させる5段階の解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "queueing-theory",
+    "name": "待ち行列の効果",
+    "name_en": "Queueing Theory",
+    "aka": [
+      "稼働率と待ち時間の関係"
+    ],
+    "aka_en": [],
+    "summary": "稼働率が100%に近づくほど待ち時間が急激に伸びるという数学的な性質。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の予定を詰め込みすぎることの説明にもなる"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームに余白を残す根拠"
+      },
+      "III": {
+        "score": 5,
+        "why": "フロー設計の数学的な裏づけ"
+      },
+      "IV": {
+        "score": 3,
+        "why": "遅延コストと組み合わせて投資判断に使われる"
+      },
+      "V": {
+        "score": 4,
+        "why": "要員計画を稼働率で組む慣行への反論になる"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "人間のレビュー工程が新たな待ち行列になりやすく、その稼働率の設計が課題になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://dora.dev/capabilities/wip-limits/",
+        "title": "Work in process limits（DORA）",
+        "note": "仕掛りを制限することがデリバリー性能を高めるという調査結果。待ち行列が伸びる仕組みへの実務的な対処",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "tdd",
+    "name": "テスト駆動開発",
+    "name_en": "Test Driven Development",
+    "aka": [
+      "TDD",
+      "レッド・グリーン・リファクタ"
+    ],
+    "aka_en": [
+      "TDD"
+    ],
+    "summary": "先に失敗するテストを書き、通すコードを書き、整えるという3拍子の開発法。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "設計を小さく考えるという個人の思考法の側面がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで規律として共有される"
+      },
+      "III": {
+        "score": 5,
+        "why": "コードの書き方そのものを規定する技術プラクティス"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 2,
+        "why": "品質保証の体制の議論に接続する"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが書いたコードの正しさを人が確かめる必要があるため、先に期待を書いておく価値が上がった"
+    },
+    "includes": [
+      "ユニットテスト",
+      "モックオブジェクト"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/tdd/",
+        "title": "Test Driven Development（Agile Alliance Glossary）",
+        "note": "テストを先に書いて設計を駆動する開発サイクルの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+        "title": "TestDrivenDevelopment（Martin Fowler）",
+        "note": "TDDの3ステップと、設計技法としての位置づけの解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "refactoring",
+    "name": "リファクタリング",
+    "name_en": "Refactoring",
+    "aka": [
+      "振る舞いを変えずに構造を直す"
+    ],
+    "aka_en": [],
+    "summary": "外から見た動きを変えずに、内部の構造だけを整理し直す作業。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "理解しやすさという認知の問題に効く"
+      },
+      "II": {
+        "score": 2,
+        "why": "共同所有を前提に日常的に行われる"
+      },
+      "III": {
+        "score": 5,
+        "why": "コードを継続的に変更可能に保つ技術"
+      },
+      "IV": {
+        "score": 2,
+        "why": "将来の変更速度という価値に効く"
+      },
+      "V": {
+        "score": 3,
+        "why": "改善の時間を認めるかという組織の判断に接続する"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "機械的な整理をAIが担えるが、どう整理すべきかの設計判断は人に残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/refactoring/",
+        "title": "Refactoring（Agile Alliance Glossary）",
+        "note": "外部から見た振る舞いを保ったまま内部構造を改善する作業の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+        "title": "DefinitionOfRefactoring（Martin Fowler）",
+        "note": "用語の厳密な定義と、書き直しとの違いの説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "continuous-integration",
+    "name": "継続的インテグレーション",
+    "name_en": "Continuous Integration",
+    "aka": [
+      "CI"
+    ],
+    "aka_en": [
+      "CI"
+    ],
+    "summary": "全員の変更を毎日以上の頻度で統合し、自動ビルドとテストで壊れを即座に見つける習慣。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技法ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チーム全員が守る規律として成立する"
+      },
+      "III": {
+        "score": 5,
+        "why": "統合のリスクを継続的に潰す開発の基盤"
+      },
+      "IV": {
+        "score": 2,
+        "why": "早く届けることの前提条件"
+      },
+      "V": {
+        "score": 3,
+        "why": "DORAが高性能組織の必須ケイパビリティとしている"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIが生成する変更量が増えるほど、統合の頻度と自動検証の網が安全装置になる"
+    },
+    "includes": [
+      "自動ビルド"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/continuous-integration/",
+        "title": "Continuous Integration（Agile Alliance Glossary）",
+        "note": "頻繁な統合と自動検証によって統合の痛みを取り除く実践の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/articles/continuousIntegration.html",
+        "title": "Continuous Integration（Martin Fowler）",
+        "note": "CIの実践条件（1日1回以上の統合、自己テスト可能なビルド等）を整理した定番記事",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "continuous-delivery",
+    "name": "継続的デリバリー",
+    "name_en": "Continuous Delivery",
+    "aka": [
+      "CD",
+      "継続的デプロイ"
+    ],
+    "aka_en": [
+      "CD",
+      "Continuous Deployment"
+    ],
+    "summary": "いつでも本番に出せる状態を保ち、リリースを事業判断だけで決められるようにすること。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの運用能力として現れる"
+      },
+      "III": {
+        "score": 5,
+        "why": "デリバリーの仕組みそのもの"
+      },
+      "IV": {
+        "score": 4,
+        "why": "リリース判断を技術制約から解放し、価値の判断に委ねる"
+      },
+      "V": {
+        "score": 4,
+        "why": "リリース承認プロセスや監査要件の見直しを伴う"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "パイプラインの構築と保守のコストが下がり、小さく頻繁に出す前提が整いやすい"
+    },
+    "includes": [
+      "デプロイパイプライン",
+      "頻繁なリリース"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/continuous-deployment/",
+        "title": "Continuous Deployment（Agile Alliance Glossary）",
+        "note": "変更を自動で本番まで届ける実践の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://dora.dev/capabilities/continuous-delivery/",
+        "title": "Continuous delivery（DORA）",
+        "note": "継続的デリバリーをデリバリー性能の中核ケイパビリティとして扱う公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "trunk-based-development",
+    "name": "トランクベース開発",
+    "name_en": "Trunk-Based Development",
+    "aka": [
+      "短命ブランチ"
+    ],
+    "aka_en": [],
+    "summary": "長期のブランチを作らず、幹に直接こまめに統合していくブランチ戦略。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チーム全員の作業の流し方を規定する"
+      },
+      "III": {
+        "score": 5,
+        "why": "統合戦略という技術プラクティス"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "DORAがデリバリー性能に効くケイパビリティとして挙げている"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが並行して大きな変更を生むほど、統合を遅らせない戦略が効いてくる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://trunkbaseddevelopment.com/",
+        "title": "Trunk Based Development",
+        "note": "短命ブランチと幹への高頻度統合を解説する専門サイト",
+        "strength": 3
+      },
+      {
+        "url": "https://dora.dev/capabilities/trunk-based-development/",
+        "title": "Trunk-based development（DORA）",
+        "note": "トランクベース開発とデリバリー性能の相関を示すDORAの解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "test-pyramid",
+    "name": "テストピラミッド",
+    "name_en": "Test Pyramid",
+    "aka": [
+      "テスト自動化の構成比"
+    ],
+    "aka_en": [],
+    "summary": "速くて安いテストを土台に多く、遅くて高いテストを上に少なく置く配分の指針。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームのテスト方針として共有される"
+      },
+      "III": {
+        "score": 5,
+        "why": "自動テストの設計指針そのもの"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 2,
+        "why": "品質保証部門との役割分担に関わる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "テストの作成コストが下がる一方、量が増えすぎて遅くならないよう配分の設計が要る"
+    },
+    "includes": [
+      "ユニットテスト",
+      "統合テスト",
+      "E2Eテスト"
+    ],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/bliki/TestPyramid.html",
+        "title": "TestPyramid（Martin Fowler）",
+        "note": "自動テストを粒度で層に分け、下層を厚くする配分の考え方",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "bdd-atdd",
+    "name": "振る舞い駆動開発／受け入れテスト駆動開発",
+    "name_en": "BDD / ATDD",
+    "aka": [
+      "BDD",
+      "ATDD",
+      "Given-When-Then"
+    ],
+    "aka_en": [
+      "BDD",
+      "ATDD"
+    ],
+    "summary": "期待する振る舞いを共通の言葉で書き、それをテストとして駆動する進め方。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "ビジネスと開発とテストの三者が同じ言葉を持つための実践"
+      },
+      "III": {
+        "score": 5,
+        "why": "テストと要求を結ぶ技術プラクティス"
+      },
+      "IV": {
+        "score": 4,
+        "why": "要求の曖昧さを実行可能な形で潰す手段"
+      },
+      "V": {
+        "score": 2,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIに渡す仕様が曖昧だと出力も曖昧になるため、期待を実行可能な形で書く価値が上がった"
+    },
+    "includes": [
+      "Given-When-Then",
+      "3アミーゴス",
+      "受け入れテスト"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/bdd/",
+        "title": "Behavior Driven Development（Agile Alliance Glossary）",
+        "note": "期待される振る舞いを自然言語に近い形で記述し開発を駆動する実践の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/atdd/",
+        "title": "Acceptance Test Driven Development（Agile Alliance Glossary）",
+        "note": "受け入れ条件を先にテストとして定義する実践の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "simple-design",
+    "name": "シンプルな設計",
+    "name_en": "Simple Design",
+    "aka": [
+      "YAGNI",
+      "単純さの規則"
+    ],
+    "aka_en": [
+      "YAGNI",
+      "Rules of Simplicity"
+    ],
+    "summary": "いま必要な分だけ作り、将来の想像で複雑にしないという設計の規律。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "理解にかかる負荷を抑える認知的な効果がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "チーム内の共通理解を保ちやすくする"
+      },
+      "III": {
+        "score": 5,
+        "why": "設計判断の指針そのもの"
+      },
+      "IV": {
+        "score": 3,
+        "why": "作らない判断につながり、投資の無駄を減らす"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C5"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIは求めれば無限に作り込めるため、作らない判断を明示的に持たないと複雑さが際限なく増える"
+    },
+    "includes": [
+      "YAGNI"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/simple-design/",
+        "title": "Simple Design（Agile Alliance Glossary）",
+        "note": "現在の要求を満たす最小限の設計を保つXPのプラクティスの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/bliki/Yagni.html",
+        "title": "Yagni（Martin Fowler）",
+        "note": "推測にもとづく機能追加のコストを整理し、必要になるまで作らない理由を説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "technical-debt",
+    "name": "技術的負債",
+    "name_en": "Technical Debt",
+    "aka": [
+      "技術的な借金"
+    ],
+    "aka_en": [],
+    "summary": "早く進めるために引き受けた設計の妥協が、後の変更速度を利息のように奪う比喩。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "理解の負荷として個人に効く"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの速度低下として体感される"
+      },
+      "III": {
+        "score": 5,
+        "why": "コードと設計の状態を扱う概念"
+      },
+      "IV": {
+        "score": 4,
+        "why": "返済を投資判断として扱えるようにする経済的な比喩"
+      },
+      "V": {
+        "score": 4,
+        "why": "改善に予算を割くかという経営判断の共通言語になる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで生産量が増えるほど負債の蓄積速度も上がり、返済の計画が必要になる"
+    },
+    "includes": [
+      "技術的負債の4象限"
+    ],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+        "title": "TechnicalDebt（Martin Fowler）",
+        "note": "Ward Cunningham の比喩の説明と、意図的／不注意・慎重／無謀の4象限",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "ubiquitous-language",
+    "name": "ユビキタス言語",
+    "name_en": "Ubiquitous Language",
+    "aka": [
+      "ドメイン駆動設計"
+    ],
+    "aka_en": [
+      "Domain-Driven Design"
+    ],
+    "summary": "業務とコードで同じ言葉を使い、翻訳による食い違いをなくす設計の原則。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "概念を塊として扱えるようにする認知的な効果がある"
+      },
+      "II": {
+        "score": 4,
+        "why": "業務側と開発側が同じ語彙を共有するための実践"
+      },
+      "III": {
+        "score": 5,
+        "why": "設計とモデリングの原則"
+      },
+      "IV": {
+        "score": 3,
+        "why": "要求の理解の精度に直結する"
+      },
+      "V": {
+        "score": 3,
+        "why": "境界づけられたコンテキストが組織の境界と対応する"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 5,
+      "why": "AIに文脈を渡す際、用語が統一されているかどうかが出力の正確さを大きく左右する"
+    },
+    "includes": [
+      "境界づけられたコンテキスト"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/ubiquitous-language/",
+        "title": "Ubiquitous Language（Agile Alliance Glossary）",
+        "note": "開発者と利用者が共有する厳密な言語を作るという原則の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/bliki/UbiquitousLanguage.html",
+        "title": "UbiquitousLanguage（Martin Fowler）",
+        "note": "Eric Evans のDDDにおける共通言語の位置づけの解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "feature-flag",
+    "name": "フィーチャーフラグ",
+    "name_en": "Feature Flag",
+    "aka": [
+      "フィーチャートグル"
+    ],
+    "aka_en": [
+      "Feature Toggle"
+    ],
+    "summary": "コードの投入と機能の公開を切り離し、切り替えで出し分ける仕組み。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 5,
+        "why": "デリバリーとリリースを分離する技術"
+      },
+      "IV": {
+        "score": 5,
+        "why": "A/Bテストや段階公開という価値検証の手段を可能にする"
+      },
+      "V": {
+        "score": 3,
+        "why": "リリース判断の権限を事業側に渡せるようになる"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "変更の投入頻度が上がるため、公開の制御を分離しておく価値が増す"
+    },
+    "includes": [
+      "カナリアリリース",
+      "段階公開"
+    ],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/articles/feature-toggles.html",
+        "title": "Feature Toggles (aka Feature Flags)（Martin Fowler）",
+        "note": "トグルの種類（リリース／実験／運用／許可）と管理の指針を整理した記事",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "code-review",
+    "name": "コードレビュー",
+    "name_en": "Code Review",
+    "aka": [
+      "プルリクエストレビュー"
+    ],
+    "aka_en": [],
+    "summary": "他者の目で変更を確認する工程。品質の担保と知識の共有を兼ねる。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の学習機会にもなる"
+      },
+      "II": {
+        "score": 4,
+        "why": "チーム内の知識共有とフィードバックの場"
+      },
+      "III": {
+        "score": 5,
+        "why": "変更を本流に入れる前の検査工程"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "統制上の承認プロセスとして制度化されることがある"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが書いた変更が増えるほどレビューが最大の待ち行列になり、人が見る範囲の設計が要る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://google.github.io/eng-practices/review/",
+        "title": "Google Engineering Practices – Code Review",
+        "note": "レビューの目的・観点・速度についてGoogleが公開している実務ガイド",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "devops",
+    "name": "DevOps",
+    "name_en": "DevOps",
+    "aka": [
+      "開発と運用の一体化"
+    ],
+    "aka_en": [],
+    "summary": "開発と運用の分断をなくし、素早く安全に届け続けるための文化と実践。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "職能を越えた協働の形として現れる"
+      },
+      "III": {
+        "score": 5,
+        "why": "作って届けて運用する一連の仕組み"
+      },
+      "IV": {
+        "score": 3,
+        "why": "届ける速度が価値実現の速度を決める"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織構造と評価の見直しを伴う変革でもある"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "運用自動化と異常検知の高度化で、少人数で広い範囲を運用できるようになった"
+    },
+    "includes": [
+      "CALMS",
+      "三つの道"
+    ],
+    "sources": [
+      {
+        "url": "https://dora.dev/",
+        "title": "DORA（DevOps Research and Assessment）",
+        "note": "DevOpsの実践と組織の成果の関係を継続的に調査・公開している研究プログラムの公式サイト",
+        "strength": 3
+      },
+      {
+        "url": "https://itrevolution.com/product/the-devops-handbook-second-edition/",
+        "title": "The DevOps Handbook（IT Revolution）",
+        "note": "フロー・フィードバック・継続的学習という三つの道を体系化した書籍の公式ページ",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "sre",
+    "name": "サイト信頼性エンジニアリング",
+    "name_en": "Site Reliability Engineering",
+    "aka": [
+      "SRE"
+    ],
+    "aka_en": [
+      "SRE"
+    ],
+    "summary": "信頼性をソフトウェア工学の問題として扱い、運用を工学的に設計する職能。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "専門チームとして組成される"
+      },
+      "III": {
+        "score": 5,
+        "why": "運用を工学的に扱う実践の体系"
+      },
+      "IV": {
+        "score": 3,
+        "why": "信頼性の水準を事業判断として扱う"
+      },
+      "V": {
+        "score": 4,
+        "why": "運用組織の役割定義そのものを変える"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "異常検知と一次対応の自動化が進み、人はより上位の設計判断に集中できる"
+    },
+    "includes": [
+      "トイル削減",
+      "オンコール"
+    ],
+    "sources": [
+      {
+        "url": "https://sre.google/sre-book/introduction/",
+        "title": "Site Reliability Engineering（Google SRE Book）",
+        "note": "Googleが公開しているSREの原典。運用をソフトウェアの問題として扱う立場を説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "slo-error-budget",
+    "name": "SLOとエラーバジェット",
+    "name_en": "SLO / Error Budget",
+    "aka": [
+      "サービスレベル目標",
+      "誤差予算"
+    ],
+    "aka_en": [],
+    "summary": "信頼性の目標値を決め、その未達分を許容枠として開発速度と交換する仕組み。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "開発と運用が同じ数字で対話する道具になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "信頼性を工学的に管理する仕組み"
+      },
+      "IV": {
+        "score": 4,
+        "why": "信頼性と速度のトレードオフを事業判断に翻訳する"
+      },
+      "V": {
+        "score": 4,
+        "why": "リリース可否のルールとして組織の統制に組み込める"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C2"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "変更頻度が上がるほど、数値で止める仕組みの必要性が増す"
+    },
+    "includes": [
+      "SLI",
+      "SLA との違い"
+    ],
+    "sources": [
+      {
+        "url": "https://sre.google/sre-book/service-level-objectives/",
+        "title": "Service Level Objectives（Google SRE Book）",
+        "note": "SLI・SLO・SLA の区別と、エラーバジェットによる速度と信頼性の調停の解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "observability",
+    "name": "オブザーバビリティ",
+    "name_en": "Observability",
+    "aka": [
+      "可観測性"
+    ],
+    "aka_en": [],
+    "summary": "外から見える出力だけで内部の状態を説明できる性質。未知の障害を調べられる状態。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "調査時の認知負荷を下げる効果がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで状況を共有する基盤になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "運用と障害対応を支える技術基盤"
+      },
+      "IV": {
+        "score": 3,
+        "why": "利用実態の観測を通じて価値検証にもつながる"
+      },
+      "V": {
+        "score": 4,
+        "why": "DORAが高性能組織のケイパビリティとして挙げている"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C2"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "大量のログとトレースから異常や原因を推定する作業がAIで現実的になった"
+    },
+    "includes": [
+      "ログ・メトリクス・トレース"
+    ],
+    "sources": [
+      {
+        "url": "https://dora.dev/capabilities/monitoring-and-observability/",
+        "title": "Monitoring and observability（DORA）",
+        "note": "監視と可観測性をデリバリー性能に効くケイパビリティとして扱う公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "blameless-postmortem",
+    "name": "非難なきポストモーテム",
+    "name_en": "Blameless Postmortem",
+    "aka": [
+      "障害のふりかえり"
+    ],
+    "aka_en": [],
+    "summary": "障害の原因を人でなく仕組みに求め、再発を防ぐ学びを残す検証の作法。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人が責められない前提で率直に話せることが条件"
+      },
+      "II": {
+        "score": 5,
+        "why": "心理的安全性がなければ成立しない集団の営み"
+      },
+      "III": {
+        "score": 5,
+        "why": "障害対応プロセスの一部として制度化される"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "失敗を扱う組織文化の指標そのもの"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "時系列の再構成や関連事象の抽出をAIが支援できる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "title": "Postmortem Culture: Learning from Failure（Google SRE Book）",
+        "note": "個人を責めずに仕組みの改善に集中する障害検証の文化の解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "platform-engineering",
+    "name": "プラットフォームエンジニアリング",
+    "name_en": "Platform Engineering",
+    "aka": [
+      "内部開発者プラットフォーム"
+    ],
+    "aka_en": [
+      "Internal Developer Platform"
+    ],
+    "summary": "開発チームが自力で進めるための共通基盤を、製品として提供する取り組み。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "開発者が抱える認知負荷を下げることが目的に含まれる"
+      },
+      "II": {
+        "score": 4,
+        "why": "プラットフォームチームという型として組成される"
+      },
+      "III": {
+        "score": 5,
+        "why": "開発の土台を作る技術的な取り組み"
+      },
+      "IV": {
+        "score": 3,
+        "why": "社内の利用者を顧客として扱うプロダクト思考を要する"
+      },
+      "V": {
+        "score": 4,
+        "why": "共通基盤をどこに置くかという組織設計の判断"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C5"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "AI基盤やエージェント実行環境を全社に提供する形が、この枠組みにそのまま乗る"
+    },
+    "includes": [
+      "セルフサービス",
+      "ゴールデンパス"
+    ],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/key-concepts",
+        "title": "Key Concepts（Team Topologies）",
+        "note": "プラットフォームチームを4タイプの一つとして定義し、認知負荷の軽減を目的に据える",
+        "strength": 3
+      },
+      {
+        "url": "https://platformengineering.org/blog/what-is-platform-engineering",
+        "title": "What is platform engineering?（platformengineering.org）",
+        "note": "内部開発者プラットフォームを製品として扱う考え方の解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "shift-left-security",
+    "name": "シフトレフト",
+    "name_en": "Shift Left",
+    "aka": [
+      "DevSecOps",
+      "早い段階での品質・セキュリティ"
+    ],
+    "aka_en": [
+      "DevSecOps"
+    ],
+    "summary": "テストやセキュリティの確認を後工程から前倒しし、作りながら確かめる進め方。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "専門職がチームに入る形として現れる"
+      },
+      "III": {
+        "score": 5,
+        "why": "工程の配置を変えるプロセス設計"
+      },
+      "IV": {
+        "score": 2,
+        "why": "手戻りの削減という経済効果がある"
+      },
+      "V": {
+        "score": 4,
+        "why": "セキュリティ部門との関係と承認プロセスの再設計を伴う"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "静的解析や脆弱性検査をAIが早期に回せるため、前倒しの実現性が上がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://dora.dev/capabilities/pervasive-security/",
+        "title": "Pervasive security（DORA）",
+        "note": "セキュリティを開発プロセスの早期から全体に組み込むことがデリバリー性能に効くという解説。旧称 shifting left on security",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "infrastructure-as-code",
+    "name": "Infrastructure as Code",
+    "name_en": "Infrastructure as Code",
+    "aka": [
+      "IaC",
+      "構成のコード化"
+    ],
+    "aka_en": [
+      "IaC"
+    ],
+    "summary": "サーバーや環境の構成をコードで定義し、再現可能かつレビュー可能にすること。",
+    "category": "III",
+    "subcategory": "III-4",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "運用知識をチームで共有できるようになる"
+      },
+      "III": {
+        "score": 5,
+        "why": "環境構築を開発と同じ土俵に乗せる技術"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "監査証跡と統制の手段としても機能する"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "構成コードの生成と検証がAIで容易になり、環境の再現性を保つ敷居が下がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/bliki/InfrastructureAsCode.html",
+        "title": "InfrastructureAsCode（Martin Fowler）",
+        "note": "インフラ構成をコードとして扱い、バージョン管理とテストの対象にする考え方",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "relative-estimation",
+    "name": "相対見積り",
+    "name_en": "Relative Estimation",
+    "aka": [
+      "ストーリーポイント"
+    ],
+    "aka_en": [
+      "Story Points"
+    ],
+    "summary": "絶対時間ではなく、既知の項目と比べた大きさで見積もるやり方。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "人間は絶対量より比較のほうが正確という認知特性に依拠する"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームで揃えることに意味がある見積り単位"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画づくりの実務的な手法"
+      },
+      "IV": {
+        "score": 2,
+        "why": "規模と価値を対比させる材料になる"
+      },
+      "V": {
+        "score": 3,
+        "why": "チーム間で比較しようとして誤用されがち"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "代替",
+      "score": 3,
+      "why": "過去データからの規模推定はAIが出せるが、チームの共通理解を作る対話の価値は残る"
+    },
+    "includes": [
+      "ストーリーポイント"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/relative-estimation/",
+        "title": "Relative Estimation（Agile Alliance Glossary）",
+        "note": "既知の項目との比較で規模を見積もる手法の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "planning-poker",
+    "name": "プランニングポーカー",
+    "name_en": "Planning Poker",
+    "aka": [],
+    "aka_en": [],
+    "summary": "全員が同時に見積り値を出し、差の理由を話し合って認識を揃える手法。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "アンカリングを避ける設計になっている"
+      },
+      "II": {
+        "score": 5,
+        "why": "認識の差を表に出すためのチームの対話手法"
+      },
+      "III": {
+        "score": 5,
+        "why": "見積りを行うための具体的な手順を定めたプロセス上の手法"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C4"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 2,
+      "why": "数値を出すこと自体は代替できるが、認識のズレを見つける目的は人の対話でしか果たせない"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/planning-poker/",
+        "title": "Planning Poker（Agile Alliance Glossary）",
+        "note": "同時提示によってアンカリングを避け、差異の議論を促す見積り手法の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "velocity",
+    "name": "ベロシティ",
+    "name_en": "Velocity",
+    "aka": [
+      "速度"
+    ],
+    "aka_en": [],
+    "summary": "1スプリントで完了できた量の実績値。予測に使い、評価には使わない。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の指標ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "チーム固有の値であり他チームと比較できない"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画の実績にもとづく予測の基礎"
+      },
+      "IV": {
+        "score": 2,
+        "why": "リリース時期の見通しに使われる"
+      },
+      "V": {
+        "score": 3,
+        "why": "生産性指標として誤用されやすい"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "代替",
+      "score": 3,
+      "why": "AI導入で1スプリントの完了量が変動し、過去の値が予測に使えなくなる局面がある"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/velocity/",
+        "title": "Velocity（Agile Alliance Glossary）",
+        "note": "反復ごとの完了量の実績値。計画のための指標であると定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "burndown-burnup",
+    "name": "バーンダウン／バーンアップ",
+    "name_en": "Burndown / Burnup Chart",
+    "aka": [
+      "残作業の推移"
+    ],
+    "aka_en": [
+      "Burndown Chart"
+    ],
+    "summary": "残りと完了の推移を線で示し、終わりの見通しを共有する図。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの状況を全員で見るための可視化"
+      },
+      "III": {
+        "score": 5,
+        "why": "進捗を追跡する実務的な道具"
+      },
+      "IV": {
+        "score": 2,
+        "why": "スコープ変更の影響を示せる（バーンアップ）"
+      },
+      "V": {
+        "score": 2,
+        "why": "報告資料として使われる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "代替",
+      "score": 2,
+      "why": "生成と読み取りは自動化でき、確率的な予測に置き換わりつつある"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/burndown-chart/",
+        "title": "Burndown Chart（Agile Alliance Glossary）",
+        "note": "残作業の推移を時系列で示す図の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "no-estimates",
+    "name": "#NoEstimates",
+    "name_en": "#NoEstimates",
+    "aka": [
+      "見積らない選択"
+    ],
+    "aka_en": [],
+    "summary": "見積りに時間をかけず、小さく分けて実績の件数で予測するという立場。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの運用方針の選択"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画手法そのものに対する対案"
+      },
+      "IV": {
+        "score": 3,
+        "why": "見積り作業に価値があるのかという投資判断を含む"
+      },
+      "V": {
+        "score": 4,
+        "why": "予算と契約が見積りを前提にしている組織では採れない"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "実績データからの確率予測が容易になり、見積りに人手をかけない選択が現実的になった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.methodsandtools.com/archive/noestimates.php",
+        "title": "#NoEstimates – Alternative to Estimate-Driven Software Development（Vasco Duarte）",
+        "note": "運動の中心人物の一人による解説。見積りの代わりに完了した項目数の実績で予測する方法",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "probabilistic-forecasting",
+    "name": "確率的な予測",
+    "name_en": "Probabilistic Forecasting",
+    "aka": [
+      "モンテカルロ予測"
+    ],
+    "aka_en": [
+      "Monte Carlo Simulation"
+    ],
+    "summary": "実績のばらつきから「何％の確率で何日」という形で見通しを出す予測法。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "計画錯誤を避けるための外部視点の導入という側面がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの実績データを使う"
+      },
+      "III": {
+        "score": 5,
+        "why": "流れの実測にもとづく計画手法"
+      },
+      "IV": {
+        "score": 3,
+        "why": "納期のリスクを事業判断に翻訳できる"
+      },
+      "V": {
+        "score": 4,
+        "why": "確定日付を前提とする組織の期待と向き合う道具になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "シミュレーションの実行と解釈が容易になり、単一日付での約束を避けやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://kanban.university/kanban-guide/",
+        "title": "The Official Kanban Guide（Kanban University）",
+        "note": "フローの実測データにもとづく予測をカンバンの実践として位置づけている",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "cynefin",
+    "name": "クネビン・フレームワーク",
+    "name_en": "Cynefin Framework",
+    "aka": [
+      "明白・煩雑・複雑・混沌"
+    ],
+    "aka_en": [
+      "Clear, Complicated, Complex, Chaotic"
+    ],
+    "summary": "状況の性質を4つに分け、それぞれに合った意思決定のしかたを選ぶ枠組み。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人の状況認識と判断の型として使える"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで状況認識を揃える共通言語になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "反復と実験を選ぶべき状況を判別する根拠"
+      },
+      "IV": {
+        "score": 4,
+        "why": "不確実な領域では計画ではなく探索を選ぶという判断につながる"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織の意思決定様式を状況に合わせる論拠になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIは煩雑な領域で力を発揮するが、複雑な領域の探索と判断は人が担う区別が要る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://thecynefin.co/about-us/about-cynefin-framework/",
+        "title": "About the Cynefin Framework（The Cynefin Company）",
+        "note": "Dave Snowden が創設した組織による公式解説。5つのドメインと対応する行動様式",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "spike",
+    "name": "スパイク",
+    "name_en": "Spike",
+    "aka": [
+      "調査のためのタイムボックス"
+    ],
+    "aka_en": [],
+    "summary": "不確実さを減らすために、期限を切って調べるだけの作業項目。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "学習のための時間を確保するという側面がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで不確実性を扱う合意として運用される"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画に組み込む不確実性への対処手段"
+      },
+      "IV": {
+        "score": 3,
+        "why": "作る前に前提を確かめるという検証の一形態"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C3"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "技術調査や試作にかかる時間が短縮され、確かめてから決める進め方が取りやすい"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/estimation/",
+        "title": "Estimation（Agile Alliance Glossary）",
+        "note": "見積りの不確実性を減らすための調査作業としてスパイクが位置づけられる文脈",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "cone-of-uncertainty",
+    "name": "不確実性のコーン",
+    "name_en": "Cone of Uncertainty",
+    "aka": [
+      "見積り精度の幅"
+    ],
+    "aka_en": [],
+    "summary": "プロジェクト初期の見積りは大きく外れ、進むほど幅が狭まるという経験則。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "初期見積りを信じすぎる認知の偏りへの対処"
+      },
+      "II": {
+        "score": 1,
+        "why": "チームの話ではない"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画の精度をどう扱うかというプロセスの前提"
+      },
+      "IV": {
+        "score": 3,
+        "why": "投資判断を段階的に行う論拠になる"
+      },
+      "V": {
+        "score": 4,
+        "why": "初期見積りで予算を固定する慣行への反論になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが精緻に見える見積りを即座に出すため、初期段階の幅の広さを意識的に扱う必要がある"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/estimation/",
+        "title": "Estimation（Agile Alliance Glossary）",
+        "note": "見積りの不確実性が進行とともに縮小することを含む、見積りの位置づけの解説",
+        "strength": 2
+      }
+    ]
+  }
+]

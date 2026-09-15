@@ -1,0 +1,1971 @@
+[
+  {
+    "id": "continuous-discovery",
+    "name": "継続的ディスカバリー",
+    "name_en": "Continuous Discovery",
+    "aka": [
+      "プロダクトディスカバリー",
+      "価値探索"
+    ],
+    "aka_en": [
+      "Product Discovery"
+    ],
+    "summary": "作るものを決める活動を一度きりにせず、顧客接点を毎週の習慣にすること。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技法ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "プロダクトの三人組（PO・デザイナー・エンジニア）で行う協働の形をとる"
+      },
+      "III": {
+        "score": 3,
+        "why": "デリバリーと並走させるプロセス設計が必要になる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "何を作るかを決める活動そのもの"
+      },
+      "V": {
+        "score": 3,
+        "why": "作る前に時間を使うことを組織が認めるかという問題を含む"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "作るコストが下がるほど、作るものを間違える損失が相対的に大きくなる"
+    },
+    "includes": [
+      "プロダクトの三人組"
+    ],
+    "sources": [
+      {
+        "url": "https://www.producttalk.org/2021/08/product-trio/",
+        "title": "What is a Product Trio?（Teresa Torres, Product Talk）",
+        "note": "継続的ディスカバリーを担う三人組の役割と、毎週の顧客接点という習慣の解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "jobs-to-be-done",
+    "name": "ジョブ理論",
+    "name_en": "Jobs to be Done",
+    "aka": [
+      "JTBD",
+      "片付けたい用事"
+    ],
+    "aka_en": [
+      "JTBD"
+    ],
+    "summary": "人は製品を買うのではなく、状況の中で片付けたい用事のために雇うという見方。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の認知の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "チーム構成の話ではない"
+      },
+      "III": {
+        "score": 1,
+        "why": "開発プロセスとは別軸"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客の必要をどう捉えるかという中核の視点"
+      },
+      "V": {
+        "score": 2,
+        "why": "事業機会の定義に使われる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "属性データの分析はAIが得意だが、状況と動機を掴む解釈は人の観察に依存する"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.christenseninstitute.org/theory/jobs-to-be-done/",
+        "title": "Jobs to Be Done（Clayton Christensen Institute）",
+        "note": "Christensen の提唱した理論を、本人が設立した研究所が解説する公式ページ",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "user-interview",
+    "name": "ユーザーインタビュー",
+    "name_en": "User Interview",
+    "aka": [
+      "顧客インタビュー",
+      "顧客開発"
+    ],
+    "aka_en": [
+      "Customer Development"
+    ],
+    "summary": "実際の利用者に会って、過去の具体的な行動を聞き出す調査。意見ではなく事実を聞く。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "誘導を避けるという認知バイアスへの配慮を要する"
+      },
+      "II": {
+        "score": 3,
+        "why": "傾聴の技術を土台にする"
+      },
+      "III": {
+        "score": 1,
+        "why": "開発プロセスとは別軸"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客理解を得る最も直接的な手段"
+      },
+      "V": {
+        "score": 2,
+        "why": "顧客接点を誰が持つかという組織の問題を含む"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "分析と要約はAIが担えるが、人に会って未言語の困りごとを掴む部分は代替しにくい"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/customer-development/",
+        "title": "Customer Development（Agile Alliance Glossary）",
+        "note": "建物の外に出て顧客から学ぶという Steve Blank の手法の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "personas",
+    "name": "ペルソナ",
+    "name_en": "Personas",
+    "aka": [
+      "利用者像"
+    ],
+    "aka_en": [],
+    "summary": "代表的な利用者を具体的な人物像として描き、判断の基準を共有する道具。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "抽象的な利用者像を具体化して扱いやすくする認知的効果がある"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで同じ利用者を思い浮かべるための共有物"
+      },
+      "III": {
+        "score": 2,
+        "why": "設計判断の前提として使われる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "誰のために作るかを定義する道具"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで架空の人物像をいくらでも作れるため、実データに基づくかどうかの区別が重要になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/personas/",
+        "title": "Personas（Agile Alliance Glossary）",
+        "note": "利用者の典型像を具体的に描いて設計判断に使う手法の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "customer-journey-map",
+    "name": "カスタマージャーニーマップ",
+    "name_en": "Customer Journey Map",
+    "aka": [
+      "顧客体験の地図"
+    ],
+    "aka_en": [],
+    "summary": "顧客が目的を達するまでの過程を時系列に並べ、感情と障害を書き出す図。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の認知の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "部門をまたいだ共通理解を作る道具として使われる"
+      },
+      "III": {
+        "score": 2,
+        "why": "機能の抜け漏れを発見する材料になる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客体験の全体像を捉える手法"
+      },
+      "V": {
+        "score": 3,
+        "why": "部門ごとに分断された体験を可視化して組織の問題を露わにする"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "行動ログからの経路推定と下書き作成をAIが支援できる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.nngroup.com/articles/journey-mapping-101/",
+        "title": "Journey Mapping 101（Nielsen Norman Group）",
+        "note": "ジャーニーマップの構成要素と作り方を整理したUX研究機関の解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "opportunity-solution-tree",
+    "name": "オポチュニティ・ソリューションツリー",
+    "name_en": "Opportunity Solution Tree",
+    "aka": [
+      "機会解決ツリー"
+    ],
+    "aka_en": [
+      "OST"
+    ],
+    "summary": "成果→機会→解決策→実験を木構造で並べ、なぜその案かを辿れるようにする図。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "判断の筋道を外部化して追えるようにする"
+      },
+      "II": {
+        "score": 3,
+        "why": "三人組で共有する思考の器になる"
+      },
+      "III": {
+        "score": 2,
+        "why": "実験をバックログに接続する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "成果と施策のつながりを可視化する発見の道具"
+      },
+      "V": {
+        "score": 2,
+        "why": "施策の説明責任を果たす材料になる"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "候補の洗い出しをAIが助けるが、どの機会を選ぶかの判断は人が担う"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.producttalk.org/2016/08/opportunity-solution-tree/",
+        "title": "Why You Should Use an Opportunity Solution Tree（Teresa Torres）",
+        "note": "成果・機会・解決策・実験を階層で結ぶ発想法の提唱者による解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "design-thinking",
+    "name": "デザイン思考",
+    "name_en": "Design Thinking",
+    "aka": [
+      "共感・定義・発想・試作・検証"
+    ],
+    "aka_en": [],
+    "summary": "人への共感から出発し、試作と検証を繰り返して解を見つける問題解決の進め方。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "思考モードの切替という個人的側面がある"
+      },
+      "II": {
+        "score": 3,
+        "why": "多様な専門をまたいだワークショップとして実施される"
+      },
+      "III": {
+        "score": 3,
+        "why": "試作を通じた学習という点でアジャイルと同じ構造を持つ"
+      },
+      "IV": {
+        "score": 5,
+        "why": "何を作るかを見つける方法論"
+      },
+      "V": {
+        "score": 2,
+        "why": "組織横断の課題解決の作法として導入される"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "試作のコストが激減し、発想と検証の回転数を上げられる"
+    },
+    "includes": [
+      "プロトタイピング"
+    ],
+    "sources": [
+      {
+        "url": "https://dschool.stanford.edu/resources",
+        "title": "Resources（Stanford d.school）",
+        "note": "デザイン思考の教育と実践資料を公開しているスタンフォード大学 d.school の公式リソース",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "impact-mapping",
+    "name": "インパクトマッピング",
+    "name_en": "Impact Mapping",
+    "aka": [
+      "なぜ・誰が・どう変わる・何を作る"
+    ],
+    "aka_en": [],
+    "summary": "目標から、関係者・行動変化・施策へと分岐させ、施策の根拠を辿れるようにする図。",
+    "category": "IV",
+    "subcategory": "IV-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "関係者と共同で描くワークショップとして行う"
+      },
+      "III": {
+        "score": 2,
+        "why": "バックログの根拠づけに使われる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "目標と施策を接続する価値設計の道具"
+      },
+      "V": {
+        "score": 3,
+        "why": "施策が目標に効く理由を経営に説明する材料になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "分岐の候補出しをAIが助けられるが、目標の設定と取捨は人が行う"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.impactmapping.org/",
+        "title": "Impact Mapping（Gojko Adzic）",
+        "note": "目標・アクター・インパクト・成果物の4階層で施策を導く手法の公式サイト",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "lean-startup",
+    "name": "リーンスタートアップ",
+    "name_en": "Lean Startup",
+    "aka": [],
+    "aka_en": [],
+    "summary": "検証的な学習を最速で回し、作り込む前に事業仮説を確かめる起業の方法論。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "小さなチームで回すことが前提になっている"
+      },
+      "III": {
+        "score": 3,
+        "why": "短い反復という構造をアジャイルと共有する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "事業仮説の検証方法そのもの"
+      },
+      "V": {
+        "score": 4,
+        "why": "新規事業の評価と予算配分の方法に踏み込む"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 5,
+      "why": "実験の構築コストが劇的に下がり、検証の回転数を桁で上げられる"
+    },
+    "includes": [
+      "イノベーション会計",
+      "検証的学習"
+    ],
+    "sources": [
+      {
+        "url": "https://theleanstartup.com/principles",
+        "title": "The Lean Startup Methodology",
+        "note": "Eric Ries による公式サイト。構築・計測・学習のループと検証的学習の原則",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "mvp",
+    "name": "MVP",
+    "name_en": "Minimum Viable Product",
+    "aka": [
+      "実用最小限の製品"
+    ],
+    "aka_en": [],
+    "summary": "学びを得るのに必要な最小限の形。完成品の劣化版ではなく、実験の道具。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 3,
+        "why": "スコープの決め方として開発に影響する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "検証のための最小単位という価値仮説の道具"
+      },
+      "V": {
+        "score": 3,
+        "why": "段階的な投資判断とセットで使われる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "試作が速く安くなり、より多くの仮説を実物で確かめられる"
+    },
+    "includes": [
+      "コンシェルジュMVP",
+      "オズの魔法使い型"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/mvp/",
+        "title": "Minimum Viable Product（Agile Alliance Glossary）",
+        "note": "最小限の労力で最大の検証学習を得るための製品版という定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "build-measure-learn",
+    "name": "構築・計測・学習ループ",
+    "name_en": "Build-Measure-Learn",
+    "aka": [
+      "BMLループ"
+    ],
+    "aka_en": [],
+    "summary": "作って測って学ぶ一周を、できるだけ短くすることを目指す考え方。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 4,
+        "why": "デリバリーの速さが学習速度の上限を決める"
+      },
+      "IV": {
+        "score": 5,
+        "why": "事業仮説の学習サイクルそのもの"
+      },
+      "V": {
+        "score": 3,
+        "why": "投資判断のサイクルとしても使える"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 5,
+      "why": "構築と計測の両方が速くなり、学習の周期を大幅に短縮できる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://theleanstartup.com/principles",
+        "title": "The Lean Startup Methodology",
+        "note": "構築・計測・学習のフィードバックループを最短化することを中核原則とする公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "pivot",
+    "name": "ピボット",
+    "name_en": "Pivot",
+    "aka": [
+      "方向転換"
+    ],
+    "aka_en": [],
+    "summary": "検証結果にもとづき、基本仮説の一部を保ったまま戦略を転換すること。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "自分の仮説を手放すという心理的な難しさを伴う"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの合意が必要になる"
+      },
+      "III": {
+        "score": 2,
+        "why": "計画の作り直しを伴う"
+      },
+      "IV": {
+        "score": 5,
+        "why": "事業仮説の転換という価値判断そのもの"
+      },
+      "V": {
+        "score": 4,
+        "why": "継続か撤退かの意思決定として組織の仕組みに関わる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "検証が速くなるほど転換の機会が増え、やめる判断を下せるかが差になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://theleanstartup.com/principles",
+        "title": "The Lean Startup Methodology",
+        "note": "検証結果にもとづく方向転換としてのピボットを定義した公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "lean-canvas",
+    "name": "リーンキャンバス",
+    "name_en": "Lean Canvas",
+    "aka": [
+      "事業仮説の1枚化"
+    ],
+    "aka_en": [],
+    "summary": "課題・解決策・独自の価値・指標などを1枚に収め、事業仮説を検証可能にする型。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "共通理解を作る道具として使われる"
+      },
+      "III": {
+        "score": 1,
+        "why": "開発プロセスとは別軸"
+      },
+      "IV": {
+        "score": 5,
+        "why": "事業仮説を整理して検証対象にする道具"
+      },
+      "V": {
+        "score": 3,
+        "why": "新規事業の提案と審査の共通様式になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "叩き台の作成は容易になったが、どの仮説が最もリスクかの判断は人が担う"
+    },
+    "includes": [
+      "バリュープロポジション"
+    ],
+    "sources": [
+      {
+        "url": "https://leanstack.com/lean-canvas",
+        "title": "Lean Canvas（LEANSTACK / Ash Maurya）",
+        "note": "ビジネスモデルキャンバスをスタートアップ向けに改変した1枚のフレームの公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "ab-testing",
+    "name": "A/Bテスト",
+    "name_en": "A/B Testing",
+    "aka": [
+      "オンライン実験",
+      "スプリットテスト"
+    ],
+    "aka_en": [
+      "Controlled Experiment"
+    ],
+    "summary": "利用者を分けて2案を同時に出し、実際の行動で優劣を決める実験。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "意見ではなく実測で判断することで認知バイアスを避ける"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 4,
+        "why": "フィーチャーフラグなどの技術基盤を必要とする"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値仮説を実データで検証する主要な手段"
+      },
+      "V": {
+        "score": 3,
+        "why": "意思決定を権威ではなくデータに委ねる文化に関わる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "案の生成と結果解析の両方が速くなり、実験の本数を増やせる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.nngroup.com/articles/ab-testing/",
+        "title": "A/B Testing 101（Nielsen Norman Group）",
+        "note": "A/Bテストの仕組みと、使える場面・使えない場面の整理",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "lean-principles",
+    "name": "リーンの原則とムダ",
+    "name_en": "Lean Principles and Waste",
+    "aka": [
+      "7つのムダ",
+      "価値の流れ"
+    ],
+    "aka_en": [
+      "Seven Wastes"
+    ],
+    "summary": "価値を定義し、流れを作り、ムダを取り除くという製造業由来の改善思想。",
+    "category": "IV",
+    "subcategory": "IV-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "作業の切替や手待ちをムダとして捉える視点を含む"
+      },
+      "II": {
+        "score": 2,
+        "why": "受け渡しのムダとしてチーム間の問題を扱う"
+      },
+      "III": {
+        "score": 5,
+        "why": "フロー改善の思想的な出発点"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客にとっての価値を起点に考えるという定義そのもの"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織全体の業務改善の枠組みとして使われる"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで作れる量が増えるほど、使われない機能という最大のムダが生まれやすくなる"
+    },
+    "includes": [
+      "作りすぎのムダ",
+      "手待ちのムダ",
+      "引き継ぎのムダ"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lean.org/lexicon-terms/lean-thinking/",
+        "title": "Lean Thinking（Lean Enterprise Institute）",
+        "note": "価値・価値の流れ・流れ・引き・完全性という5原則の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "wsjf",
+    "name": "WSJF",
+    "name_en": "Weighted Shortest Job First",
+    "aka": [
+      "重み付き最短ジョブ優先"
+    ],
+    "aka_en": [],
+    "summary": "遅延コストを所要期間で割り、値が大きい順にやるという優先順位の決め方。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで順番を合意する道具になる"
+      },
+      "III": {
+        "score": 3,
+        "why": "所要期間の見積りを入力として必要とする"
+      },
+      "IV": {
+        "score": 5,
+        "why": "経済的な根拠で順番を決める手法そのもの"
+      },
+      "V": {
+        "score": 4,
+        "why": "部門をまたいだ投資の優先順位づけに使われる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "入力値の推定を補助できるが、遅延コストの評価そのものは人の判断が要る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://framework.scaledagile.com/wsjf",
+        "title": "WSJF（SAFe）",
+        "note": "遅延コスト÷ジョブサイズで優先順位を算出する手法の公式定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "cost-of-delay",
+    "name": "遅延コスト",
+    "name_en": "Cost of Delay",
+    "aka": [
+      "CoD",
+      "遅れることで失う金額"
+    ],
+    "aka_en": [
+      "CoD"
+    ],
+    "summary": "1週間遅れると事業がいくら失うかを金額で表し、優先順位の根拠にする考え方。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 3,
+        "why": "流れを速くすることの価値を金額で示せる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "時間の価値を経済的に扱う中核概念"
+      },
+      "V": {
+        "score": 4,
+        "why": "投資判断と予算配分の議論を共通の単位に乗せる"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "作る速度が上がるほど、何を先にやるかの経済的な判断が成果を分ける"
+    },
+    "includes": [
+      "CD3"
+    ],
+    "sources": [
+      {
+        "url": "https://blackswanfarming.com/cost-of-delay/",
+        "title": "Cost of Delay（Black Swan Farming, Joshua Arnold）",
+        "note": "遅延コストの算出と、優先順位づけへの適用を体系的に解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "roi",
+    "name": "投資対効果",
+    "name_en": "Return on Investment",
+    "aka": [
+      "ROI"
+    ],
+    "aka_en": [
+      "ROI"
+    ],
+    "summary": "投じた費用に対してどれだけ利益が返るかの比率。施策の説明責任の基本形。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 2,
+        "why": "自動化投資などの判断に使われる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値を金額で測るという事業判断の基本"
+      },
+      "V": {
+        "score": 5,
+        "why": "予算の獲得と説明責任の共通言語"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AI投資の効果測定が経営の関心事になり、効果を数字で示す力が問われるようになった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/return-on-investment-roi-formula/",
+        "title": "Return on Investment (ROI) Formula（Corporate Finance Institute）",
+        "note": "投資額に対する利益の比率の定義・計算式と、期間を考慮しないという限界の説明",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "npv",
+    "name": "正味現在価値",
+    "name_en": "Net Present Value",
+    "aka": [
+      "NPV",
+      "お金の時間価値"
+    ],
+    "aka_en": [
+      "NPV"
+    ],
+    "summary": "将来のお金を現在価値に割り引いて足し合わせ、投資の是非を判断する指標。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "III": {
+        "score": 2,
+        "why": "早く出すことの価値を裏づける"
+      },
+      "IV": {
+        "score": 5,
+        "why": "時間を含めた価値評価の基本手法"
+      },
+      "V": {
+        "score": 5,
+        "why": "稟議や投資審査で使われる評価の標準"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "計算自体は自動化できるが、将来キャッシュフローの前提置きは人の判断に残る"
+    },
+    "includes": [
+      "割引率"
+    ],
+    "sources": [
+      {
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/net-present-value-npv/",
+        "title": "Net Present Value (NPV)（Corporate Finance Institute）",
+        "note": "将来キャッシュフローを割引率で現在価値に換算して投資を評価する方法の定義と計算例",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "kano-model",
+    "name": "狩野モデル",
+    "name_en": "Kano Model",
+    "aka": [
+      "狩野分析",
+      "魅力的品質・当たり前品質"
+    ],
+    "aka_en": [],
+    "summary": "機能を当たり前・一元的・魅力的などに分類し、満足度への効き方の違いを扱うモデル。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 2,
+        "why": "スコープ判断に使われる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客満足と機能の関係を扱う品質のモデル"
+      },
+      "V": {
+        "score": 2,
+        "why": "商品企画の共通言語になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで当たり前品質の実現が容易になるほど、魅力的品質をどこに置くかが競争軸になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agile-studio.jp/agile-practice-map",
+        "title": "アジャイルプラクティスマップ（Agile Studio）",
+        "note": "価値探索路線の駅として狩野分析を収録している日本語のプラクティスマップ",
+        "strength": 2
+      },
+      {
+        "url": "https://asq.org/quality-resources/kano-model",
+        "title": "Kano Model（American Society for Quality）",
+        "note": "狩野紀昭による品質の分類モデルの解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "moscow",
+    "name": "MoSCoW",
+    "name_en": "MoSCoW Prioritisation",
+    "aka": [
+      "必須・重要・あれば良い・今回やらない"
+    ],
+    "aka_en": [
+      "Must, Should, Could, Won't"
+    ],
+    "summary": "要求を必須・重要・可能なら・今回はやらないの4段階に分ける優先順位づけ。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "関係者との合意形成に使われる"
+      },
+      "III": {
+        "score": 3,
+        "why": "固定期間内でスコープを調整する前提になる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "要求の優先順位を決める手法"
+      },
+      "V": {
+        "score": 3,
+        "why": "契約や合意文書に使われることがある"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "代替",
+      "score": 2,
+      "why": "分類の下書きは自動化できるが、必須の線引きは関係者の合意に依存する"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilebusiness.org/dsdm-project-framework/moscow-prioritisation.html",
+        "title": "MoSCoW Prioritisation（Agile Business Consortium / DSDM Project Framework）",
+        "note": "DSDM を策定した団体による公式定義。Must/Should/Could/Won't の4段階と適用範囲",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "last-responsible-moment",
+    "name": "最終責任時点",
+    "name_en": "Last Responsible Moment",
+    "aka": [
+      "決めるべき最後の瞬間"
+    ],
+    "aka_en": [
+      "LRM"
+    ],
+    "summary": "選択肢が失われる直前まで決定を遅らせ、その間に情報を集めるという判断の原則。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "早く決めたくなる心理に逆らう判断の規律"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの意思決定のタイミングに関わる"
+      },
+      "III": {
+        "score": 4,
+        "why": "アーキテクチャ決定を遅らせる設計判断につながる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "不確実な状況での投資判断のタイミングを扱う"
+      },
+      "V": {
+        "score": 4,
+        "why": "早期に全部決めさせる承認プロセスへの対案になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "変更コストが下がるほど遅らせる余地が増える一方、遅らせすぎの判断は人が握る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://agilepainrelief.com/glossary/last-responsible-moment/",
+        "title": "Last Responsible Moment（Agile Pain Relief 用語集）",
+        "note": "Poppendieck のリーン開発に由来する原則の定義。重要な選択肢が失われる直前が決定の期限であるとする",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "options-thinking",
+    "name": "オプション思考",
+    "name_en": "Options Thinking",
+    "aka": [
+      "リアルオプション",
+      "選択肢を買う"
+    ],
+    "aka_en": [
+      "Real Options"
+    ],
+    "summary": "不確実な状況では、決め打ちではなく選択肢を確保することに価値があるという見方。",
+    "category": "IV",
+    "subcategory": "IV-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "決め打ちを避ける思考の型"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 3,
+        "why": "モジュール化や疎結合の設計価値を説明する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "不確実性下の投資判断の理論"
+      },
+      "V": {
+        "score": 4,
+        "why": "段階的な予算配分の根拠になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "試作が安くなることで、選択肢を保持する戦略のコストが下がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.infoq.com/articles/real-options-enhance-agility/",
+        "title": "Real Options（InfoQ）",
+        "note": "Chris Matts らによる、意思決定を選択肢として扱う考え方の解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "okr",
+    "name": "OKR",
+    "name_en": "Objectives and Key Results",
+    "aka": [
+      "目標と主要な結果"
+    ],
+    "aka_en": [],
+    "summary": "定性的な目標と、達成を測る数値結果をセットで置く目標設定の仕組み。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人OKRとして運用されることもある"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの焦点を揃える手段になる"
+      },
+      "III": {
+        "score": 2,
+        "why": "バックログの優先順位に接続する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "成果を定義して測るという価値管理の中核"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織全体の目標を連結させる経営の仕組み"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "作業量が測りにくくなるため、成果で合意して測る仕組みの必要性が増す"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.whatmatters.com/faqs/okr-meaning-definition-example",
+        "title": "What is an OKR?（What Matters / John Doerr）",
+        "note": "OKRを広めた John Doerr による公式の定義と実例",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "product-goal",
+    "name": "プロダクトゴール",
+    "name_en": "Product Goal",
+    "aka": [
+      "プロダクトの到達点"
+    ],
+    "aka_en": [],
+    "summary": "プロダクトが目指す将来の状態。バックログはそこに向かう道筋になる。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームが同じ方向を向くための拠り所"
+      },
+      "III": {
+        "score": 4,
+        "why": "スクラムの作成物のコミットメントとして定義されている"
+      },
+      "IV": {
+        "score": 5,
+        "why": "プロダクトが目指す価値の定義そのもの"
+      },
+      "V": {
+        "score": 3,
+        "why": "事業戦略との接続点になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "大量に作れるほど方向を見失いやすく、目的地の明示が効いてくる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "プロダクトゴールをプロダクトバックログのコミットメントとして定義している",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "outcome-over-output",
+    "name": "アウトカムとアウトプット",
+    "name_en": "Outcome over Output",
+    "aka": [
+      "成果と産出物"
+    ],
+    "aka_en": [],
+    "summary": "何個作ったか（アウトプット）ではなく、何が変わったか（アウトカム）で測る立場。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの目標設定の考え方を変える"
+      },
+      "III": {
+        "score": 3,
+        "why": "ベロシティ偏重への対案になる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値をどう定義するかという中核の主張"
+      },
+      "V": {
+        "score": 5,
+        "why": "評価制度と投資判断の基準そのものを問い直す"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIでアウトプットが安価になるほど、作った量を成果とみなす評価が成り立たなくなる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.scrum.org/resources/evidence-based-management",
+        "title": "Evidence-Based Management（Scrum.org）",
+        "note": "現在価値・未実現価値・市場投入時間・イノベーション能力という成果側の指標群を定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "north-star-metric",
+    "name": "North Star指標",
+    "name_en": "North Star Metric",
+    "aka": [
+      "北極星指標"
+    ],
+    "aka_en": [],
+    "summary": "プロダクトが顧客に届けている価値を最もよく表す、ひとつの中心指標。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの判断基準として共有される"
+      },
+      "III": {
+        "score": 2,
+        "why": "計測の実装を要する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値の測り方を1つに定める考え方"
+      },
+      "V": {
+        "score": 4,
+        "why": "全社で同じ数字を見るという組織の整列の手段"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "計測と分析が容易になり、単一指標の運用がしやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://amplitude.com/blog/product-north-star-metric",
+        "title": "North Star Metric（Amplitude）",
+        "note": "プロダクトの価値を代表する単一指標の選び方と、入力指標との関係の解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "build-trap",
+    "name": "ビルドトラップ",
+    "name_en": "Build Trap",
+    "aka": [
+      "作ること自体が目的化する罠"
+    ],
+    "aka_en": [],
+    "summary": "機能を作った数を成果と取り違え、顧客価値から切り離されてしまう状態。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの目標設定の誤りとして現れる"
+      },
+      "III": {
+        "score": 3,
+        "why": "ベロシティ重視の運用が誘発する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値とアウトプットの取り違えというアンチパターンそのもの"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織の評価と予算の仕組みが原因になっていることが多い"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIで機能を量産できるため、罠にはまる速度と規模が上がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.mindtheproduct.com/escaping-build-trap-melissa-perri/",
+        "title": "Escaping the Build Trap（Melissa Perri, Mind the Product）",
+        "note": "提唱者本人の講演を収録した記事。価値を機能の産出量で測ることが組織を罠に閉じ込めると説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "vanity-metrics",
+    "name": "虚栄の指標",
+    "name_en": "Vanity Metrics",
+    "aka": [
+      "バニティメトリクス"
+    ],
+    "aka_en": [],
+    "summary": "見栄えは良いが意思決定に使えない指標。行動につながる指標と区別する。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "都合のよい数字を選んでしまう認知の偏りに関係する"
+      },
+      "II": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "III": {
+        "score": 2,
+        "why": "計測設計の質に関わる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値の測り方の妥当性を問う概念"
+      },
+      "V": {
+        "score": 4,
+        "why": "報告文化がこの指標を生み出す構造を持つ"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AI関連の活動量（利用回数など）が虚栄の指標になりやすく、区別する目が要る"
+    },
+    "includes": [
+      "イノベーション会計"
+    ],
+    "sources": [
+      {
+        "url": "https://theleanstartup.com/principles",
+        "title": "The Lean Startup Methodology",
+        "note": "イノベーション会計の文脈で、行動につながらない指標を退ける考え方を提示",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "user-story",
+    "name": "ユーザーストーリー",
+    "name_en": "User Story",
+    "aka": [
+      "利用者視点の要求"
+    ],
+    "aka_en": [],
+    "summary": "利用者の立場で何をしたいかを短く書き、会話の起点にする要求の形式。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "会話を促すための書式という性質を持つ"
+      },
+      "III": {
+        "score": 4,
+        "why": "バックログの構成単位として開発に直結する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客価値を単位として要求を表現する形式"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "代替",
+      "score": 3,
+      "why": "文面の生成はAIが担えるが、書式の目的である会話の代替にはならない"
+    },
+    "includes": [
+      "ユーザーストーリーのテンプレート",
+      "エピック"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/user-stories/",
+        "title": "User Stories（Agile Alliance Glossary）",
+        "note": "利用者にとっての価値を短く記述し、詳細は会話で詰めるという要求形式の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "three-cs",
+    "name": "3つのC",
+    "name_en": "The Three C's",
+    "aka": [
+      "カード・会話・確認"
+    ],
+    "aka_en": [
+      "Card, Conversation, Confirmation"
+    ],
+    "summary": "ストーリーはカード（書く）・会話（話す）・確認（確かめる）の3点セットという捉え方。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "会話こそが本体だという主張がチームの協働に効く"
+      },
+      "III": {
+        "score": 3,
+        "why": "受け入れ条件の位置づけを定める"
+      },
+      "IV": {
+        "score": 5,
+        "why": "要求の扱い方を定義する枠組み"
+      },
+      "V": {
+        "score": 0,
+        "why": "無関係"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで書く部分が自動化されるほど、会話と確認が抜け落ちるリスクが上がる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/three-cs/",
+        "title": "The Three C's（Agile Alliance Glossary）",
+        "note": "Ron Jeffries によるカード・会話・確認の3要素の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "invest",
+    "name": "INVEST",
+    "name_en": "INVEST",
+    "aka": [
+      "良いストーリーの6条件"
+    ],
+    "aka_en": [],
+    "summary": "独立・交渉可能・価値がある・見積れる・小さい・テスト可能という良い要求の基準。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームの共通基準として使われる"
+      },
+      "III": {
+        "score": 4,
+        "why": "見積り可能性とテスト可能性を通じて開発に直結する"
+      },
+      "IV": {
+        "score": 5,
+        "why": "要求の品質を判定する基準"
+      },
+      "V": {
+        "score": 0,
+        "why": "無関係"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "基準への適合チェックをAIが機械的に行えるようになった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/invest/",
+        "title": "INVEST（Agile Alliance Glossary）",
+        "note": "Bill Wake による、良いユーザーストーリーの6つの性質の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "acceptance-criteria",
+    "name": "受け入れ基準",
+    "name_en": "Acceptance Criteria",
+    "aka": [
+      "受け入れ条件"
+    ],
+    "aka_en": [],
+    "summary": "その要求が満たされたと言える条件を、事前に具体的な形で決めておくもの。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "認識のズレを事前に潰す合意として機能する"
+      },
+      "III": {
+        "score": 5,
+        "why": "受け入れテストとして実装される"
+      },
+      "IV": {
+        "score": 5,
+        "why": "要求の意味を確定させる価値側の定義"
+      },
+      "V": {
+        "score": 2,
+        "why": "検収の基準として契約に接続する"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C3"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIに実装を任せるほど、何をもって満たされたかの事前定義が品質の分かれ目になる"
+    },
+    "includes": [
+      "Given-When-Then"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/acceptance-testing/",
+        "title": "Acceptance Testing（Agile Alliance Glossary）",
+        "note": "受け入れ条件を満たすかを確認するテストの定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "story-splitting",
+    "name": "ストーリー分割",
+    "name_en": "Story Splitting",
+    "aka": [
+      "小さく割る"
+    ],
+    "aka_en": [],
+    "summary": "大きすぎる要求を、価値を保ったまま小さな単位に割っていく技術。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "扱える大きさに収めるという認知の問題を含む"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで一緒に行う作業"
+      },
+      "III": {
+        "score": 4,
+        "why": "バッチサイズ縮小の実務的な手段"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値の単位を保ちながら小さくするという要求設計の技術"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "分割の候補出しをAIが助けられるが、価値を保つ切り方の判断は人が担う"
+    },
+    "includes": [
+      "エピック",
+      "MMF（最小市場性フィーチャー）"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/story-splitting/",
+        "title": "Story Splitting（Agile Alliance Glossary）",
+        "note": "大きなストーリーを価値を保ったまま分割する技法の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "story-mapping",
+    "name": "ユーザーストーリーマッピング",
+    "name_en": "User Story Mapping",
+    "aka": [
+      "ストーリーマップ"
+    ],
+    "aka_en": [
+      "Story Mapping"
+    ],
+    "summary": "利用者の行動の流れを横軸に、詳細度を縦軸に並べて全体像とリリース範囲を見る図。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "全体像を一枚で把握できる認知的効果がある"
+      },
+      "II": {
+        "score": 4,
+        "why": "関係者と一緒に作ることで共通理解を生む"
+      },
+      "III": {
+        "score": 3,
+        "why": "リリース計画の単位を決める"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値の流れに沿って要求を構造化する手法"
+      },
+      "V": {
+        "score": 2,
+        "why": "関係者との合意形成に使われる"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C1"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "叩き台の生成は容易になったが、並べ替えながら議論する過程に価値がある"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/story-mapping/",
+        "title": "Story Mapping（Agile Alliance Glossary）",
+        "note": "利用者の活動の流れに沿ってストーリーを二次元に配置する手法の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://jpattonassociates.com/story-mapping/",
+        "title": "Story Mapping（Jeff Patton）",
+        "note": "手法の提唱者本人による解説。平坦なバックログが失う全体像を取り戻す目的",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "product-backlog",
+    "name": "プロダクトバックログ",
+    "name_en": "Product Backlog",
+    "aka": [
+      "優先順位づきの一覧",
+      "リファインメント"
+    ],
+    "aka_en": [
+      "Backlog Refinement"
+    ],
+    "summary": "プロダクトに必要なものを順序づけて並べた唯一の一覧。常に手入れし続ける。",
+    "category": "IV",
+    "subcategory": "IV-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで継続的に手入れする対象"
+      },
+      "III": {
+        "score": 4,
+        "why": "スプリントの入力として開発プロセスに組み込まれる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値の優先順位を1本の順序で表現する仕組み"
+      },
+      "V": {
+        "score": 3,
+        "why": "誰が順序を決めるかという権限の問題を含む"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "重複検出や記述の整備をAIが補えるが、順序の決定は責任を持つ人に残る"
+    },
+    "includes": [
+      "バックログリファインメント"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/backlog/",
+        "title": "Product Backlog（Agile Alliance Glossary）",
+        "note": "プロダクトに必要な作業を優先順位づけて並べた一覧の定義",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/backlog-refinement/",
+        "title": "Backlog Refinement（Agile Alliance Glossary）",
+        "note": "バックログ項目を継続的に分割・見直し・詳細化する活動の定義",
+        "strength": 3
+      }
+    ]
+  }
+]

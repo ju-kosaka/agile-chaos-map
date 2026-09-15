@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# URL到達性チェックの実行ログ（scripts/check_urls.py で再生成できる）
+scripts/.url_check.log
+scripts/.url_check.tsv

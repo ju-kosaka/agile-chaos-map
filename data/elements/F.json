@@ -1,0 +1,199 @@
+[
+  {
+    "id": "agile-manifesto",
+    "name": "アジャイルソフトウェア開発宣言",
+    "name_en": "Manifesto for Agile Software Development",
+    "aka": ["アジャイル宣言", "4つの価値"],
+    "aka_en": [],
+    "summary": "プロセスより人、包括的文書より動くもの、契約交渉より協調、計画遵守より変化対応を重んじる宣言。",
+    "category": "F",
+    "subcategory": "F-1",
+    "affinity": {
+      "I": { "score": 2, "why": "個人の技法ではないが、働き方の前提を与える" },
+      "II": { "score": 4, "why": "人と対話を重んじるという第1の価値がチーム論の出発点になる" },
+      "III": { "score": 4, "why": "動くソフトウェアという価値が開発の進め方を規定する" },
+      "IV": { "score": 4, "why": "顧客との協調と変化への対応が価値探索の土台になる" },
+      "V": { "score": 3, "why": "契約と計画の扱いを通じて組織の慣行に踏み込む" }
+    },
+    "capabilities": ["C1", "C4"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "右側（プロセス・文書・契約・計画）をAIが安価に量産できるため、左側を選ぶ判断がより問われる"
+    },
+    "includes": ["4つの価値"],
+    "sources": [
+      { "url": "https://agilemanifesto.org/iso/ja/manifesto.html", "title": "アジャイルソフトウェア開発宣言（日本語公式）", "note": "2001年に17名が署名した4つの価値の原文。左記の価値のほうをより重んじると明記されている", "strength": 3 }
+    ]
+  },
+  {
+    "id": "twelve-principles",
+    "name": "アジャイル宣言の背後にある原則",
+    "name_en": "Principles behind the Agile Manifesto",
+    "aka": ["12の原則"],
+    "aka_en": [],
+    "summary": "早期かつ継続的な提供、変化の歓迎、持続可能なペースなど、宣言を支える12の原則。",
+    "category": "F",
+    "subcategory": "F-1",
+    "affinity": {
+      "I": { "score": 3, "why": "持続可能なペースやモチベーションに関する原則を含む" },
+      "II": { "score": 4, "why": "対面の会話・自己組織化・信頼に関する原則を含む" },
+      "III": { "score": 5, "why": "頻繁な提供・技術的卓越・シンプルさという開発の指針を含む" },
+      "IV": { "score": 4, "why": "顧客満足と価値ある提供を第1原則に置く" },
+      "V": { "score": 3, "why": "ビジネス側と開発側の日常的な協働を求める" }
+    },
+    "capabilities": ["C1", "C3"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "頻繁な提供と変化の歓迎はAIで容易になった一方、対話と持続可能性の原則は人の課題として残る"
+    },
+    "includes": [],
+    "sources": [
+      { "url": "https://agilemanifesto.org/iso/ja/principles.html", "title": "アジャイル宣言の背後にある原則（日本語公式）", "note": "宣言を具体化する12の原則の原文", "strength": 3 }
+    ]
+  },
+  {
+    "id": "scrum-values",
+    "name": "スクラムの価値基準",
+    "name_en": "Scrum Values",
+    "aka": ["確約・集中・公開・尊敬・勇気"],
+    "aka_en": ["Commitment, Focus, Openness, Respect, Courage"],
+    "summary": "スクラムを機能させる5つの価値基準。仕組みではなく態度の側の条件。",
+    "category": "F",
+    "subcategory": "F-1",
+    "affinity": {
+      "I": { "score": 3, "why": "個人の態度として現れる" },
+      "II": { "score": 5, "why": "チームの信頼が成り立つ条件として機能する" },
+      "III": { "score": 4, "why": "スクラムの実効性の前提として公式に定義されている" },
+      "IV": { "score": 2, "why": "間接的" },
+      "V": { "score": 2, "why": "組織の文化に接続する" }
+    },
+    "capabilities": ["C4"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "分からないと言える勇気と公開の姿勢が、AIの出力を検証する場面で効いてくる"
+    },
+    "includes": [],
+    "sources": [
+      { "url": "https://scrumguides.org/scrum-guide.html", "title": "The Scrum Guide", "note": "5つの価値基準をスクラムの成功条件として明記している公式定義", "strength": 3 }
+    ]
+  },
+  {
+    "id": "empiricism",
+    "name": "経験主義",
+    "name_en": "Empiricism",
+    "aka": ["透明性・検査・適応"],
+    "aka_en": ["Transparency, Inspection, Adaptation"],
+    "summary": "観察された事実にもとづいて判断する立場。透明性・検査・適応の3本柱で成り立つ。",
+    "category": "F",
+    "subcategory": "F-2",
+    "affinity": {
+      "I": { "score": 3, "why": "思い込みではなく観察に基づくという個人の判断の規律でもある" },
+      "II": { "score": 3, "why": "透明性がチームの前提条件になる" },
+      "III": { "score": 5, "why": "反復と検査というプロセス設計の根拠そのもの" },
+      "IV": { "score": 4, "why": "仮説を実データで確かめる検証の姿勢と一致する" },
+      "V": { "score": 4, "why": "証拠にもとづく経営という組織の意思決定様式につながる" }
+    },
+    "capabilities": ["C1", "C3"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIの出力は根拠なく流暢であるため、事実で確かめる態度が品質の分かれ目になる"
+    },
+    "includes": [],
+    "sources": [
+      { "url": "https://scrumguides.org/scrum-guide.html", "title": "The Scrum Guide", "note": "スクラムは経験主義とリーン思考に立脚し、透明性・検査・適応の3本柱を持つと規定", "strength": 3 }
+    ]
+  },
+  {
+    "id": "systems-thinking",
+    "name": "システム思考",
+    "name_en": "Systems Thinking",
+    "aka": ["全体最適", "因果ループ"],
+    "aka_en": [],
+    "summary": "部分ではなく関係と循環で全体を捉え、局所最適が全体を悪化させる構造を見る考え方。",
+    "category": "F",
+    "subcategory": "F-2",
+    "affinity": {
+      "I": { "score": 3, "why": "自分の行動が系にどう跳ね返るかを捉える思考法" },
+      "II": { "score": 3, "why": "チーム間の相互作用を扱う視点になる" },
+      "III": { "score": 4, "why": "制約理論やフローの考え方の土台になっている" },
+      "IV": { "score": 3, "why": "施策が系全体に及ぼす影響を見る視点" },
+      "V": { "score": 5, "why": "組織を系として扱う組織論の基礎" }
+    },
+    "capabilities": ["C1", "C5"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "局所をAIで最適化しやすくなるほど、全体が悪化する構造を見抜く視点が必要になる"
+    },
+    "includes": ["因果ループ図", "局所最適の罠"],
+    "sources": [
+      { "url": "https://thesystemsthinker.com/", "title": "The Systems Thinker", "note": "システム思考の実務的な論考を蓄積している媒体。因果ループとレバレッジポイントの解説を含む", "strength": 2 }
+    ]
+  },
+  {
+    "id": "complex-adaptive-system",
+    "name": "複雑適応系",
+    "name_en": "Complex Adaptive System",
+    "aka": ["創発", "予測できない相互作用"],
+    "aka_en": ["Emergence"],
+    "summary": "構成要素が互いに影響し合い、全体の振る舞いが事前に予測できない系の捉え方。",
+    "category": "F",
+    "subcategory": "F-2",
+    "affinity": {
+      "I": { "score": 2, "why": "個人の話ではないが、判断の前提を与える" },
+      "II": { "score": 4, "why": "自己組織化するチームが成り立つ理論的な背景" },
+      "III": { "score": 4, "why": "事前に完全な計画を立てられない理由の説明になる" },
+      "IV": { "score": 4, "why": "市場の反応が予測できないことを前提に探索する根拠" },
+      "V": { "score": 5, "why": "組織を機械ではなく生態系として扱う立場" }
+    },
+    "capabilities": ["C1"],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIを含む系はさらに予測しにくくなり、試して観察する進め方の必要性が増す"
+    },
+    "includes": [],
+    "sources": [
+      { "url": "https://thecynefin.co/about-us/about-cynefin-framework/", "title": "About the Cynefin Framework（The Cynefin Company）", "note": "複雑な領域では原因と結果が事後にしか分からず、探索・感知・対応の順で動くべきという整理", "strength": 3 }
+    ]
+  },
+  {
+    "id": "feedback-loop",
+    "name": "フィードバックループ",
+    "name_en": "Feedback Loop",
+    "aka": ["結果を次の入力に戻す"],
+    "aka_en": [],
+    "summary": "出した結果を観測して次の行動に戻す仕組み。短いほど学習が速く、誤りが小さく済む。",
+    "category": "F",
+    "subcategory": "F-2",
+    "affinity": {
+      "I": { "score": 4, "why": "個人の技能習得の中核にある仕組み" },
+      "II": { "score": 4, "why": "ふりかえりと対話の構造そのもの" },
+      "III": { "score": 5, "why": "テスト・CI・反復のすべてが長さの違うループとして説明できる" },
+      "IV": { "score": 5, "why": "構築・計測・学習という価値検証の骨格" },
+      "V": { "score": 4, "why": "組織の意思決定と学習のサイクルにも同じ構造が当てはまる" }
+    },
+    "capabilities": ["C3"],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 5,
+      "why": "ほぼすべてのループの一周が短くなり、学習速度そのものが競争条件になった"
+    },
+    "includes": [],
+    "sources": [
+      { "url": "https://itrevolution.com/product/the-devops-handbook-second-edition/", "title": "The DevOps Handbook（IT Revolution）", "note": "フロー・フィードバック・継続的学習という三つの道のうち、第二の道としてフィードバックを位置づける", "strength": 2 },
+      { "url": "https://agilemanifesto.org/iso/ja/principles.html", "title": "アジャイル宣言の背後にある原則", "note": "動くソフトウェアを短い間隔で提供し、定期的に振り返るという原則がループの短縮を求めている", "strength": 3 }
+    ]
+  }
+]

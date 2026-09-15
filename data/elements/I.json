@@ -1,0 +1,1323 @@
+[
+  {
+    "id": "context-switching",
+    "name": "コンテキストスイッチ",
+    "name_en": "Context Switching",
+    "aka": [
+      "タスクスイッチ",
+      "マルチタスクの代償"
+    ],
+    "aka_en": [
+      "Task Switching"
+    ],
+    "summary": "作業を切り替えるたびに、頭の切替えそのものに時間と精度を奪われる現象。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の実行機能に起きる現象そのもので、他の単位に置き換えられない"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームへの割り込みの話として語られることはあるが本体は個人の認知"
+      },
+      "III": {
+        "score": 4,
+        "why": "WIP制限やスプリント中の割り込み禁止という設計の直接の根拠になっている"
+      },
+      "IV": {
+        "score": 0,
+        "why": "顧客価値の議論とは接点がない"
+      },
+      "V": {
+        "score": 3,
+        "why": "1人を複数プロジェクトに兼務させる組織設計の是非に直結する"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが個々の作業を速くするほど同時に抱える案件数が増え、切替コストが相対的に最大のボトルネックになる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.apa.org/topics/research/multitasking",
+        "title": "Multitasking: Switching costs（American Psychological Association）",
+        "note": "Rubinstein・Meyer・Evans の実験を引いて、切替には「目標の切替」と「ルールの再活性化」の2段階があり時間を失うと説明する心理学会の解説",
+        "strength": 2
+      },
+      {
+        "url": "https://www.scrum.org/resources/blog/financial-cost-task-switching",
+        "title": "The Financial Cost of Task Switching（Scrum.org）",
+        "note": "Weinberg の見積り（2案件並行で各40%、20%が切替で消える）を金額換算した記事。工学的な経験則であり実験結果ではない点も明記されている",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "single-tasking",
+    "name": "シングルタスク（WIP=1）",
+    "name_en": "Single-tasking / WIP=1",
+    "aka": [
+      "一個流し"
+    ],
+    "aka_en": [
+      "One-piece Flow"
+    ],
+    "summary": "同時に手をつける仕事を1つに絞り、終わらせてから次に移る進め方。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が自分の注意をどう配分するかという選択そのもの"
+      },
+      "II": {
+        "score": 3,
+        "why": "チーム単位のスウォーミングとして実践されることも多い"
+      },
+      "III": {
+        "score": 4,
+        "why": "カンバンのWIP制限を極限まで下げた形であり、フロー設計の一種でもある"
+      },
+      "IV": {
+        "score": 0,
+        "why": "価値の中身には関与しない"
+      },
+      "V": {
+        "score": 2,
+        "why": "兼務を前提にした要員計画とは相容れない"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIエージェントを複数並走させられるようになった分、人間が抱える判断の同時数を絞る規律の価値が上がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/kanban/",
+        "title": "Kanban（Agile Alliance Glossary）",
+        "note": "仕掛り作業（WIP）を制限して流れを作るカンバンの定義。WIP=1はこの制限を最小にした形",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "flow-state",
+    "name": "フロー状態",
+    "name_en": "Flow State",
+    "aka": [
+      "ゾーン",
+      "没入"
+    ],
+    "aka_en": [
+      "Being in the Zone"
+    ],
+    "summary": "難度と能力が釣り合ったときに訪れる、深く没入して時間感覚が薄れる状態。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の内面で起きる意識の状態で、外から直接作れない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで守る時間設計（会議の集約、割り込みの遮断）の目的として語られる"
+      },
+      "III": {
+        "score": 2,
+        "why": "仕事の流れ（Flow）とは別概念だが混同されやすい"
+      },
+      "IV": {
+        "score": 0,
+        "why": "価値仮説とは無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "オフィス設計や会議文化の是非の根拠に使われる"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIとの対話は細切れの往復になりやすく、意図的に確保しないと没入が成立しにくくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness",
+        "title": "Flow, the secret to happiness（Mihaly Csikszentmihalyi, TED）",
+        "note": "フロー概念の提唱者本人による講演。挑戦の難度と技能が釣り合ったときに没入が生じるという説明",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/sustainable-pace/",
+        "title": "Sustainable Pace（Agile Alliance Glossary）",
+        "note": "長時間労働ではなく持続できる速度で働くというXPの原則。没入できる状態を守る前提条件として関係する",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "makers-schedule",
+    "name": "メイカーのスケジュール",
+    "name_en": "Maker's Schedule, Manager's Schedule",
+    "aka": [
+      "作る人の時間割"
+    ],
+    "aka_en": [],
+    "summary": "作る人は半日単位、管理する人は1時間単位で時間を使う。混ぜると作る側が壊れる。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人の時間の使い方と集中の確保の話"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの会議設定の作法として実践される"
+      },
+      "III": {
+        "score": 2,
+        "why": "スプリント中の会議配置の設計に効く"
+      },
+      "IV": {
+        "score": 0,
+        "why": "価値の議論とは無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織の会議文化そのものを問い直す論拠になる"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで作業が速くなっても、まとまった思考時間を要する判断業務は減らないため区分けの必要は残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.paulgraham.com/makersschedule.html",
+        "title": "Maker's Schedule, Manager's Schedule（Paul Graham）",
+        "note": "1本の会議が午後を丸ごと壊すという、作る人と管理する人の時間感覚の違いを説明した原典エッセイ",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "deep-work",
+    "name": "ディープワーク",
+    "name_en": "Deep Work",
+    "aka": [
+      "深い仕事"
+    ],
+    "aka_en": [],
+    "summary": "気を散らさず認知能力を限界まで使う作業。浅い作業と意識的に分ける考え方。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の注意資源をどこに投じるかの設計"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームで静かな時間帯を設ける運用に応用される"
+      },
+      "III": {
+        "score": 1,
+        "why": "作業の種類の区別として言及される程度"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "常時接続を前提とした組織文化への反論として使われる"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "浅い作業をAIが引き受けるほど、人間に残るのは深い思考を要する仕事だけになる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/",
+        "title": "Deep Work（Cal Newport）",
+        "note": "著者本人による書籍紹介ページ。深い仕事と浅い仕事の区別と、深い仕事の希少価値を説く",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "sustainable-pace",
+    "name": "持続可能なペース",
+    "name_en": "Sustainable Pace",
+    "aka": [
+      "週40時間労働"
+    ],
+    "aka_en": [
+      "40-hour Week"
+    ],
+    "summary": "無期限に続けられる速度で働く規律。短期の無理で長期の生産性を削らない。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人の消耗と回復の管理という側面が本体"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの約束として運用されるXPのプラクティス"
+      },
+      "III": {
+        "score": 3,
+        "why": "見積りとコミットメントの現実性に直結する"
+      },
+      "IV": {
+        "score": 1,
+        "why": "納期優先の圧力への反論として出てくる程度"
+      },
+      "V": {
+        "score": 3,
+        "why": "労務管理と組織の期待値設定の問題でもある"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで出力量が増えるほど人間のレビューと判断の負荷が増え、消耗の管理が必要になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/sustainable-pace/",
+        "title": "Sustainable Pace（Agile Alliance Glossary）",
+        "note": "無期限に維持できる速度で働くというXP由来のプラクティスの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://agilemanifesto.org/iso/ja/principles.html",
+        "title": "アジャイル宣言の背後にある原則",
+        "note": "第8原則が一定のペースを継続的に維持できることを求めている（日本語公式）",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "cognitive-load-theory",
+    "name": "認知負荷理論",
+    "name_en": "Cognitive Load Theory",
+    "aka": [
+      "課題内在性・課題外在性・学習関連負荷"
+    ],
+    "aka_en": [
+      "Intrinsic / Extraneous / Germane Load"
+    ],
+    "summary": "頭に一度に載る量には上限があり、負荷は3種類に分けて減らし方を変える理論。",
+    "category": "I",
+    "subcategory": "I-2",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人のワーキングメモリの容量制約という理論そのもの"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームが担える責任範囲の上限を決める根拠としてTeam Topologiesが採用している"
+      },
+      "III": {
+        "score": 3,
+        "why": "設計のシンプルさやドキュメントの作り方の根拠になる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "価値の議論とは無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "チーム境界とシステム境界を引くときの組織設計の判断材料になる"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが生成する量が人間の読める量を超えるため、何を読ませないかの設計が成果を左右する"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/key-concepts",
+        "title": "Key Concepts（Team Topologies）",
+        "note": "認知負荷の3分類をチームの責任範囲設計に持ち込んだ公式解説",
+        "strength": 3
+      },
+      {
+        "url": "https://itrevolution.com/articles/minimize-cognitive-load-of-teams/",
+        "title": "Minimize Team Cognitive Load to Increase Flow（IT Revolution）",
+        "note": "チームの認知負荷を下げることが流れを速くするという、Skelton・Pais による解説記事",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "working-memory-limit",
+    "name": "ワーキングメモリの限界",
+    "name_en": "Working Memory Limit",
+    "aka": [
+      "マジカルナンバー7±2",
+      "4±1"
+    ],
+    "aka_en": [
+      "Magical Number Seven"
+    ],
+    "summary": "人が同時に頭に保持できる情報の塊は4〜7個程度という認知の上限。",
+    "category": "I",
+    "subcategory": "I-2",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の短期記憶の容量そのもの"
+      },
+      "II": {
+        "score": 2,
+        "why": "会議の議題数や選択肢の絞り込みの根拠に使われる"
+      },
+      "III": {
+        "score": 3,
+        "why": "画面設計・API設計・バックログの粒度の判断に使われる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "選択肢の提示数の設計に間接的に効く"
+      },
+      "V": {
+        "score": 1,
+        "why": "組織の階層数の議論に引用されることがある"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIは大量の候補を出せるが、人間が比較検討できる数は変わらないため絞る作業の価値が上がる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://psychclassics.yorku.ca/Miller/",
+        "title": "The Magical Number Seven, Plus or Minus Two（George A. Miller, 1956）",
+        "note": "情報処理の限界を7±2と定式化した古典論文の全文（Classics in the History of Psychology）",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "chunking",
+    "name": "チャンキング",
+    "name_en": "Chunking",
+    "aka": [
+      "情報のかたまり化"
+    ],
+    "aka_en": [],
+    "summary": "ばらばらの情報を意味のある塊にまとめ、実質的に扱える量を増やす技術。",
+    "category": "I",
+    "subcategory": "I-2",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の記憶と理解の方略そのもの"
+      },
+      "II": {
+        "score": 2,
+        "why": "共通言語をつくることでチーム全体の理解を圧縮する応用がある"
+      },
+      "III": {
+        "score": 3,
+        "why": "抽象化・モジュール分割・ユビキタス言語の認知的な裏付けになる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "説明の組み立てに使われる程度"
+      },
+      "V": {
+        "score": 1,
+        "why": "間接的"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "AIが大量の情報を構造化して塊にしてくれるため、人間側の理解の圧縮を助けられる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://psychclassics.yorku.ca/Miller/",
+        "title": "The Magical Number Seven, Plus or Minus Two（George A. Miller, 1956）",
+        "note": "チャンク（塊）という概念を提示し、塊の数が限界であって情報量ではないことを示した原典",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "information-radiator",
+    "name": "情報ラジエーター",
+    "name_en": "Information Radiator",
+    "aka": [
+      "見える化",
+      "大きくて見やすい図表"
+    ],
+    "aka_en": [
+      "Big Visible Chart",
+      "Information Radiators"
+    ],
+    "summary": "状況を大きく掲示して、聞かなくても目に入るようにする仕掛け。",
+    "category": "I",
+    "subcategory": "I-2",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "覚えておく負担を環境側に逃がす、認知の外部化という発想が本体"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームで同じものを見るための装置として使われる"
+      },
+      "III": {
+        "score": 4,
+        "why": "タスクボード・バーンダウン・累積フロー図として実装される"
+      },
+      "IV": {
+        "score": 2,
+        "why": "アウトカムの掲示に応用される"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織の透明性の実装のひとつ"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "ダッシュボードの自動生成と要約が容易になり、掲示の鮮度を保ちやすくなった"
+    },
+    "includes": [
+      "タスクボード",
+      "バーンダウンチャート"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/information-radiators/",
+        "title": "Information Radiators（Agile Alliance Glossary）",
+        "note": "チームの作業場所に大きく掲示して自然に目に入るようにする可視化装置の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "cognitive-bias",
+    "name": "認知バイアス",
+    "name_en": "Cognitive Bias",
+    "aka": [
+      "計画錯誤",
+      "確証バイアス",
+      "アンカリング"
+    ],
+    "aka_en": [
+      "Planning Fallacy",
+      "Confirmation Bias",
+      "Anchoring"
+    ],
+    "summary": "人の判断に系統的に生じる偏り。見積りや検証の場面で特に効いてくる。",
+    "category": "I",
+    "subcategory": "I-2",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の認知処理に内在する偏りそのもの"
+      },
+      "II": {
+        "score": 3,
+        "why": "集団思考や同調圧力として集団でも増幅される"
+      },
+      "III": {
+        "score": 4,
+        "why": "見積りが常に楽観に寄る（計画錯誤）ことの説明として不可欠"
+      },
+      "IV": {
+        "score": 4,
+        "why": "仮説検証が確証バイアスで骨抜きになる典型を説明する"
+      },
+      "V": {
+        "score": 3,
+        "why": "意思決定プロセスの設計（反対意見の制度化）の根拠になる"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIの出力は流暢で説得力があるため確証バイアスを強化しやすく、意図的な反証がより必要になる"
+    },
+    "includes": [
+      "計画錯誤",
+      "確証バイアス",
+      "アンカリング"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/",
+        "title": "Daniel Kahneman – Facts（The Nobel Prize）",
+        "note": "不確実性下の判断における系統的な偏りの研究でノーベル経済学賞を受けた業績の公式紹介",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "double-loop-learning",
+    "name": "ダブルループ学習",
+    "name_en": "Double-loop Learning",
+    "aka": [
+      "二重ループ学習"
+    ],
+    "aka_en": [],
+    "summary": "やり方を直すだけでなく、前提そのものを疑って書き換える学習の型。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人が自分の前提を検査する内省の型"
+      },
+      "II": {
+        "score": 4,
+        "why": "ふりかえりを表層の改善から前提の見直しへ引き上げる枠組み"
+      },
+      "III": {
+        "score": 3,
+        "why": "プロセス改善の深さの違いを説明する"
+      },
+      "IV": {
+        "score": 3,
+        "why": "プロダクト仮説の前提を疑う場面に当てはまる"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織学習論の中核概念であり変革の議論で使われる"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIは与えられた前提の中で最適化するのが得意なので、前提を疑う役割が人間に残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://hbr.org/1991/05/teaching-smart-people-how-to-learn",
+        "title": "Teaching Smart People How to Learn（Chris Argyris, HBR）",
+        "note": "単ループ学習と二重ループ学習の違いを、優秀な人ほど学べない理由とともに示した原典記事",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "shu-ha-ri",
+    "name": "守破離",
+    "name_en": "Shu-Ha-Ri",
+    "aka": [],
+    "aka_en": [],
+    "summary": "型を守り、型を破り、型から離れるという日本の芸道由来の熟達の3段階。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人がどう上達していくかの段階論"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームがフレームワークをどこまで忠実にやるかの議論に使われる"
+      },
+      "III": {
+        "score": 4,
+        "why": "スクラムをそのままやるか調整するかの判断基準として定番"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "組織への導入戦略の説明に使われる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが型どおりの出力を即座に出せるため、人間の価値は型を離れる判断のほうに移る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/bliki/ShuHaRi.html",
+        "title": "ShuHaRi（Martin Fowler）",
+        "note": "守破離をソフトウェア開発の学習段階に当てはめ、型の習得を飛ばす危険を説く解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "deliberate-practice",
+    "name": "意図的な練習",
+    "name_en": "Deliberate Practice",
+    "aka": [
+      "限界的練習"
+    ],
+    "aka_en": [],
+    "summary": "できないことの一歩先を、即時のフィードバック付きで繰り返す練習法。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の技能習得の方法論そのもの"
+      },
+      "II": {
+        "score": 3,
+        "why": "コーディング道場やモブでの学習として集団化される"
+      },
+      "III": {
+        "score": 3,
+        "why": "技術プラクティスの習得手段として使われる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "人材育成方針の根拠になる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "AIが即時に反応を返せるため、練習のフィードバックループを個人で高速に回せるようになった"
+    },
+    "includes": [
+      "コーディング道場",
+      "カタ"
+    ],
+    "sources": [
+      {
+        "url": "https://hbr.org/2007/07/the-making-of-an-expert",
+        "title": "The Making of an Expert（Ericsson et al., HBR）",
+        "note": "一流の技能は才能ではなく意図的な練習の蓄積で作られると示した Ericsson らの記事",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "t-shaped-skills",
+    "name": "T型スキル",
+    "name_en": "T-shaped Skills",
+    "aka": [
+      "ジェネラライジング・スペシャリスト"
+    ],
+    "aka_en": [
+      "Generalizing Specialist"
+    ],
+    "summary": "ひとつの深い専門に加えて、周辺を広く扱える幅を持つスキルの形。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が自分のスキルの形（縦の深さと横の幅）をどう作るかという設計そのもの"
+      },
+      "II": {
+        "score": 5,
+        "why": "クロスファンクショナルなチームが機能するための前提条件"
+      },
+      "III": {
+        "score": 3,
+        "why": "属人化とボトルネックの解消手段として語られる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "職能別組織から機能横断組織に移るときの人材要件になる"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "AIが専門外の領域の入口を下げるため、幅を広げるコストが下がり縦の深さの価値が際立つ"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.scrum.org/resources/blog/t-shaped-people-and-teams",
+        "title": "T-shaped People and Teams（Scrum.org）",
+        "note": "自己管理するチームが機能するための前提としてT型人材を説明した記事",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "unlearning",
+    "name": "アンラーニング",
+    "name_en": "Unlearning",
+    "aka": [
+      "学習棄却",
+      "学びほぐし"
+    ],
+    "aka_en": [],
+    "summary": "うまくいってきたやり方を意図的に手放し、入れ替えること。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が自分の成功体験を捨てるという認知の作業"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの慣行を変えるときの抵抗の説明に使う"
+      },
+      "III": {
+        "score": 2,
+        "why": "プロセス変更への抵抗として現れる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "既存事業の前提を捨てる議論に使われる"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織変革で最も難しい部分として扱われる"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIで前提が短期間に変わる局面が増え、過去のやり方を手放せるかどうかが差になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://hbr.org/1991/05/teaching-smart-people-how-to-learn",
+        "title": "Teaching Smart People How to Learn（Chris Argyris, HBR）",
+        "note": "成功してきた人ほど防衛的になり学び直せないという、アンラーニングの難しさの理論的背景",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "growth-mindset",
+    "name": "成長マインドセット",
+    "name_en": "Growth Mindset",
+    "aka": [
+      "しなやかマインドセット"
+    ],
+    "aka_en": [],
+    "summary": "能力は努力で伸びるという信念。固定的な見方と対比される。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が自分の能力をどう捉えるかという信念"
+      },
+      "II": {
+        "score": 4,
+        "why": "失敗を学習として扱えるチーム文化の前提になる"
+      },
+      "III": {
+        "score": 2,
+        "why": "改善の継続に効く程度"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "Business Agility Institute がドメインの一つとして挙げている組織能力でもある"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで既存スキルが陳腐化しやすくなり、学び直せると信じられるかが行動の差になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
+        "title": "What Having a Growth Mindset Actually Means（Carol Dweck, HBR）",
+        "note": "提唱者本人が、努力を褒めるだけの誤用を正した記事",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "j-curve",
+    "name": "変革のJカーブ",
+    "name_en": "J-Curve of Change",
+    "aka": [
+      "学習曲線の谷",
+      "サティアの変化モデル"
+    ],
+    "aka_en": [
+      "Satir Change Model"
+    ],
+    "summary": "新しいやり方を入れると一度性能が落ち、その谷を越えてから伸びる曲線。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人が新しいやり方を習得する過程で必ず通る低下期"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの生産性が導入直後に落ちることの説明に使う"
+      },
+      "III": {
+        "score": 3,
+        "why": "新プラクティス導入の評価時期を誤らせない根拠"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "変革の途中で撤退する判断を防ぐための共有知識"
+      }
+    },
+    "capabilities": [
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AI導入直後に生産性が落ちる現象の説明として、そのまま使える"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://stevenmsmith.com/ar-satir-change-model/",
+        "title": "The Satir Change Model（Steven M. Smith）",
+        "note": "変化がもたらす混乱期（カオス）を経て新しい状態に至る5段階モデルの解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "self-determination-theory",
+    "name": "自己決定理論",
+    "name_en": "Self-Determination Theory",
+    "aka": [
+      "SDT",
+      "自律・有能感・関係性"
+    ],
+    "aka_en": [
+      "SDT"
+    ],
+    "summary": "自律・有能感・関係性の3つが満たされると人は内側から動くという動機づけの理論。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の動機づけがどこから来るかという理論そのもの"
+      },
+      "II": {
+        "score": 4,
+        "why": "自己組織化するチームが成立する心理的な前提を説明する"
+      },
+      "III": {
+        "score": 2,
+        "why": "プロセス設計の是非の根拠に使われる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "権限委譲や評価制度の設計思想の土台になる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIに指示されて動く働き方が増えるほど、自律の感覚をどう保つかが人の持続性を左右する"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://selfdeterminationtheory.org/theory/",
+        "title": "Theory（Center for Self-Determination Theory）",
+        "note": "Deci と Ryan による理論の公式サイト。基本的心理欲求としての自律性・有能感・関係性を定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "drive-motivation-3",
+    "name": "モチベーション3.0",
+    "name_en": "Drive (Autonomy, Mastery, Purpose)",
+    "aka": [
+      "自律・熟達・目的"
+    ],
+    "aka_en": [],
+    "summary": "報酬と罰ではなく、自律・熟達・目的が創造的な仕事の動機になるという主張。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が何に動かされるかの整理"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの目的共有と権限の設計に直結する"
+      },
+      "III": {
+        "score": 2,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 2,
+        "why": "プロダクトゴールを目的として機能させる論拠になる"
+      },
+      "V": {
+        "score": 4,
+        "why": "成果給やインセンティブ設計への反論として使われる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "定型業務がAIに移るほど、人が担うのは目的を自分で見出す種類の仕事になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation",
+        "title": "The puzzle of motivation（Dan Pink, TED）",
+        "note": "外的報酬が創造的作業ではむしろ成績を下げるという実験群を紹介した講演",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "intrinsic-motivation",
+    "name": "内発的動機づけ",
+    "name_en": "Intrinsic Motivation",
+    "aka": [],
+    "aka_en": [],
+    "summary": "行為そのものが目的になっている動機。外からの報酬で損なわれることがある。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の内側から生じる動機の定義そのもの"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームの熱量をどう保つかの議論に使われる"
+      },
+      "III": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "報酬制度が創造性を削ぐという議論の中心"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "作業の達成感をAIが肩代わりする場面が増え、何に喜びを見出すかの再設計が要る"
+    },
+    "includes": [
+      "アンダーマイニング効果"
+    ],
+    "sources": [
+      {
+        "url": "https://selfdeterminationtheory.org/theory/",
+        "title": "Theory（Center for Self-Determination Theory）",
+        "note": "内発的動機と外発的動機の連続体、外的報酬による内発的動機の低下を扱う理論の公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "job-crafting",
+    "name": "ジョブ・クラフティング",
+    "name_en": "Job Crafting",
+    "aka": [
+      "仕事の自己定義"
+    ],
+    "aka_en": [],
+    "summary": "与えられた職務を自分で意味づけ直し、範囲や関わり方を作り変えること。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人が自分の仕事の意味を組み替える行為"
+      },
+      "II": {
+        "score": 3,
+        "why": "役割の重なりを許すチーム運営と相性がよい"
+      },
+      "III": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "職務記述に縛られない働き方を許すかという人事制度の問題になる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "職務の中身がAIで置き換わるなか、自分の仕事を定義し直せる人が残る仕事を作れる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://positiveorgs.bus.umich.edu/cpo-tools/job-crafting-exercise/",
+        "title": "Job Crafting Exercise（University of Michigan, Center for Positive Organizations）",
+        "note": "Wrzesniewski・Dutton・Berg が開発した、仕事の時間と関係を描き直す演習の公式ページ",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "self-efficacy",
+    "name": "自己効力感",
+    "name_en": "Self-Efficacy",
+    "aka": [],
+    "aka_en": [],
+    "summary": "自分はこれをやれるという見込み。挑戦するかどうかを左右する。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の自己認識と行動選択の関係そのもの"
+      },
+      "II": {
+        "score": 3,
+        "why": "小さな成功を積む設計（スプリント）の効果の説明になる"
+      },
+      "III": {
+        "score": 2,
+        "why": "短い反復が自信を積み上げる根拠として使われる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "育成方針の根拠になる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIのほうが上手いと感じる場面が増えるため、人が挑戦を続けられる自信の設計が必要になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.apa.org/pi/aids/resources/education/self-efficacy",
+        "title": "Teaching Tip Sheet: Self-Efficacy（American Psychological Association）",
+        "note": "Bandura の自己効力感の定義と、それを高める4つの源泉を整理した心理学会の解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "burnout",
+    "name": "燃え尽き（バーンアウト）",
+    "name_en": "Burnout",
+    "aka": [],
+    "aka_en": [],
+    "summary": "慢性的な職場ストレスで消耗し、距離を置き、効力感を失う状態。",
+    "category": "I",
+    "subcategory": "I-4",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人に起きる消耗の状態"
+      },
+      "II": {
+        "score": 4,
+        "why": "チームの負荷配分と支え合いの問題として現れる"
+      },
+      "III": {
+        "score": 3,
+        "why": "SPACEのSやDORAの計測対象に含まれる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織が構造的に生み出すという位置づけがWHOの定義にある"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "DORA 2025の調査ではAI採用と燃え尽きの相関は見られなかったが、扱う変更量は増えており負荷管理は依然として必要"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
+        "title": "Burn-out an occupational phenomenon（WHO）",
+        "note": "燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表",
+        "strength": 3
+      }
+    ]
+  }
+]

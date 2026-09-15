@@ -1,0 +1,1873 @@
+[
+  {
+    "id": "dunbars-number",
+    "name": "ダンバー数",
+    "name_en": "Dunbar's Number",
+    "aka": [
+      "150の法則"
+    ],
+    "aka_en": [],
+    "summary": "人が安定した関係を保てる人数の上限。5・15・50・150と層をなすとされる。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人が保持できる関係の数という認知の限界としても語られる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームを何人で組むかの直接の根拠として使われる"
+      },
+      "III": {
+        "score": 1,
+        "why": "開発プロセスそのものには直接効かない"
+      },
+      "IV": {
+        "score": 0,
+        "why": "価値仮説とは無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "部門や事業部をどこで割るかという組織設計の根拠になる"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで作業量が増えても人間同士の信頼の総量は増えないため、分割点の判断がより効いてくる"
+    },
+    "includes": [
+      "5人・15人・50人・150人の層"
+    ],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/key-concepts",
+        "title": "Key Concepts（Team Topologies）",
+        "note": "ダンバー数の各層を組織のグルーピング（5-8人、15人、50人、150人…）に対応させる設計指針",
+        "strength": 3
+      },
+      {
+        "url": "https://teamtopologies.com/news-blogs-newsletters/when-teams-grow-too-large-solving-cognitive-load-issues",
+        "title": "When Teams Grow Too Large（Team Topologies）",
+        "note": "15人を超えると信頼関係の維持が難しくなり認知負荷が上がると述べた公式ニュースレター",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "two-pizza-team",
+    "name": "2枚のピザルール",
+    "name_en": "Two-Pizza Team",
+    "aka": [
+      "ツーピザチーム"
+    ],
+    "aka_en": [],
+    "summary": "ピザ2枚で足りる人数を超えたらチームを割るという経験則。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの人数を決める実務的な目安そのもの"
+      },
+      "III": {
+        "score": 2,
+        "why": "デリバリー速度の議論で引かれる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "マイクロサービスと自律的な組織単位の設計とセットで語られる"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "AIが補助することで少人数でも扱える範囲が広がり、小さく保つ設計がより現実的になった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/two-pizza-teams.html",
+        "title": "Two-pizza teams（AWS ホワイトペーパー）",
+        "note": "Amazon が採用する、ピザ2枚で足りる規模の自律チームという組織単位の公式説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "cross-functional-team",
+    "name": "クロスファンクショナルチーム",
+    "name_en": "Cross-functional Team",
+    "aka": [
+      "機能横断チーム",
+      "チーム全体"
+    ],
+    "aka_en": [
+      "Whole Team"
+    ],
+    "summary": "価値を届けるのに必要なスキルをチームの中に揃え、外部依存を減らす構成。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームをどう構成するかの定義そのもの"
+      },
+      "III": {
+        "score": 4,
+        "why": "受け渡しを減らしてリードタイムを短くする手段になる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "価値を最後まで届ける責任範囲の話につながる"
+      },
+      "V": {
+        "score": 4,
+        "why": "職能別組織から価値の流れに沿った組織へ移る話そのもの"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "AIが不足スキルの一部を埋めるため、少人数でも機能横断を成立させやすくなった"
+    },
+    "includes": [
+      "チーム全体（Whole Team）"
+    ],
+    "sources": [
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "スクラムチームは機能横断であり、各スプリントで価値を生むために必要なすべてのスキルを備えると定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "team-topologies-4types",
+    "name": "4つのチームタイプ",
+    "name_en": "Four Team Types",
+    "aka": [
+      "ストリームアラインド",
+      "イネイブリング",
+      "コンプリケイテッド・サブシステム",
+      "プラットフォーム"
+    ],
+    "aka_en": [
+      "Stream-aligned",
+      "Enabling",
+      "Complicated Subsystem",
+      "Platform"
+    ],
+    "summary": "組織に必要なチームは4種類に整理できるという、チーム設計の型。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの種類と責任範囲を定義する枠組みそのもの"
+      },
+      "III": {
+        "score": 3,
+        "why": "プラットフォームの位置づけを通じて開発の流れに効く"
+      },
+      "IV": {
+        "score": 2,
+        "why": "価値の流れとの整合が前提になっている"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織全体のチーム構成をどう設計するかという組織論でもある"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "AI基盤を提供するプラットフォームチームという形が、この型にそのまま当てはまる"
+    },
+    "includes": [
+      "3つのインタラクションモード"
+    ],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/key-concepts",
+        "title": "Key Concepts（Team Topologies）",
+        "note": "4つのチームタイプと3つのインタラクションモード（コラボレーション／X-as-a-Service／ファシリテーション）の公式定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "stable-team",
+    "name": "安定したチーム",
+    "name_en": "Stable Team",
+    "aka": [
+      "長く続くチーム",
+      "仕事を人に持ってくる"
+    ],
+    "aka_en": [
+      "Long-lived Team",
+      "Bring Work to the Team"
+    ],
+    "summary": "案件ごとに人を集め直さず、チームを保ったまま仕事のほうを運んでくる考え方。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人にとっては所属の安定という意味を持つ"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが成熟するための時間的な前提そのもの"
+      },
+      "III": {
+        "score": 4,
+        "why": "ベロシティが意味を持つ条件であり予測可能性の土台になる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "プロダクト単位の責任と結びつく"
+      },
+      "V": {
+        "score": 5,
+        "why": "プロジェクト型からプロダクト型へという組織の作り替えの核心"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで個々の作業が代替可能になるほど、蓄積された文脈と関係性がチームの残る価値になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/key-concepts",
+        "title": "Key Concepts（Team Topologies）",
+        "note": "チームを長期に維持し、仕事の側をチームへ流すという組織設計の原則",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "communication-paths",
+    "name": "コミュニケーションパスの爆発",
+    "name_en": "Communication Paths",
+    "aka": [
+      "n(n-1)/2"
+    ],
+    "aka_en": [],
+    "summary": "人数が増えると経路は2乗で増える。20人なら190通りになる。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人が抱える関係の負荷として現れる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームを小さく保つべき理由を数式で説明する"
+      },
+      "III": {
+        "score": 2,
+        "why": "調整コストの増大としてプロセスに現れる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織を分割する理由の定量的な裏づけになる"
+      }
+    },
+    "capabilities": [
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが議事や要約を助けても、合意形成に要する人間同士の経路数そのものは減らない"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://teamtopologies.com/news-blogs-newsletters/when-teams-grow-too-large-solving-cognitive-load-issues",
+        "title": "When Teams Grow Too Large（Team Topologies）",
+        "note": "20人で190通りの経路が生じるという、規模と調整コストの関係の説明",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "feature-team",
+    "name": "フィーチャーチーム",
+    "name_en": "Feature Team",
+    "aka": [
+      "コンポーネントチームとの対比"
+    ],
+    "aka_en": [
+      "vs Component Team"
+    ],
+    "summary": "技術部品ごとではなく、顧客機能を最後まで担当する単位でチームを組む形。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの担当範囲の切り方の選択そのもの"
+      },
+      "III": {
+        "score": 4,
+        "why": "受け渡しと待ちを減らして流れを良くする手段"
+      },
+      "IV": {
+        "score": 3,
+        "why": "顧客価値の単位で責任を持たせるという発想"
+      },
+      "V": {
+        "score": 4,
+        "why": "複数チームで1プロダクトを作るときの構造の選択"
+      }
+    },
+    "capabilities": [
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "AIが不慣れな領域の学習コストを下げるため、広い範囲を担当する構成が取りやすくなった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://less.works/less/structure/feature-teams",
+        "title": "Feature Teams（LeSS）",
+        "note": "コンポーネントチームとの違いと、顧客中心に機能を丸ごと担う単位の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "psychological-safety",
+    "name": "心理的安全性",
+    "name_en": "Psychological Safety",
+    "aka": [],
+    "aka_en": [],
+    "summary": "対人リスクを取っても罰せられないとメンバーが信じている状態。",
+    "category": "II",
+    "subcategory": "II-2",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人が感じる安心感として体験されるが、測る対象はチーム単位"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームという単位で成立する集団の性質として定義されている"
+      },
+      "III": {
+        "score": 3,
+        "why": "問題の早期表明や非難なきポストモーテムの前提条件"
+      },
+      "IV": {
+        "score": 2,
+        "why": "悪い検証結果を握り潰さないための条件"
+      },
+      "V": {
+        "score": 4,
+        "why": "DORAが組織文化として計測対象に含めている"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIの出力を疑って指摘できるか、分からないと言えるかが品質を左右するため、率直さの価値が上がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://fearlessorganization.com/",
+        "title": "The Fearless Organization（Amy C. Edmondson）",
+        "note": "概念の提唱者本人による公式サイト。学習する組織の前提としての心理的安全性を扱う",
+        "strength": 3
+      },
+      {
+        "url": "https://dora.dev/capabilities/generative-organizational-culture/",
+        "title": "Generative organizational culture（DORA）",
+        "note": "Westrum の文化類型に基づき、情報の流れと心理的安全性がデリバリー性能に効くことを示したDORAのケイパビリティ解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "five-dysfunctions",
+    "name": "チームの5つの機能不全",
+    "name_en": "Five Dysfunctions of a Team",
+    "aka": [
+      "信頼の欠如・衝突への恐怖・責任感の不足・説明責任の回避・結果への無関心"
+    ],
+    "aka_en": [],
+    "summary": "信頼の欠如を土台に、衝突回避・不参加・無責任・結果軽視が積み上がるという階層モデル。",
+    "category": "II",
+    "subcategory": "II-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の性質ではなくチームの状態を扱う"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが機能しなくなる過程のモデルそのもの"
+      },
+      "III": {
+        "score": 2,
+        "why": "問題が表に出ない原因の診断に使われる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "経営チームの診断にも使われる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "対面の機会が減るほど信頼の土台が自然には育たず、意図的に作る必要が増す"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/",
+        "title": "The Five Dysfunctions of a Team（The Table Group）",
+        "note": "Patrick Lencioni 本人の組織による公式解説。5層のピラミッドとしてのモデル",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "healthy-conflict",
+    "name": "健全な衝突",
+    "name_en": "Healthy Conflict",
+    "aka": [
+      "建設的な対立",
+      "コンフリクトマネジメント"
+    ],
+    "aka_en": [
+      "Constructive Conflict"
+    ],
+    "summary": "意見の食い違いを避けずに扱い、人ではなく問題に向ける対立の作法。",
+    "category": "II",
+    "subcategory": "II-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の感情の扱いという側面もある"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内で意見をぶつける規範の話"
+      },
+      "III": {
+        "score": 2,
+        "why": "設計判断の質を上げる手段として働く"
+      },
+      "IV": {
+        "score": 2,
+        "why": "優先順位の議論で必要になる"
+      },
+      "V": {
+        "score": 3,
+        "why": "部門間の利害調整にも同じ作法が効く"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C1"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが無難な折衷案を出しやすいため、あえて異論を突き合わせる場の設計が必要になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/",
+        "title": "The Five Dysfunctions of a Team（The Table Group）",
+        "note": "衝突への恐怖を第2の機能不全として位置づけ、健全な対立の必要性を説く",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "working-agreement",
+    "name": "ワーキングアグリーメント",
+    "name_en": "Working Agreement",
+    "aka": [
+      "チームの約束事",
+      "ソーシャルコントラクト"
+    ],
+    "aka_en": [
+      "Team Norms",
+      "Social Contract"
+    ],
+    "summary": "チームで守ると決めた働き方の取り決め。自分たちで作り、変えていく。",
+    "category": "II",
+    "subcategory": "II-2",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の規律ではなくチームの合意"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが自分たちの規範を明文化する行為そのもの"
+      },
+      "III": {
+        "score": 3,
+        "why": "完成の定義など他の取り決めと連動して運用される"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "組織のルールとの関係で語られることがある"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIをどこまで使うか・レビューをどうするかをチームで決める必要が生まれ、取り決めの対象が増えた"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agile-studio.jp/agile-practice-map",
+        "title": "アジャイルプラクティスマップ（Agile Studio）",
+        "note": "スクラム（補完）路線の駅としてワーキングアグリーメントを収録している日本語のプラクティスマップ",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "trust-building",
+    "name": "信頼の構築",
+    "name_en": "Trust Building",
+    "aka": [
+      "信頼の方程式"
+    ],
+    "aka_en": [
+      "Trust Equation"
+    ],
+    "summary": "信頼は人柄ではなく、一貫性・誠実さ・親密さ・自己志向の低さから成るという捉え方。",
+    "category": "II",
+    "subcategory": "II-2",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の振る舞いの積み重ねとして現れる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが機能する土台として扱われる"
+      },
+      "III": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 2,
+        "why": "顧客との関係構築にも同じ枠組みが使われる"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織開発が対象とする関係の質の中核"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "生成物が本物か判別しにくくなるほど、人と人の間の信頼が判断の拠り所になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://trustedadvisor.com/why-trust-matters/understanding-trust/understanding-the-trust-equation",
+        "title": "Understanding The Trust Equation（Trusted Advisor Associates）",
+        "note": "信頼＝(信頼性＋確実性＋親密さ)÷自己志向 という分解を提示した公式解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "tuckman-model",
+    "name": "タックマンモデル",
+    "name_en": "Tuckman's Stages of Group Development",
+    "aka": [
+      "形成期・混乱期・統一期・機能期・散会期"
+    ],
+    "aka_en": [
+      "Forming, Storming, Norming, Performing, Adjourning"
+    ],
+    "summary": "チームは形成・混乱・統一・機能の段階を経て育つという集団発達のモデル。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人ではなく集団の発達を扱う"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが時間とともに変わる過程のモデルそのもの"
+      },
+      "III": {
+        "score": 2,
+        "why": "立ち上げ直後の生産性の低さの説明に使われる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織再編のたびに混乱期に戻ることの説明として使われる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 2,
+      "why": "AIで人の入れ替えが容易に見えても、集団としての成熟には同じ時間がかかる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://psycnet.apa.org/record/1965-12187-001",
+        "title": "Developmental sequence in small groups（Bruce W. Tuckman, 1965）",
+        "note": "形成・混乱・統一・機能の4段階を初めて提示した原論文の書誌（APA PsycNet）",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "self-managing-team",
+    "name": "自己管理型チーム",
+    "name_en": "Self-managing Team",
+    "aka": [
+      "自己組織化チーム"
+    ],
+    "aka_en": [
+      "Self-organizing Team"
+    ],
+    "summary": "誰が何をいつどうやるかを、チーム自身が決める働き方。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "自律という個人の動機づけと表裏になっている"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの意思決定権限の所在を定義するもの"
+      },
+      "III": {
+        "score": 3,
+        "why": "スクラムの前提として組み込まれている"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 5,
+        "why": "どこまで権限を降ろすかという組織の設計判断そのもの"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIで実行が速くなるほど、細かく指示を待つ構造が最大の遅延要因になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://scrumguides.org/scrum-guide.html",
+        "title": "The Scrum Guide",
+        "note": "スクラムチームは自己管理型であり、誰が何をいつどのように行うかを内部で決めると定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "inception-deck",
+    "name": "インセプションデッキ",
+    "name_en": "Inception Deck",
+    "aka": [
+      "我われはなぜここにいるのか"
+    ],
+    "aka_en": [],
+    "summary": "プロジェクト開始時に目的・範囲・トレードオフを10の問いで揃える道具。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 0,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの認識を立ち上げ時に合わせる場として使われる"
+      },
+      "III": {
+        "score": 3,
+        "why": "プロジェクト計画の代替として機能する"
+      },
+      "IV": {
+        "score": 4,
+        "why": "なぜやるのか・何をやらないのかという価値の議論を含む"
+      },
+      "V": {
+        "score": 3,
+        "why": "ステークホルダーとの期待合わせの道具でもある"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C4"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "叩き台の作成をAIに任せられる分、議論そのものに時間を使いやすくなった"
+    },
+    "includes": [
+      "エレベーターピッチ",
+      "トレードオフスライダー",
+      "やらないことリスト",
+      "ドラッカー風エクササイズ"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agile-studio.jp/agile-practice-map",
+        "title": "アジャイルプラクティスマップ（Agile Studio）",
+        "note": "価値探索路線の駅としてインセプションデッキを収録",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "servant-leadership",
+    "name": "サーバントリーダーシップ",
+    "name_en": "Servant Leadership",
+    "aka": [
+      "支援型リーダーシップ"
+    ],
+    "aka_en": [],
+    "summary": "指示ではなく、メンバーが力を発揮できる環境を整えることで導く型。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "リーダー個人の姿勢という側面もある"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームに対するリーダーの関わり方の型"
+      },
+      "III": {
+        "score": 2,
+        "why": "スクラムマスターの振る舞いとして現れる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "管理職の役割の再定義として組織変革の論点になる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "指示を出すこと自体はAIでも足りるため、人が担うのは環境を整え障害を除く側になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.greenleaf.org/what-is-servant-leadership/",
+        "title": "What is Servant Leadership?（Robert K. Greenleaf Center）",
+        "note": "提唱者 Greenleaf の名を冠したセンターによる公式定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "skill-map",
+    "name": "スキルマップ",
+    "name_en": "Skill Map",
+    "aka": [
+      "星取表"
+    ],
+    "aka_en": [],
+    "summary": "誰が何をできるかを表にして、属人化と学習の空白を見える化する道具。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人の学習目標の設定に使われる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内のスキルの偏りを扱うための道具"
+      },
+      "III": {
+        "score": 3,
+        "why": "単一障害点（バス係数）の把握につながる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "育成計画や配置の検討材料になる"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIで補える領域と補えない領域を区別して可視化する必要が生まれた"
+    },
+    "includes": [
+      "バス係数"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agile-studio.jp/agile-practice-map",
+        "title": "アジャイルプラクティスマップ（Agile Studio）",
+        "note": "チームビルディング路線の駅としてスキルマップを収録",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "happiness-metric",
+    "name": "幸福指標",
+    "name_en": "Happiness Metric",
+    "aka": [
+      "ニコニコカレンダー"
+    ],
+    "aka_en": [
+      "Niko-niko Calendar"
+    ],
+    "summary": "チームの気分を日々記録し、生産性の先行指標として扱う計測。",
+    "category": "II",
+    "subcategory": "II-3",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人の状態を申告する形をとる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの空気を可視化して改善につなげる仕掛け"
+      },
+      "III": {
+        "score": 3,
+        "why": "ふりかえりの入力として使われる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "SPACE の満足度の次元と対応する"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "作業量の指標がAIで意味を失いやすいなか、人の状態を測る指標の相対的な価値が上がる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/niko-niko/",
+        "title": "Niko-niko Calendar（Agile Alliance Glossary）",
+        "note": "1日の終わりに気分を記号で記録し、チームの傾向を可視化する日本発のプラクティス",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "facilitation",
+    "name": "ファシリテーション",
+    "name_en": "Facilitation",
+    "aka": [
+      "場をまわす技術"
+    ],
+    "aka_en": [],
+    "summary": "中身に肩入れせず、話し合いの進め方を設計して結論に導く役割と技術。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技能ではあるが、対象は集団"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの話し合いを成果に変える中核の技術"
+      },
+      "III": {
+        "score": 3,
+        "why": "スクラムイベントの成立条件になっている"
+      },
+      "IV": {
+        "score": 2,
+        "why": "ステークホルダーとの合意形成で使われる"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織開発の介入手段として位置づけられる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "記録や要約はAIが担えるが、その場の力学を読んで介入する部分は人に残る"
+    },
+    "includes": [
+      "グラウンドルール",
+      "タイムキーピング"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/facilitation/",
+        "title": "Facilitation（Agile Alliance Glossary）",
+        "note": "議論の内容ではなくプロセスに責任を持つ役割としてのファシリテーションの定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "coaching",
+    "name": "コーチング",
+    "name_en": "Coaching",
+    "aka": [
+      "GROWモデル"
+    ],
+    "aka_en": [
+      "GROW Model"
+    ],
+    "summary": "答えを与えず問いかけで相手の内側から答えを引き出す関わり方。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "受け手個人の気づきと行動変容を目的とする"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内の人材育成と関係構築の主要な手段"
+      },
+      "III": {
+        "score": 2,
+        "why": "スクラムマスターの活動の一部として現れる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "エンタープライズコーチとして組織変革の職能になっている"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIは助言を即座に出せるが、本人が自分で答えに到達する過程の設計は人が担う"
+    },
+    "includes": [
+      "GROWモデル",
+      "ティーチングとの使い分け"
+    ],
+    "sources": [
+      {
+        "url": "https://coachingfederation.org/about/credentials/core-competencies/",
+        "title": "ICF Core Competencies（International Coaching Federation）",
+        "note": "国際コーチング連盟が定める職業としてのコーチングの中核能力",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "active-listening",
+    "name": "傾聴",
+    "name_en": "Active Listening",
+    "aka": [
+      "アクティブリスニング"
+    ],
+    "aka_en": [],
+    "summary": "遮らず、評価せず、相手の言葉と感情をそのまま受け取る聴き方。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の対話スキル"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内の対話の質を決める基礎技術"
+      },
+      "III": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 4,
+        "why": "顧客インタビューで誘導を避けるための基礎でもある"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織開発の介入技法の土台"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C1"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "言語化されていない本当の困りごとを引き出す部分は、いまも人の関与を要する"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://coachingfederation.org/about/credentials/core-competencies/",
+        "title": "ICF Core Competencies（International Coaching Federation）",
+        "note": "アクティブリスニングを職業コーチの中核能力の一つとして定義している",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "feedback",
+    "name": "フィードバック",
+    "name_en": "Feedback",
+    "aka": [
+      "SBI（状況・行動・影響）"
+    ],
+    "aka_en": [
+      "SBI Model"
+    ],
+    "summary": "相手の行動と、それが及ぼした影響を事実として伝える技術。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "受け手個人の学習の材料になる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内で互いに伝え合う規範として機能する"
+      },
+      "III": {
+        "score": 3,
+        "why": "コードレビューやペアの中でも同じ作法が要る"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "評価制度や1on1の運用に組み込まれる"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIのレビューは事実指摘に強いが、相手の状況をふまえて伝える部分は人に残る"
+    },
+    "includes": [
+      "SBIモデル"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/",
+        "title": "Use Situation-Behavior-Impact to Understand Intent（Center for Creative Leadership）",
+        "note": "SBI（状況・行動・影響）の枠組みを開発した機関による解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "one-on-one",
+    "name": "1on1",
+    "name_en": "One-on-One",
+    "aka": [
+      "1対1の面談"
+    ],
+    "aka_en": [],
+    "summary": "上司と部下が定期的に1対1で話す場。評価面談ではなく支援のための時間。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "個人の状態把握とキャリアの支援が目的"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム運営における関係構築の主要な手段"
+      },
+      "III": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "マネジメント制度として組織に実装される"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "非同期とAI経由のやりとりが増えるほど、人の状態を直接確認する場の必要性が上がる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://rework.withgoogle.com/en/guides/managers-coach-managers-to-coach",
+        "title": "Coach managers to coach（Google re:Work）",
+        "note": "Google が管理職の実践として1対1の対話を位置づけたガイド",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "nonviolent-communication",
+    "name": "非暴力コミュニケーション",
+    "name_en": "Nonviolent Communication",
+    "aka": [
+      "NVC",
+      "観察・感情・必要・要求"
+    ],
+    "aka_en": [
+      "NVC"
+    ],
+    "summary": "評価を混ぜず、観察・感情・必要・要求の順で伝える対話の型。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "自分の感情と必要を認識する内省を含む"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム内の対立を扱うための具体的な言語の型"
+      },
+      "III": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織開発の対話技法として使われる"
+      }
+    },
+    "capabilities": [
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "言い回しの下書きをAIが助けられるが、自分の必要を特定する部分は人に残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.cnvc.org/learn/what-is-nvc",
+        "title": "What is NVC?（Center for Nonviolent Communication）",
+        "note": "Marshall Rosenberg が1984年に設立した団体による公式定義。観察・感情・必要・要求の4要素",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "retrospective",
+    "name": "ふりかえり",
+    "name_en": "Retrospective",
+    "aka": [
+      "レトロスペクティブ",
+      "KPT",
+      "YWT"
+    ],
+    "aka_en": [
+      "Heartbeat Retrospective"
+    ],
+    "summary": "一定の区切りで自分たちの進め方を検査し、次の一手を決める場。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人の内省としても実践できる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームが自分たちのやり方を変える主要な場"
+      },
+      "III": {
+        "score": 4,
+        "why": "スクラムのイベントとして組み込まれ、プロセス改善の駆動輪になる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "プロダクトの学びを扱う回もある"
+      },
+      "V": {
+        "score": 3,
+        "why": "組織レベルのふりかえりに拡張される"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "データの収集と論点の抽出をAIが担えるため、対話と意思決定に時間を回せる"
+    },
+    "includes": [
+      "KPT",
+      "YWT",
+      "Fun/Done/Learn",
+      "タイムライン"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/heartbeat-retrospective/",
+        "title": "Heartbeat Retrospective（Agile Alliance Glossary）",
+        "note": "反復のたびに行う定期的なふりかえりの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://hurikaeri.jp/",
+        "title": "ふりかえり実践会",
+        "note": "日本語で手法とTIPSを体系的に公開しているコミュニティ。手法カタログの一次入口",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "diverge-converge",
+    "name": "発散と収束",
+    "name_en": "Diverge and Converge",
+    "aka": [
+      "ダブルダイヤモンド"
+    ],
+    "aka_en": [
+      "Double Diamond"
+    ],
+    "summary": "選択肢を広げる時間と、絞る時間を意識的に分けるワークショップの設計原則。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "思考モードの切替という個人的な側面もある"
+      },
+      "II": {
+        "score": 5,
+        "why": "話し合いの設計における基本の型"
+      },
+      "III": {
+        "score": 2,
+        "why": "設計検討の進め方に応用される"
+      },
+      "IV": {
+        "score": 4,
+        "why": "課題の探索と解決策の探索という2つのダイヤモンドとして価値探索で使われる"
+      },
+      "V": {
+        "score": 2,
+        "why": "戦略検討の場にも使われる"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C4"
+    ],
+    "flow": "B1",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 4,
+      "why": "発散のコストが劇的に下がった一方、収束の判断が人の仕事として際立つ"
+    },
+    "includes": [
+      "ブレインストーミング",
+      "ドット投票"
+    ],
+    "sources": [
+      {
+        "url": "https://www.designcouncil.org.uk/our-resources/the-double-diamond/",
+        "title": "The Double Diamond（Design Council）",
+        "note": "発見・定義・開発・提供の4段階を2つのダイヤモンドで表した枠組みの公式解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "consent-decision",
+    "name": "合意形成の作法",
+    "name_en": "Consent-based Decision Making",
+    "aka": [
+      "拳で5",
+      "同意ではなく異論なし"
+    ],
+    "aka_en": [
+      "Fist of Five",
+      "Consent vs Consensus"
+    ],
+    "summary": "全員一致を待たず、重大な反対がなければ進めるという意思決定の型。",
+    "category": "II",
+    "subcategory": "II-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の意思決定ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームで決めるときの手続きそのもの"
+      },
+      "III": {
+        "score": 2,
+        "why": "スプリントプランニングなどの場で使われる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "優先順位の合意に使われる"
+      },
+      "V": {
+        "score": 4,
+        "why": "権限を降ろした組織の意思決定手続きとして制度化される"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C4"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが選択肢を大量に出すほど、決め切る手続きを持っているかどうかが速度差になる"
+    },
+    "includes": [
+      "拳で5（Fist of Five）",
+      "ドット投票"
+    ],
+    "sources": [
+      {
+        "url": "https://www.sociocracyforall.org/consent-decision-making/",
+        "title": "Consent Decision Making（Sociocracy For All）",
+        "note": "全員の積極的賛成ではなく、重大な反対の不在で決めるという手続きの解説",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "pair-programming",
+    "name": "ペアプログラミング",
+    "name_en": "Pair Programming",
+    "aka": [
+      "ペアリング",
+      "ペア作業"
+    ],
+    "aka_en": [
+      "Pairing"
+    ],
+    "summary": "2人が1つの作業に同時に取り組み、書く役と考える役を交代する進め方。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人の学習手段としての効果もある"
+      },
+      "II": {
+        "score": 5,
+        "why": "2人で協働する形式そのもの"
+      },
+      "III": {
+        "score": 5,
+        "why": "XPの中核プラクティスであり、レビューを常時化する技術でもある"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "生産性の測り方をめぐる組織的な議論を呼ぶ"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "代替",
+      "score": 4,
+      "why": "AIが相方の役割の一部を担えるようになり、人と人のペアの位置づけが問い直されている"
+    },
+    "includes": [
+      "ドライバーとナビゲーター",
+      "ピンポンペア"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/pair-programming/",
+        "title": "Pair Programming（Agile Alliance Glossary）",
+        "note": "2人が1台で協働し、役割を交代しながら進めるXPのプラクティスの定義",
+        "strength": 3
+      },
+      {
+        "url": "https://martinfowler.com/articles/on-pair-programming.html",
+        "title": "On Pair Programming（Martin Fowler）",
+        "note": "ペアの型・効用・向かない状況を整理した実務的な解説",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "mob-programming",
+    "name": "モブプログラミング",
+    "name_en": "Mob Programming",
+    "aka": [
+      "モブワーク",
+      "アンサンブルプログラミング"
+    ],
+    "aka_en": [
+      "Ensemble Programming"
+    ],
+    "summary": "チーム全員が同じ時間に同じ場所で1つの仕事に取り組む進め方。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人作業とは対極にある"
+      },
+      "II": {
+        "score": 5,
+        "why": "チーム全員での協働という形式そのもの"
+      },
+      "III": {
+        "score": 4,
+        "why": "受け渡しとレビュー待ちを消す流れの技術でもある"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "稼働率で測る組織文化と衝突しやすい"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C2"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "AIを共同で操作しながら判断を全員で共有する形として機能しやすい"
+    },
+    "includes": [
+      "ドライバー・ナビゲーター交代"
+    ],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/mob-programming/",
+        "title": "Mob Programming（Agile Alliance Glossary）",
+        "note": "チーム全員が同じ課題に同じ時間・場所で取り組む進め方の定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "swarming",
+    "name": "スウォーミング",
+    "name_en": "Swarming",
+    "aka": [
+      "群がる"
+    ],
+    "aka_en": [],
+    "summary": "手が空いた人が進行中の項目に加わり、1つずつ終わらせていく動き方。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の話ではない"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームがどう仕事に群がるかという協働の形"
+      },
+      "III": {
+        "score": 5,
+        "why": "WIPを絞って完了を早めるフロー設計の実践そのもの"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 2,
+        "why": "個人単位の評価制度と衝突する"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C4"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 2,
+      "why": "AIで着手の敷居が下がり、応援に入る切替コストが下がった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/kanban/",
+        "title": "Kanban（Agile Alliance Glossary）",
+        "note": "WIP制限のもとで完了を優先する動きとして、群がる働き方が導かれる",
+        "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "collective-ownership",
+    "name": "共同所有",
+    "name_en": "Collective Ownership",
+    "aka": [
+      "集団によるコード所有"
+    ],
+    "aka_en": [
+      "Collective Code Ownership"
+    ],
+    "summary": "コードは誰か個人のものではなく、チーム全員が直せるという原則。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の所有意識を手放す側面はある"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームで責任を共有するという規範"
+      },
+      "III": {
+        "score": 5,
+        "why": "XPの中核プラクティスで、変更の速度に直結する"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 3,
+        "why": "担当制を前提とした組織のルールと衝突する"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C4"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "AIが広範囲に変更を加えられるため、誰が責任を持つかの合意が一層必要になる"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://www.agilealliance.org/glossary/collective-ownership/",
+        "title": "Collective Ownership（Agile Alliance Glossary）",
+        "note": "誰もがどのコードでも変更できるというXPの所有モデルの定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "async-communication",
+    "name": "非同期コミュニケーション",
+    "name_en": "Asynchronous Communication",
+    "aka": [
+      "書く文化",
+      "ドキュメントファースト"
+    ],
+    "aka_en": [
+      "Writing Culture"
+    ],
+    "summary": "その場に揃わなくても進むよう、書いて残すことを既定にする働き方。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 4,
+        "why": "割り込みを減らして個人の集中を守る効果が大きい"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームのやりとりの既定値をどこに置くかの選択"
+      },
+      "III": {
+        "score": 3,
+        "why": "分散環境での開発の進め方に直結する"
+      },
+      "IV": {
+        "score": 1,
+        "why": "間接的"
+      },
+      "V": {
+        "score": 4,
+        "why": "時差のある組織やリモート前提の組織設計に不可欠"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 5,
+      "why": "AIが読み書きを助けるうえ、文脈が文書化されているほどAI自身の出力精度も上がる"
+    },
+    "includes": [
+      "意思決定記録（ADR）"
+    ],
+    "sources": [
+      {
+        "url": "https://about.gitlab.com/company/culture/all-remote/asynchronous/",
+        "title": "Asynchronous communication（GitLab Handbook）",
+        "note": "全社リモートを前提に非同期を既定とする理由と実践を公開している一次資料",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "distributed-team",
+    "name": "分散チーム",
+    "name_en": "Distributed Team",
+    "aka": [
+      "リモートチーム",
+      "ハイブリッドワーク"
+    ],
+    "aka_en": [
+      "Remote Team"
+    ],
+    "summary": "同じ場所に集まらずに働くチーム。同席を前提としたプラクティスの読み替えが要る。",
+    "category": "II",
+    "subcategory": "II-5",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人の働く環境と集中の条件が変わる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの協働のあり方を規定する条件"
+      },
+      "III": {
+        "score": 3,
+        "why": "同席前提のプラクティスの代替手段が必要になる"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "拠点戦略や人材採用の範囲を変える組織の判断"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "翻訳・要約・記録の支援で距離と言語の制約が下がった"
+    },
+    "includes": [
+      "コアタイム",
+      "チームルームのオンライン版"
+    ],
+    "sources": [
+      {
+        "url": "https://about.gitlab.com/company/culture/all-remote/guide/",
+        "title": "The Remote Playbook（GitLab Handbook）",
+        "note": "全社リモートの運用を体系的に公開している一次資料",
+        "strength": 3
+      },
+      {
+        "url": "https://www.agilealliance.org/glossary/team-room/",
+        "title": "Team Room（Agile Alliance Glossary）",
+        "note": "同席を前提としたチームルームの定義。分散チームではこの機能を別手段で置き換える必要がある",
+        "strength": 3
+      }
+    ]
+  }
+]

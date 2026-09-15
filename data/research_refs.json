@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-15",
+  "note": "要素の出典ではなく、大枠の設計そのものに使った参照。SOURCES.md の第2部として出力される。",
+  "groups": [
+    {
+      "name": "先行するプラクティスマップ（再発明を避けるために全件照合した）",
+      "refs": [
+        { "url": "https://www.agilealliance.org/agile101/subway-map-to-agile-practices/", "title": "Subway Map to Agile Practices（Agile Alliance）", "note": "9本の路線（Scrum / XP / Lean / Testing / Product Management / DevOps / Teams & Culture / Design / Fundamentals）でアジャイルのプラクティスを路線図として並べた先行マップ。分類の軸は「出自」", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://www.agilealliance.org/agile101/agile-glossary/", "title": "Agile Glossary（Agile Alliance）", "note": "Subway Map の各駅に対応する公式用語集。78語のスラッグを抽出し、本マップの出典と照合の原簿にした", "access": "2026-09-15 にページ本文を取得" },
+        { "url": "https://www.agile-studio.jp/agile-practice-map", "title": "アジャイルプラクティスマップ（Agile Studio / 永和システムマネジメント）", "note": "5路線49駅の日本語の路線図。スクラム／スクラム（補完）／XP／価値探索／チームビルディング。これから始める開発者向けであることを明示している", "access": "2026-09-15 にブラウザで全駅を抽出" }
+      ]
+    },
+    {
+      "name": "大枠の骨格を接続した既存タクソノミー",
+      "refs": [
+        { "url": "https://www.icagile.com/agile-delivery", "title": "Agile Delivery Learning Roadmap（ICAgile）", "note": "Agile Coaching / Engineering / Testing / Delivery Management / DevOps / Product Ownership などの学習トラック。職能が独立領域として成立していることの裏取りに使った", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://www.pmi.org/disciplined-agile/toolkit/process-goals", "title": "Process Goals（PMI Disciplined Agile）", "note": "Inception / Construction / Transition / Ongoing の4フェーズ24ゴール。資金確保やガバナンスなど開発の外側の意思決定を拾う参照にした", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://businessagility.institute/domains/overview", "title": "The Domains of Business Agility（Business Agility Institute）", "note": "5ドメイン18ケイパビリティ。顧客を中心に置き、リーダーシップ・個人・オペレーションの次元で組織能力を整理する。IV層とV層の受け皿の根拠", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://framework.scaledagile.com/", "title": "SAFe Framework（Scaled Agile）", "note": "7つのコアコンピテンシー（Lean-Agile Leadership / Team and Technical Agility / Agile Product Delivery / Enterprise Solution Delivery / Lean Portfolio Management / Organizational Agility / Continuous Learning Culture）。V層（組織）の裏取り", "access": "2026-09-15 はbot対策で本文取得不可。構成は検索結果で確認" },
+        { "url": "https://teamtopologies.com/key-concepts", "title": "Key Concepts（Team Topologies）", "note": "4チームタイプ×3インタラクションモードと認知負荷。既存体系のなかで唯一「人間の認知の限界」をチーム設計に接続しており、I層とII層の骨格の根拠になった", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://dora.dev/capabilities/", "title": "DORA Capabilities", "note": "成熟度の段階付けではなく継続的に伸ばす能力の集合として整理されたカタログ。本マップの計測系要素の出典元であり、ケイパビリティという考え方自体も参照した", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://queue.acm.org/detail.cfm?id=3454124", "title": "The SPACE of Developer Productivity（ACM Queue）", "note": "生産性を満足度・パフォーマンス・活動・協働・効率の5次元で捉える原論文。単一指標を避けるという立場が本マップのスコア設計の考え方に影響した", "access": "2026-09-15 はbot対策で本文取得不可。定義は検索結果で確認" }
+      ]
+    },
+    {
+      "name": "「認知の限界」を独立した層として立てるための参照",
+      "refs": [
+        { "url": "https://www.apa.org/topics/research/multitasking", "title": "Multitasking: Switching costs（American Psychological Association）", "note": "Rubinstein・Meyer・Evans の実験にもとづく切替コストの解説。目標の切替とルールの再活性化という2段階", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://www.scrum.org/resources/blog/financial-cost-task-switching", "title": "The Financial Cost of Task Switching（Scrum.org）", "note": "Weinberg の経験則（2案件並行で各40%、20%が切替で消える）と、それが実験結果ではなく工学的な見積りであるという但し書き", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://teamtopologies.com/news-blogs-newsletters/when-teams-grow-too-large-solving-cognitive-load-issues", "title": "When Teams Grow Too Large（Team Topologies）", "note": "ダンバー数の層（5・15・50・150）とコミュニケーション経路の爆発（20人で190通り）を組織設計に接続した記事", "access": "2026-09-15 時点で到達確認" }
+      ]
+    },
+    {
+      "name": "日本語圏の参照",
+      "refs": [
+        { "url": "https://www.keiomcc.com/organization-development/", "title": "組織開発とは（慶應丸の内シティキャンパス）", "note": "組織開発を「制度ではなく人と人の関係の質に働きかける実践」として定義し、人材開発との違いを整理した日本語の解説", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://hurikaeri.jp/", "title": "ふりかえり実践会", "note": "ふりかえりの手法とTIPSを日本語で体系的に公開しているコミュニティ。II-4のふりかえり関連の粒度を決める参考にした", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://www.ipa.go.jp/digital/model/agile20200331.html", "title": "情報システム・モデル取引・契約書（アジャイル開発版）｜IPA", "note": "日本の実務でアジャイル開発の契約を準委任で組むための公的モデル。V-3の契約要素の根拠", "access": "2026-09-15 時点で到達確認" },
+        { "url": "https://agilemanifesto.org/iso/ja/manifesto.html", "title": "アジャイルソフトウェア開発宣言（日本語公式）", "note": "4つの価値の日本語訳の原文。土台の帯の起点", "access": "2026-09-15 時点で到達確認" }
+      ]
+    }
+  ],
+  "access_note": "到達確認は curl による HTTP ステータスと本文サイズの取得による。agilealliance.org / scaledagile.com / thesystemsthinker.com など一部のサイトは連続アクセスに対して 403 / 202 を返すが、これは bot 対策であって URL の無効を意味しない（単発・間隔をあけたアクセスでは 200 と実体が返ることを確認済み）。回避はしていない。"
+}
