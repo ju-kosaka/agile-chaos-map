@@ -65,6 +65,12 @@
         "title": "Scrum（Agile Alliance Glossary）",
         "note": "反復で複雑な製品を開発するフレームワークとしての簡潔な定義",
         "strength": 3
+      },
+      {
+        "url": "https://hbr.org/1986/01/the-new-new-product-development-game",
+        "title": "The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）",
+        "note": "スクラムという名称の由来になったラグビーの比喩を示した論文。フレームワークの直接の源流",
+        "strength": 3
       }
     ]
   },
@@ -603,6 +609,72 @@
     ]
   },
   {
+    "id": "new-new-product-development",
+    "name": "ラグビー型の開発",
+    "name_en": "The New New Product Development Game",
+    "aka": [
+      "新製品開発のホリスティック・アプローチ",
+      "スクラムの語源",
+      "野中郁次郎",
+      "竹内弘高"
+    ],
+    "aka_en": [
+      "Ikujiro Nonaka",
+      "Hirotaka Takeuchi"
+    ],
+    "summary": "工程を分業でつながず、チームが一体のまま重ねて走る新製品開発の型。スクラムの語源。",
+    "category": "III",
+    "subcategory": "III-1",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技法ではない"
+      },
+      "II": {
+        "score": 4,
+        "why": "自己組織化するチームを6つの特性の一つとして含む"
+      },
+      "III": {
+        "score": 5,
+        "why": "開発の進め方の型そのもの。スクラムが名前と構造を直接受け継いでいる"
+      },
+      "IV": {
+        "score": 3,
+        "why": "不安定さをあえて組み込んで速く市場に出すという戦略を含む"
+      },
+      "V": {
+        "score": 4,
+        "why": "学習を組織へ移すことを特性の一つに挙げており、組織論でもある"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C3"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "工程を重ねたまま走るという前提が、AIによる並行作業でより現実的になった"
+    },
+    "includes": [
+      "不安定な状態",
+      "自己組織化するチーム",
+      "重なり合う開発フェーズ",
+      "多重学習",
+      "柔らかなコントロール",
+      "学習の組織的移転"
+    ],
+    "sources": [
+      {
+        "url": "https://hbr.org/1986/01/the-new-new-product-development-game",
+        "title": "The New New Product Development Game（Hirotaka Takeuchi & Ikujiro Nonaka, HBR 1986）",
+        "note": "ラグビーのスクラムに喩えて全体一体型の開発を提示した原典。スクラムという名称はここから来ている",
+        "strength": 3
+      }
+    ]
+  },
+  {
     "id": "littles-law",
     "name": "リトルの法則",
     "name_en": "Little's Law",
@@ -1036,6 +1108,65 @@
         "url": "https://dora.dev/capabilities/wip-limits/",
         "title": "Work in process limits（DORA）",
         "note": "仕掛りを制限することがデリバリー性能を高めるという調査結果。待ち行列が伸びる仕組みへの実務的な対処",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "organizational-slack",
+    "name": "ゆとり（スラック）",
+    "name_en": "Slack",
+    "aka": [
+      "組織の余白",
+      "デマルコ"
+    ],
+    "aka_en": [
+      "Tom DeMarco"
+    ],
+    "summary": "全員が常に忙しい状態では、変化に使える余力が組織に残らないという主張。",
+    "category": "III",
+    "subcategory": "III-2",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "個人が考える余白を持てるかという話でもある"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームに余裕を残すという運用判断になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "稼働率を上げるほど待ち時間が伸びるという、流れの経済そのもの"
+      },
+      "IV": {
+        "score": 3,
+        "why": "変化に対応する能力への投資という見方を含む"
+      },
+      "V": {
+        "score": 5,
+        "why": "効率を最大化しようとする経営への正面からの反論になっている"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C1"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIで詰め込める作業量が増えるほど、意図して余白を残さないと変化に対応できなくなる"
+    },
+    "includes": [
+      "100%稼働の神話",
+      "忙しさと生産性の混同"
+    ],
+    "sources": [
+      {
+        "url": "https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/",
+        "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）",
+        "note": "完全効率という神話を退け、組織が変化するために必要な余白を論じた書籍の出版社ページ",
         "strength": 3
       }
     ]
@@ -2704,6 +2835,67 @@
         "title": "Estimation（Agile Alliance Glossary）",
         "note": "見積りの不確実性が進行とともに縮小することを含む、見積りの位置づけの解説",
         "strength": 2
+      }
+    ]
+  },
+  {
+    "id": "software-risk-management",
+    "name": "リスクを織り込む計画",
+    "name_en": "Software Risk Management",
+    "aka": [
+      "熊とワルツを",
+      "デマルコ"
+    ],
+    "aka_en": [
+      "Waltzing with Bears",
+      "Tom DeMarco",
+      "Tim Lister"
+    ],
+    "summary": "起きうる悪いことを事前に挙げ、確率と影響を見積もって計画に織り込むこと。",
+    "category": "III",
+    "subcategory": "III-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "楽観に傾く認知の偏りへの対処という側面がある"
+      },
+      "II": {
+        "score": 2,
+        "why": "悪い見通しを口に出せる空気が前提になる"
+      },
+      "III": {
+        "score": 5,
+        "why": "計画と見積りに不確実性を織り込む実務そのもの"
+      },
+      "IV": {
+        "score": 4,
+        "why": "リスクを取らないこと自体のリスクという投資判断を含む"
+      },
+      "V": {
+        "score": 4,
+        "why": "悪い知らせが上に届く組織かどうかが成否を分ける"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "見通しは立てやすくなったが、外れたときに何が起きるかを見積もる作業の重みは変わらない"
+    },
+    "includes": [
+      "リスク図",
+      "未確定要素の可視化",
+      "リスク発現時の対応計画"
+    ],
+    "sources": [
+      {
+        "url": "https://systemsguild.eu/tom-demarco",
+        "title": "Tom DeMarco（The Atlantic Systems Guild）",
+        "note": "『熊とワルツを』でソフトウェアプロジェクトの代表的リスク（スケジュール欠陥・要求の膨張・離職・仕様の崩壊・性能未達）と管理法を示した著者本人の所属組織",
+        "strength": 3
       }
     ]
   }

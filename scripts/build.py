@@ -63,6 +63,63 @@ def build_prior_index(prior):
     return index
 
 
+def check_docs_numbers(elements):
+    """README.md / docs/DESIGN.md に手書きされた数値が、実データと合っているか検査する。
+
+    要素を足すたびにドキュメントの数値が黙って古くなる事故を止めるための装置。
+    これらは生成物ではないので build では直さない。ズレを報告するだけにしている。
+    """
+    import collections
+
+    issues = []
+    n = len(elements)
+    urls = {s["url"] for e in elements for s in e["sources"]}
+    cat = collections.Counter(e["category"] for e in elements)
+    cap = collections.Counter()
+    for e in elements:
+        for c in e.get("capabilities", []):
+            cap[c] += 1
+    own = sum(1 for e in elements if not e.get("also_in"))
+    own_pct = round(100 * own / n) if n else 0
+
+    def expect(path, pattern, actual, label):
+        if not path.exists():
+            return
+        text = path.read_text(encoding="utf-8")
+        m = re.search(pattern, text)
+        if not m:
+            issues.append(f"[{path.name}] {label}: 記述が見つからない（書式が変わった？）")
+            return
+        got = int(m.group(1))
+        if got != actual:
+            issues.append(f"[{path.name}] {label}: 記載 {got} ≠ 実データ {actual}")
+
+    readme = ROOT / "README.md"
+    design = ROOT / "docs" / "DESIGN.md"
+
+    expect(readme, r"現在 \*\*(\d+)要素", n, "要素数")
+    expect(readme, r"出典URL (\d+)件\*\*", len(urls), "出典URL数")
+    expect(readme, r"バッジの無い(\d+)件", own, "先行マップに無い件数")
+    expect(readme, r"バッジの無い\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
+
+    layer_names = {
+        "I": "認知と自己", "II": "人とチーム", "III": "流れとものづくり",
+        "IV": "価値と事業", "V": "組織とガバナンス",
+    }
+    for layer, jp in layer_names.items():
+        expect(readme, rf"\| {layer} \| {jp} \|[^|]*\| (\d+) \|", cat[layer], f"{layer}層の件数")
+    expect(readme, r"\| 土台 \| 根っこにある考え方 \|[^|]*\| (\d+) \|", cat["F"], "土台の件数")
+
+    for c in ["C1", "C2", "C3", "C4", "C5"]:
+        expect(readme, rf"{c} (\d+)", cap[c], f"{c} の件数")
+
+    expect(design, r"\| 本マップの要素 \| (\d+)件 \|", n, "要素数")
+    expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*(\d+)件", own, "先行マップに無い件数")
+    expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
+
+    return issues
+
+
 def main():
     check_only = "--check" in sys.argv
     elements = load_elements()
@@ -252,6 +309,10 @@ def main():
             strengths[s["strength"]] = strengths.get(s["strength"], 0) + 1
     print("出典強度の内訳:", ", ".join(f"強度{k}: {v}本" for k, v in sorted(strengths.items(), reverse=True)))
     print("出典URL総数:", sum(len(e["sources"]) for e in elements))
+
+    doc_issues = check_docs_numbers(elements)
+    if doc_issues:
+        problems.extend(doc_issues)
 
     print("=" * 62)
     if problems:

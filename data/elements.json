@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "updated": "2026-09-15",
-  "count": 177,
+  "count": 193,
   "elements": [
     {
       "id": "agile-manifesto",
@@ -287,7 +287,8 @@
       },
       "includes": [
         "因果ループ図",
-        "局所最適の罠"
+        "局所最適の罠",
+        "効果の図（Diagram of Effects）"
       ],
       "sources": [
         {
@@ -295,6 +296,12 @@
           "title": "The Systems Thinker",
           "note": "システム思考の実務的な論考を蓄積している媒体。因果ループとレバレッジポイントの解説を含む",
           "strength": 2
+        },
+        {
+          "url": "https://geraldmweinberg.com/Site/Home.html",
+          "title": "Gerald M. Weinberg（本人サイト）",
+          "note": "『Quality Software Management: Systems Thinking』でシステム思考をソフトウェア開発に持ち込み、因果の連鎖を図示する「効果の図」を示した著者の公式サイト",
+          "strength": 3
         }
       ],
       "crossing": [],
@@ -472,7 +479,9 @@
         "score": 5,
         "why": "AIが個々の作業を速くするほど同時に抱える案件数が増え、切替コストが相対的に最大のボトルネックになる"
       },
-      "includes": [],
+      "includes": [
+        "20%ルール（ワインバーグ）"
+      ],
       "sources": [
         {
           "url": "https://www.apa.org/topics/research/multitasking",
@@ -604,6 +613,12 @@
       },
       "includes": [],
       "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "『ピープルウエア』でフロー状態に入るまでの立ち上がり時間と、中断がそれを毎回ゼロに戻すことを論じた著者本人の所属組織",
+          "strength": 3
+        },
         {
           "url": "https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness",
           "title": "Flow, the secret to happiness（Mihaly Csikszentmihalyi, TED）",
@@ -814,6 +829,73 @@
         "agile-alliance-subway",
         "agile-studio-apm"
       ]
+    },
+    {
+      "id": "quiet-workspace",
+      "name": "中断のない作業環境",
+      "name_en": "Quiet Workspace",
+      "aka": [
+        "コーディング・ウォー・ゲーム",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Coding War Games",
+        "Tom DeMarco"
+      ],
+      "summary": "静かで中断のない環境が、個人の生産性を何倍も左右するという実測にもとづく主張。",
+      "category": "I",
+      "subcategory": "I-1",
+      "affinity": {
+        "I": {
+          "score": 5,
+          "why": "個人の集中が環境条件によって決まるという話"
+        },
+        "II": {
+          "score": 3,
+          "why": "チームで静かな時間帯を守る運用として実践される"
+        },
+        "III": {
+          "score": 2,
+          "why": "生産性の差の説明として持ち出される"
+        },
+        "IV": {
+          "score": 0,
+          "why": "無関係"
+        },
+        "V": {
+          "score": 4,
+          "why": "オフィス設計と会議文化という、組織が金を出す判断に直結する"
+        }
+      },
+      "capabilities": [
+        "C5",
+        "C2"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "通知とAIとの細かい往復で中断が増えるほど、まとまった無中断時間の価値が上がる"
+      },
+      "includes": [
+        "コーディング・ウォー・ゲーム",
+        "環境要因による生産性差"
+      ],
+      "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "『ピープルウエア』の著者本人の所属組織による紹介。数百人規模の実測から職場環境と生産性の関係を示した Coding War Games を含む",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "I",
+      "affinity_gap": 1,
+      "also_in": []
     },
     {
       "id": "cognitive-load-theory",
@@ -1577,6 +1659,145 @@
       "also_in": []
     },
     {
+      "id": "tacit-explicit-knowledge",
+      "name": "暗黙知と形式知",
+      "name_en": "Tacit and Explicit Knowledge",
+      "aka": [
+        "言葉にできない知",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Ikujiro Nonaka"
+      ],
+      "summary": "経験や勘として身体に宿る知（暗黙知）と、書き表して渡せる知（形式知）の区別。",
+      "category": "I",
+      "subcategory": "I-3",
+      "affinity": {
+        "I": {
+          "score": 5,
+          "why": "言葉にならない知は個人の身体と経験に宿るという、知の所在そのものの話"
+        },
+        "II": {
+          "score": 4,
+          "why": "暗黙知は同じ体験を共有することでしか人から人へ渡らない"
+        },
+        "III": {
+          "score": 3,
+          "why": "ドキュメントで渡せる知と、一緒に手を動かさないと渡らない知の線引きになる"
+        },
+        "IV": {
+          "score": 1,
+          "why": "価値の議論とは別軸"
+        },
+        "V": {
+          "score": 4,
+          "why": "組織の知識資産をどう扱うかという経営の問題に直結する"
+        }
+      },
+      "capabilities": [
+        "C5",
+        "C3"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIが扱えるのは形式知であり、言葉になっていない知をどう表に出すかが人に残る仕事になった"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://str.toyokeizai.net/books/9784492522325/",
+          "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+          "note": "暗黙知と形式知の区別を経営学に持ち込み、知識創造のメカニズムを示した原典の出版社ページ",
+          "strength": 3
+        },
+        {
+          "url": "http://nonaka-ik.org/nonaka/books/219.html",
+          "title": "知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）",
+          "note": "著者本人の研究所による書籍紹介",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "II",
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "I",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "phronesis",
+      "name": "フロネシス（実践知）",
+      "name_en": "Phronesis / Practical Wisdom",
+      "aka": [
+        "賢慮",
+        "賢慮型リーダーシップ",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Practical Wisdom",
+        "Ikujiro Nonaka"
+      ],
+      "summary": "個別具体の文脈のただ中で、何が善いかを判断して動ける実践的な知恵。",
+      "category": "I",
+      "subcategory": "I-3",
+      "affinity": {
+        "I": {
+          "score": 5,
+          "why": "個人に宿る判断能力そのもので、マニュアルや手順に外部化できない"
+        },
+        "II": {
+          "score": 4,
+          "why": "共に経験することでしか育たず、チームの中で受け継がれる"
+        },
+        "III": {
+          "score": 2,
+          "why": "プロセスで代替できない部分として現れる"
+        },
+        "IV": {
+          "score": 3,
+          "why": "何を作るべきかという価値判断の土台になる"
+        },
+        "V": {
+          "score": 4,
+          "why": "賢慮型リーダーシップとして、組織を率いる者の資質として論じられる"
+        }
+      },
+      "capabilities": [
+        "C1",
+        "C5"
+      ],
+      "flow": "B2",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIは一般解を即座に出せるが、この状況でいま何をすべきかという個別具体の判断は人に残る"
+      },
+      "includes": [
+        "共通善の判断",
+        "本質を直観する力"
+      ],
+      "sources": [
+        {
+          "url": "https://hbr.org/2011/05/the-big-idea-the-wise-leader",
+          "title": "The Big Idea: The Wise Leader（Ikujiro Nonaka & Hirotaka Takeuchi, HBR 2011）",
+          "note": "知識創造の次の段階として、実践知を備えたリーダーの6つの能力を提示した本人らの論文",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "II",
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "I",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "self-determination-theory",
       "name": "自己決定理論",
       "name_en": "Self-Determination Theory",
@@ -1917,6 +2138,12 @@
           "url": "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
           "title": "Burn-out an occupational phenomenon（WHO）",
           "note": "燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表",
+          "strength": 3
+        },
+        {
+          "url": "https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/",
+          "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）",
+          "note": "燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ",
           "strength": 3
         }
       ],
@@ -2690,6 +2917,133 @@
       "also_in": []
     },
     {
+      "id": "peopleware",
+      "name": "ピープルウエア",
+      "name_en": "Peopleware",
+      "aka": [
+        "問題は技術ではなく人",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Tom DeMarco",
+        "Tim Lister"
+      ],
+      "summary": "開発でうまくいかないことの大半は、技術ではなく人と人の問題だという見方。",
+      "category": "II",
+      "subcategory": "II-2",
+      "affinity": {
+        "I": {
+          "score": 3,
+          "why": "個人の作業環境と動機に踏み込む議論を含む"
+        },
+        "II": {
+          "score": 5,
+          "why": "開発の問題を人とチームの問題として捉え直す視点そのもの"
+        },
+        "III": {
+          "score": 3,
+          "why": "技術的な解決に偏りがちな現場への対案になる"
+        },
+        "IV": {
+          "score": 1,
+          "why": "間接的"
+        },
+        "V": {
+          "score": 4,
+          "why": "管理のあり方そのものへの批判を含む"
+        }
+      },
+      "capabilities": [
+        "C4"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "技術面の制約がAIで下がるほど、残る問題が人と人の側に集中していく"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "開発の主要な問題は技術的ではなく社会学的だと論じた『ピープルウエア』の著者本人の所属組織",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "egoless-programming",
+      "name": "エゴレスプログラミング",
+      "name_en": "Egoless Programming",
+      "aka": [
+        "自我を離れたプログラミング",
+        "ワインバーグ"
+      ],
+      "aka_en": [
+        "Gerald M. Weinberg"
+      ],
+      "summary": "自分の書いたものと自分の価値を切り離し、批評を素材として受け取れるようにする構え。",
+      "category": "II",
+      "subcategory": "II-2",
+      "affinity": {
+        "I": {
+          "score": 4,
+          "why": "自我と成果物を切り離すという、個人の側の構えでもある"
+        },
+        "II": {
+          "score": 5,
+          "why": "他者のレビューが機能するために必要なチームの規範"
+        },
+        "III": {
+          "score": 4,
+          "why": "コードレビューやペアが成立する前提条件になっている"
+        },
+        "IV": {
+          "score": 0,
+          "why": "無関係"
+        },
+        "V": {
+          "score": 2,
+          "why": "個人の成果で評価する制度とは緊張関係にある"
+        }
+      },
+      "capabilities": [
+        "C4",
+        "C3"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIの書いたものを批評し、自分の書いたものを惜しまず捨てる判断が日常になった"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://geraldmweinberg.com/Site/Programming_Psychology.html",
+          "title": "The Psychology of Computer Programming（Gerald M. Weinberg）",
+          "note": "1971年にエゴレスプログラミングの概念を提示した、人間中心のソフトウェア開発論の原典。著者本人のサイト",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "I",
+        "III"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "tuckman-model",
       "name": "タックマンモデル",
       "name_en": "Tuckman's Stages of Group Development",
@@ -2799,6 +3153,12 @@
           "url": "https://scrumguides.org/scrum-guide.html",
           "title": "The Scrum Guide",
           "note": "スクラムチームは自己管理型であり、誰が何をいつどのように行うかを内部で決めると定義",
+          "strength": 3
+        },
+        {
+          "url": "https://hbr.org/1986/01/the-new-new-product-development-game",
+          "title": "The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）",
+          "note": "自己組織化するプロジェクトチームを、優れた新製品開発に共通する6つの特性の一つとして挙げた原典",
           "strength": 3
         }
       ],
@@ -3062,6 +3422,149 @@
         "agile-alliance-subway",
         "agile-studio-apm"
       ]
+    },
+    {
+      "id": "jelled-team",
+      "name": "結束したチーム",
+      "name_en": "Jelled Team",
+      "aka": [
+        "ジェルドチーム",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Tom DeMarco",
+        "Tim Lister"
+      ],
+      "summary": "全体が部分の和を超えた状態のチーム。作ろうとして作れるものではない。",
+      "category": "II",
+      "subcategory": "II-3",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の性質ではない"
+        },
+        "II": {
+          "score": 5,
+          "why": "チームが一体になった状態の定義そのもの"
+        },
+        "III": {
+          "score": 2,
+          "why": "生産性の差として結果に現れる"
+        },
+        "IV": {
+          "score": 0,
+          "why": "無関係"
+        },
+        "V": {
+          "score": 3,
+          "why": "人を入れ替え続ける組織運営とは両立しない"
+        }
+      },
+      "capabilities": [
+        "C4"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "個々の作業がAIに置き換わるほど、チームとして噛み合っているかどうかが残る差になる"
+      },
+      "includes": [
+        "低い離職率",
+        "強い一体感",
+        "仕事の共同所有"
+      ],
+      "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "『ピープルウエア』で jelled team という語を用い、噛み合ったチームの特徴を示した著者本人の所属組織",
+          "strength": 3
+        },
+        {
+          "url": "https://systemsguild.eu/tim-lister",
+          "title": "Tim Lister（The Atlantic Systems Guild）",
+          "note": "『ピープルウエア』『熊とワルツを』の共著者本人の所属組織",
+          "strength": 3
+        }
+      ],
+      "crossing": [],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 2,
+      "also_in": []
+    },
+    {
+      "id": "teamicide",
+      "name": "チーム殺し",
+      "name_en": "Teamicide",
+      "aka": [
+        "チーミサイド",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Tom DeMarco",
+        "Tim Lister"
+      ],
+      "summary": "良かれと思って組織がやることで、チームの結束が壊れていく現象。",
+      "category": "II",
+      "subcategory": "II-3",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "個人へのプレッシャーとして体感される"
+        },
+        "II": {
+          "score": 5,
+          "why": "チームの結束が壊れていく過程そのもの"
+        },
+        "III": {
+          "score": 2,
+          "why": "生産性の低下として現れる"
+        },
+        "IV": {
+          "score": 0,
+          "why": "無関係"
+        },
+        "V": {
+          "score": 5,
+          "why": "防衛的な管理・官僚主義・人の入れ替えなど、原因はほぼ組織の側にある"
+        }
+      },
+      "capabilities": [
+        "C4"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 3,
+        "why": "生産性を数字で示せという圧力が増すほど、防衛的な管理がチームを壊しやすくなる"
+      },
+      "includes": [
+        "防衛的な管理",
+        "官僚主義",
+        "物理的な分断",
+        "時間の細切れ",
+        "品質の切り下げ",
+        "偽の締切"
+      ],
+      "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "『ピープルウエア』で teamicide という語を造り、組織がチームを壊す典型的な振る舞いを列挙した著者本人の所属組織",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [
+        "V"
+      ],
+      "affinity_top": "II",
+      "affinity_gap": 0,
+      "also_in": []
     },
     {
       "id": "facilitation",
@@ -3643,6 +4146,69 @@
       "also_in": []
     },
     {
+      "id": "ba-place",
+      "name": "場（Ba）",
+      "name_en": "Ba (Shared Context)",
+      "aka": [
+        "共有された文脈",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Ikujiro Nonaka"
+      ],
+      "summary": "知が生まれるために共有される文脈。物理的な場所とはかぎらない。",
+      "category": "II",
+      "subcategory": "II-4",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "個人の内側ではなく、人と人のあいだに生じる"
+        },
+        "II": {
+          "score": 5,
+          "why": "人が集まって文脈を共有する関係の場そのもの"
+        },
+        "III": {
+          "score": 2,
+          "why": "イベントやセレモニーを設計する思想的な裏づけになる"
+        },
+        "IV": {
+          "score": 1,
+          "why": "間接的"
+        },
+        "V": {
+          "score": 4,
+          "why": "組織として場をどう用意するかという経営の判断になる"
+        }
+      },
+      "capabilities": [
+        "C4",
+        "C3"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "やりとりが非同期とAI経由に寄るほど、文脈を共有する場を意図して作らないと知が生まれない"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://str.toyokeizai.net/books/9784492522325/",
+          "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+          "note": "知識創造が起きるための共有された文脈として「場」を位置づけた原典の出版社ページ",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "pair-programming",
       "name": "ペアプログラミング",
       "name_en": "Pair Programming",
@@ -4119,6 +4685,12 @@
           "url": "https://www.agilealliance.org/glossary/scrum/",
           "title": "Scrum（Agile Alliance Glossary）",
           "note": "反復で複雑な製品を開発するフレームワークとしての簡潔な定義",
+          "strength": 3
+        },
+        {
+          "url": "https://hbr.org/1986/01/the-new-new-product-development-game",
+          "title": "The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）",
+          "note": "スクラムという名称の由来になったラグビーの比喩を示した論文。フレームワークの直接の源流",
           "strength": 3
         }
       ],
@@ -4748,6 +5320,80 @@
       ]
     },
     {
+      "id": "new-new-product-development",
+      "name": "ラグビー型の開発",
+      "name_en": "The New New Product Development Game",
+      "aka": [
+        "新製品開発のホリスティック・アプローチ",
+        "スクラムの語源",
+        "野中郁次郎",
+        "竹内弘高"
+      ],
+      "aka_en": [
+        "Ikujiro Nonaka",
+        "Hirotaka Takeuchi"
+      ],
+      "summary": "工程を分業でつながず、チームが一体のまま重ねて走る新製品開発の型。スクラムの語源。",
+      "category": "III",
+      "subcategory": "III-1",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の技法ではない"
+        },
+        "II": {
+          "score": 4,
+          "why": "自己組織化するチームを6つの特性の一つとして含む"
+        },
+        "III": {
+          "score": 5,
+          "why": "開発の進め方の型そのもの。スクラムが名前と構造を直接受け継いでいる"
+        },
+        "IV": {
+          "score": 3,
+          "why": "不安定さをあえて組み込んで速く市場に出すという戦略を含む"
+        },
+        "V": {
+          "score": 4,
+          "why": "学習を組織へ移すことを特性の一つに挙げており、組織論でもある"
+        }
+      },
+      "capabilities": [
+        "C2",
+        "C3"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "増幅",
+        "score": 3,
+        "why": "工程を重ねたまま走るという前提が、AIによる並行作業でより現実的になった"
+      },
+      "includes": [
+        "不安定な状態",
+        "自己組織化するチーム",
+        "重なり合う開発フェーズ",
+        "多重学習",
+        "柔らかなコントロール",
+        "学習の組織的移転"
+      ],
+      "sources": [
+        {
+          "url": "https://hbr.org/1986/01/the-new-new-product-development-game",
+          "title": "The New New Product Development Game（Hirotaka Takeuchi & Ikujiro Nonaka, HBR 1986）",
+          "note": "ラグビーのスクラムに喩えて全体一体型の開発を提示した原典。スクラムという名称はここから来ている",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "II",
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "III",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "littles-law",
       "name": "リトルの法則",
       "name_en": "Little's Law",
@@ -5242,6 +5888,74 @@
       "crossing_tied": [],
       "affinity_top": "III",
       "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "organizational-slack",
+      "name": "ゆとり（スラック）",
+      "name_en": "Slack",
+      "aka": [
+        "組織の余白",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Tom DeMarco"
+      ],
+      "summary": "全員が常に忙しい状態では、変化に使える余力が組織に残らないという主張。",
+      "category": "III",
+      "subcategory": "III-2",
+      "affinity": {
+        "I": {
+          "score": 3,
+          "why": "個人が考える余白を持てるかという話でもある"
+        },
+        "II": {
+          "score": 3,
+          "why": "チームに余裕を残すという運用判断になる"
+        },
+        "III": {
+          "score": 5,
+          "why": "稼働率を上げるほど待ち時間が伸びるという、流れの経済そのもの"
+        },
+        "IV": {
+          "score": 3,
+          "why": "変化に対応する能力への投資という見方を含む"
+        },
+        "V": {
+          "score": 5,
+          "why": "効率を最大化しようとする経営への正面からの反論になっている"
+        }
+      },
+      "capabilities": [
+        "C2",
+        "C1"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIで詰め込める作業量が増えるほど、意図して余白を残さないと変化に対応できなくなる"
+      },
+      "includes": [
+        "100%稼働の神話",
+        "忙しさと生産性の混同"
+      ],
+      "sources": [
+        {
+          "url": "https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/",
+          "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）",
+          "note": "完全効率という神話を退け、組織が変化するために必要な余白を論じた書籍の出版社ページ",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [
+        "V"
+      ],
+      "affinity_top": "III",
+      "affinity_gap": 0,
       "also_in": []
     },
     {
@@ -7142,6 +7856,75 @@
       "also_in": []
     },
     {
+      "id": "software-risk-management",
+      "name": "リスクを織り込む計画",
+      "name_en": "Software Risk Management",
+      "aka": [
+        "熊とワルツを",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Waltzing with Bears",
+        "Tom DeMarco",
+        "Tim Lister"
+      ],
+      "summary": "起きうる悪いことを事前に挙げ、確率と影響を見積もって計画に織り込むこと。",
+      "category": "III",
+      "subcategory": "III-5",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "楽観に傾く認知の偏りへの対処という側面がある"
+        },
+        "II": {
+          "score": 2,
+          "why": "悪い見通しを口に出せる空気が前提になる"
+        },
+        "III": {
+          "score": 5,
+          "why": "計画と見積りに不確実性を織り込む実務そのもの"
+        },
+        "IV": {
+          "score": 4,
+          "why": "リスクを取らないこと自体のリスクという投資判断を含む"
+        },
+        "V": {
+          "score": 4,
+          "why": "悪い知らせが上に届く組織かどうかが成否を分ける"
+        }
+      },
+      "capabilities": [
+        "C1"
+      ],
+      "flow": "B2",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "見通しは立てやすくなったが、外れたときに何が起きるかを見積もる作業の重みは変わらない"
+      },
+      "includes": [
+        "リスク図",
+        "未確定要素の可視化",
+        "リスク発現時の対応計画"
+      ],
+      "sources": [
+        {
+          "url": "https://systemsguild.eu/tom-demarco",
+          "title": "Tom DeMarco（The Atlantic Systems Guild）",
+          "note": "『熊とワルツを』でソフトウェアプロジェクトの代表的リスク（スケジュール欠陥・要求の膨張・離職・仕様の崩壊・性能未達）と管理法を示した著者本人の所属組織",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "IV",
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "III",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "continuous-discovery",
       "name": "継続的ディスカバリー",
       "name_en": "Continuous Discovery",
@@ -8916,6 +9699,68 @@
       ],
       "crossing": [
         "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "IV",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "quality-is-value",
+      "name": "品質とは誰かにとっての価値",
+      "name_en": "Quality is Value to Some Person",
+      "aka": [
+        "品質の定義",
+        "ワインバーグ"
+      ],
+      "aka_en": [
+        "Gerald M. Weinberg"
+      ],
+      "summary": "品質は絶対的な性質ではなく、誰にとっての価値かを問わないと決まらないという定義。",
+      "category": "IV",
+      "subcategory": "IV-4",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "自分の価値判断が主観であることの自覚を求める"
+        },
+        "II": {
+          "score": 3,
+          "why": "誰のための品質かをチームで合意する必要が出てくる"
+        },
+        "III": {
+          "score": 4,
+          "why": "完成の定義や品質基準を決めるときの土台になる"
+        },
+        "IV": {
+          "score": 5,
+          "why": "価値を誰の視点で測るのかという問いそのもの"
+        },
+        "V": {
+          "score": 3,
+          "why": "品質基準を誰が決めるのかという権限の問題になる"
+        }
+      },
+      "capabilities": [
+        "C1"
+      ],
+      "flow": "B2",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIは基準を与えれば満たせるが、誰にとっての価値かを決める部分は人に残る"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://geraldmweinberg.com/Site/Home.html",
+          "title": "Gerald M. Weinberg（本人サイト）",
+          "note": "『Quality Software Management: Systems Thinking』で品質を「誰かにとっての価値」と定義した著者の公式サイト",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "III"
       ],
       "crossing_tied": [],
       "affinity_top": "IV",
@@ -10897,6 +11742,211 @@
       "also_in": []
     },
     {
+      "id": "seci-model",
+      "name": "SECIモデル",
+      "name_en": "SECI Model",
+      "aka": [
+        "共同化・表出化・連結化・内面化",
+        "知識創造の螺旋",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Socialization, Externalization, Combination, Internalization",
+        "Ikujiro Nonaka"
+      ],
+      "summary": "暗黙知と形式知が4つの変換を回ることで、組織の知が生まれ育つという理論。",
+      "category": "V",
+      "subcategory": "V-4",
+      "affinity": {
+        "I": {
+          "score": 3,
+          "why": "内面化は個人の中で起きる"
+        },
+        "II": {
+          "score": 4,
+          "why": "共同化は人と人が同じ体験を共有することで起きる"
+        },
+        "III": {
+          "score": 2,
+          "why": "開発プロセスとは別軸"
+        },
+        "IV": {
+          "score": 2,
+          "why": "新しい価値が生まれる源泉として語られる"
+        },
+        "V": {
+          "score": 5,
+          "why": "組織が知を生み出す仕組みを説明した理論そのもの"
+        }
+      },
+      "capabilities": [
+        "C3",
+        "C4"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "形式知どうしを組み合わせる連結化はAIが最も得意な一方、共同化と表出化は人の体験に依存したまま残る"
+      },
+      "includes": [
+        "共同化",
+        "表出化",
+        "連結化",
+        "内面化",
+        "知識創造の螺旋"
+      ],
+      "sources": [
+        {
+          "url": "https://str.toyokeizai.net/books/9784492522325/",
+          "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+          "note": "SECIモデルを提示し、日本企業のイノベーションの仕組みを知識創造として説明した原典の出版社ページ",
+          "strength": 3
+        },
+        {
+          "url": "http://nonaka-ik.org/nonaka/books/219.html",
+          "title": "知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）",
+          "note": "著者本人の研究所による書籍紹介",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "II"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "V",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "middle-up-down",
+      "name": "ミドル・アップダウン",
+      "name_en": "Middle-Up-Down Management",
+      "aka": [
+        "中間管理職が知を繋ぐ",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Ikujiro Nonaka"
+      ],
+      "summary": "中間管理職が経営の理想と現場の現実を結び、知を生み出す担い手になるという型。",
+      "category": "V",
+      "subcategory": "V-4",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の技法ではない"
+        },
+        "II": {
+          "score": 3,
+          "why": "チームと経営のあいだの橋渡しとして現れる"
+        },
+        "III": {
+          "score": 1,
+          "why": "開発プロセスとは別軸"
+        },
+        "IV": {
+          "score": 2,
+          "why": "戦略を具体的な施策に落とす役割を含む"
+        },
+        "V": {
+          "score": 5,
+          "why": "トップダウンでもボトムアップでもない組織マネジメント様式の定義そのもの"
+        }
+      },
+      "capabilities": [
+        "C4",
+        "C1"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "情報の伝達はAIで代替できるが、理想と現実の矛盾を引き受けて翻訳する役割は人に残る"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://str.toyokeizai.net/books/9784492522325/",
+          "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+          "note": "トップダウンでもボトムアップでもない第三のマネジメント様式としてミドル・アップダウンを提示した原典",
+          "strength": 3
+        }
+      ],
+      "crossing": [],
+      "crossing_tied": [],
+      "affinity_top": "V",
+      "affinity_gap": 2,
+      "also_in": []
+    },
+    {
+      "id": "essence-of-failure",
+      "name": "失敗の本質",
+      "name_en": "The Essence of Failure",
+      "aka": [
+        "日本軍の組織論的研究",
+        "野中郁次郎"
+      ],
+      "aka_en": [
+        "Ikujiro Nonaka"
+      ],
+      "summary": "日本軍の敗北を組織論で分析し、日本型組織が同じ失敗を繰り返す構造を示した研究。",
+      "category": "V",
+      "subcategory": "V-4",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の資質の問題としては扱わない"
+        },
+        "II": {
+          "score": 2,
+          "why": "現場の空気として現れる部分がある"
+        },
+        "III": {
+          "score": 2,
+          "why": "計画と現実の乖離がなぜ放置されるかの説明になる"
+        },
+        "IV": {
+          "score": 2,
+          "why": "目的が曖昧なまま資源を投じる構造を扱う"
+        },
+        "V": {
+          "score": 5,
+          "why": "組織が学習できなくなる構造を分析した組織論そのもの"
+        }
+      },
+      "capabilities": [
+        "C3",
+        "C1"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 3,
+        "why": "新しい道具を入れても、目的が曖昧で学習しない組織の構造はそのまま残る"
+      },
+      "includes": [
+        "戦略の曖昧さ",
+        "空気の支配",
+        "学習の欠如",
+        "人的ネットワーク偏重",
+        "結果よりも動機を重視する評価"
+      ],
+      "sources": [
+        {
+          "url": "https://www.chuko.co.jp/special/shippaino-honshitsu/",
+          "title": "『失敗の本質 ― 日本軍の組織論的研究』特設サイト（中央公論新社）",
+          "note": "戸部良一・寺本義也・鎌田伸一・杉之尾孝生・村井友秀・野中郁次郎による共著。日本型組織の失敗の構造を6つの作戦から分析した研究書の出版社特設ページ",
+          "strength": 3
+        }
+      ],
+      "crossing": [],
+      "crossing_tied": [],
+      "affinity_top": "V",
+      "affinity_gap": 3,
+      "also_in": []
+    },
+    {
       "id": "dora-metrics",
       "name": "DORAの4つの指標",
       "name_en": "DORA Four Keys",
@@ -11281,6 +12331,72 @@
       "also_in": [
         "agile-alliance-subway"
       ]
+    },
+    {
+      "id": "limits-of-measurement",
+      "name": "計測の限界",
+      "name_en": "Limits of Measurement",
+      "aka": [
+        "測れないものは管理できないの再考",
+        "デマルコ"
+      ],
+      "aka_en": [
+        "Tom DeMarco"
+      ],
+      "summary": "測れないものは管理できないという通説を、言い出した本人が後に否定した論点。",
+      "category": "V",
+      "subcategory": "V-5",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "数字で自分の仕事を証明しようとする心理に関わる"
+        },
+        "II": {
+          "score": 2,
+          "why": "チームを数字で比べることの弊害として現れる"
+        },
+        "III": {
+          "score": 3,
+          "why": "生産性指標をどう扱うかに直結する"
+        },
+        "IV": {
+          "score": 4,
+          "why": "アウトカムをどこまで数字にできるのかという問いを含む"
+        },
+        "V": {
+          "score": 5,
+          "why": "組織として何を測り何で統制するかという、ガバナンスの前提そのものへの問い直し"
+        }
+      },
+      "capabilities": [
+        "C1",
+        "C3"
+      ],
+      "flow": "B4",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 5,
+        "why": "AIで作業量の指標が意味を失い、何を測るべきかの問い直しが避けられなくなった"
+      },
+      "includes": [
+        "制御の幻想",
+        "プロジェクトの価値と厳密な管理の関係"
+      ],
+      "sources": [
+        {
+          "url": "https://www.computer.org/csdl/magazine/so/2009/04/mso2009040096/13rRUxYIN5T",
+          "title": "Software Engineering: An Idea Whose Time Has Come and Gone?（Tom DeMarco, IEEE Software 2009）",
+          "note": "自著の「測れないものは管理できない」を本人が撤回し、厳密な管理が効くのは価値の低いプロジェクトだけだと述べた論考",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "IV"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "V",
+      "affinity_gap": 1,
+      "also_in": []
     }
   ]
 }

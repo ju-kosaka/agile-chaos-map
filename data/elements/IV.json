@@ -1574,6 +1574,61 @@
     ]
   },
   {
+    "id": "quality-is-value",
+    "name": "品質とは誰かにとっての価値",
+    "name_en": "Quality is Value to Some Person",
+    "aka": [
+      "品質の定義",
+      "ワインバーグ"
+    ],
+    "aka_en": [
+      "Gerald M. Weinberg"
+    ],
+    "summary": "品質は絶対的な性質ではなく、誰にとっての価値かを問わないと決まらないという定義。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "自分の価値判断が主観であることの自覚を求める"
+      },
+      "II": {
+        "score": 3,
+        "why": "誰のための品質かをチームで合意する必要が出てくる"
+      },
+      "III": {
+        "score": 4,
+        "why": "完成の定義や品質基準を決めるときの土台になる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "価値を誰の視点で測るのかという問いそのもの"
+      },
+      "V": {
+        "score": 3,
+        "why": "品質基準を誰が決めるのかという権限の問題になる"
+      }
+    },
+    "capabilities": [
+      "C1"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIは基準を与えれば満たせるが、誰にとっての価値かを決める部分は人に残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://geraldmweinberg.com/Site/Home.html",
+        "title": "Gerald M. Weinberg（本人サイト）",
+        "note": "『Quality Software Management: Systems Thinking』で品質を「誰かにとっての価値」と定義した著者の公式サイト",
+        "strength": 3
+      }
+    ]
+  },
+  {
     "id": "user-story",
     "name": "ユーザーストーリー",
     "name_en": "User Story",

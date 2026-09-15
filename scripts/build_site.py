@@ -371,7 +371,7 @@ footer a { color: var(--ink-soft); }
       <span class="label">先行マップ</span>
     </div>
     <div class="group">
-      <input type="search" id="q" placeholder="要素名で絞り込む" aria-label="要素名で絞り込む">
+      <input type="search" id="q" placeholder="名前・人名・出典で絞り込む" aria-label="名前・人名・出典で絞り込む">
       <span class="count" id="count"></span>
     </div>
   </div>
@@ -640,7 +640,9 @@ function visible(e) {
   if (inPrior && !state.prior.has('in')) return false;
   if (!inPrior && !state.prior.has('out')) return false;
   if (state.q) {
-    const hay = [e.name, e.name_en, ...(e.aka || []), ...(e.aka_en || []), e.summary]
+    const hay = [e.name, e.name_en, ...(e.aka || []), ...(e.aka_en || []), e.summary,
+                 ...(e.includes || []),
+                 ...(e.sources || []).map(s => (s.title || '') + ' ' + (s.note || ''))]
       .join(' ').toLowerCase();
     if (!hay.includes(state.q)) return false;
   }

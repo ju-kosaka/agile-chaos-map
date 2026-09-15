@@ -2,15 +2,15 @@
 
 生成物です。`scripts/build_sources.py` が `data/elements.json` と `data/research_refs.json` から生成します。**手で編集しないでください。**
 
-- 要素数: **177件**
-- 要素の出典として参照しているURL: **167件**（延べ 211本）
+- 要素数: **193件**
+- 要素の出典として参照しているURL: **178件**（延べ 235本）
 - 設計に使った参照URL: **17件**
 
 ## 出典強度の見方
 
 | 強度 | 意味 | 本数 |
 |---|---|---|
-| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 140件 |
+| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 151件 |
 | 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 26件 |
 | 1（解説のみ） | 一般の解説記事のみ。次フェーズで一次ソースを探し直す対象 | 1件 |
 
@@ -34,23 +34,26 @@
 | スクラムの価値基準 | [The Scrum Guide](https://scrumguides.org/scrum-guide.html) | 3 | 5つの価値基準をスクラムの成功条件として明記している公式定義 |
 | 経験主義 | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | スクラムは経験主義とリーン思考に立脚し、透明性・検査・適応の3本柱を持つと規定 |
 | システム思考 | [The Systems Thinker](https://thesystemsthinker.com/) | 2 | システム思考の実務的な論考を蓄積している媒体。因果ループとレバレッジポイントの解説を含む |
+| 〃 | [Gerald M. Weinberg（本人サイト）](https://geraldmweinberg.com/Site/Home.html) | 3 | 『Quality Software Management: Systems Thinking』でシステム思考をソフトウェア開発に持ち込み、因果の連鎖を図示する「効果の図」を示した著者の公式サイト |
 | 複雑適応系 | [About the Cynefin Framework（The Cynefin Company）](https://thecynefin.co/about-us/about-cynefin-framework/) | 3 | 複雑な領域では原因と結果が事後にしか分からず、探索・感知・対応の順で動くべきという整理 |
 | フィードバックループ | [The DevOps Handbook（IT Revolution）](https://itrevolution.com/product/the-devops-handbook-second-edition/) | 2 | フロー・フィードバック・継続的学習という三つの道のうち、第二の道としてフィードバックを位置づける |
 | 〃 | [アジャイル宣言の背後にある原則](https://agilemanifesto.org/iso/ja/principles.html)（再掲） | 3 | 動くソフトウェアを短い間隔で提供し、定期的に振り返るという原則がループの短縮を求めている |
 
-### I. 認知と自己（24要素）
+### I. 認知と自己（27要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
 | コンテキストスイッチ | [Multitasking: Switching costs（American Psychological Association）](https://www.apa.org/topics/research/multitasking) | 2 | Rubinstein・Meyer・Evans の実験を引いて、切替には「目標の切替」と「ルールの再活性化」の2段階があり時間を失うと説明する心理学会の解説 |
 | 〃 | [The Financial Cost of Task Switching（Scrum.org）](https://www.scrum.org/resources/blog/financial-cost-task-switching) | 2 | Weinberg の見積り（2案件並行で各40%、20%が切替で消える）を金額換算した記事。工学的な経験則であり実験結果ではない点も明記されている |
 | シングルタスク（WIP=1） | [Kanban（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/kanban/) | 3 | 仕掛り作業（WIP）を制限して流れを作るカンバンの定義。WIP=1はこの制限を最小にした形 |
-| フロー状態 | [Flow, the secret to happiness（Mihaly Csikszentmihalyi, TED）](https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness) | 3 | フロー概念の提唱者本人による講演。挑戦の難度と技能が釣り合ったときに没入が生じるという説明 |
+| フロー状態 | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco) | 3 | 『ピープルウエア』でフロー状態に入るまでの立ち上がり時間と、中断がそれを毎回ゼロに戻すことを論じた著者本人の所属組織 |
+| 〃 | [Flow, the secret to happiness（Mihaly Csikszentmihalyi, TED）](https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness) | 3 | フロー概念の提唱者本人による講演。挑戦の難度と技能が釣り合ったときに没入が生じるという説明 |
 | 〃 | [Sustainable Pace（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/sustainable-pace/) | 3 | 長時間労働ではなく持続できる速度で働くというXPの原則。没入できる状態を守る前提条件として関係する |
 | メイカーのスケジュール | [Maker's Schedule, Manager's Schedule（Paul Graham）](https://www.paulgraham.com/makersschedule.html) | 3 | 1本の会議が午後を丸ごと壊すという、作る人と管理する人の時間感覚の違いを説明した原典エッセイ |
 | ディープワーク | [Deep Work（Cal Newport）](https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/) | 3 | 著者本人による書籍紹介ページ。深い仕事と浅い仕事の区別と、深い仕事の希少価値を説く |
 | 持続可能なペース | [Sustainable Pace（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/sustainable-pace/)（再掲） | 3 | 無期限に維持できる速度で働くというXP由来のプラクティスの定義 |
 | 〃 | [アジャイル宣言の背後にある原則](https://agilemanifesto.org/iso/ja/principles.html)（再掲） | 3 | 第8原則が一定のペースを継続的に維持できることを求めている（日本語公式） |
+| 中断のない作業環境 | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』の著者本人の所属組織による紹介。数百人規模の実測から職場環境と生産性の関係を示した Coding War Games を含む |
 | 認知負荷理論 | [Key Concepts（Team Topologies）](https://teamtopologies.com/key-concepts) | 3 | 認知負荷の3分類をチームの責任範囲設計に持ち込んだ公式解説 |
 | 〃 | [Minimize Team Cognitive Load to Increase Flow（IT Revolution）](https://itrevolution.com/articles/minimize-cognitive-load-of-teams/) | 2 | チームの認知負荷を下げることが流れを速くするという、Skelton・Pais による解説記事 |
 | ワーキングメモリの限界 | [The Magical Number Seven, Plus or Minus Two（George A. Miller, 1956）](https://psychclassics.yorku.ca/Miller/) | 3 | 情報処理の限界を7±2と定式化した古典論文の全文（Classics in the History of Psychology） |
@@ -64,14 +67,18 @@
 | アンラーニング | [Teaching Smart People How to Learn（Chris Argyris, HBR）](https://hbr.org/1991/05/teaching-smart-people-how-to-learn)（再掲） | 2 | 成功してきた人ほど防衛的になり学び直せないという、アンラーニングの難しさの理論的背景 |
 | 成長マインドセット | [What Having a Growth Mindset Actually Means（Carol Dweck, HBR）](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means) | 3 | 提唱者本人が、努力を褒めるだけの誤用を正した記事 |
 | 変革のJカーブ | [The Satir Change Model（Steven M. Smith）](https://stevenmsmith.com/ar-satir-change-model/) | 2 | 変化がもたらす混乱期（カオス）を経て新しい状態に至る5段階モデルの解説 |
+| 暗黙知と形式知 | [知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）](https://str.toyokeizai.net/books/9784492522325/) | 3 | 暗黙知と形式知の区別を経営学に持ち込み、知識創造のメカニズムを示した原典の出版社ページ |
+| 〃 | [知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）](http://nonaka-ik.org/nonaka/books/219.html) | 3 | 著者本人の研究所による書籍紹介 |
+| フロネシス（実践知） | [The Big Idea: The Wise Leader（Ikujiro Nonaka & Hirotaka Takeuchi, HBR 2011）](https://hbr.org/2011/05/the-big-idea-the-wise-leader) | 3 | 知識創造の次の段階として、実践知を備えたリーダーの6つの能力を提示した本人らの論文 |
 | 自己決定理論 | [Theory（Center for Self-Determination Theory）](https://selfdeterminationtheory.org/theory/) | 3 | Deci と Ryan による理論の公式サイト。基本的心理欲求としての自律性・有能感・関係性を定義 |
 | モチベーション3.0 | [The puzzle of motivation（Dan Pink, TED）](https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation) | 2 | 外的報酬が創造的作業ではむしろ成績を下げるという実験群を紹介した講演 |
 | 内発的動機づけ | [Theory（Center for Self-Determination Theory）](https://selfdeterminationtheory.org/theory/)（再掲） | 3 | 内発的動機と外発的動機の連続体、外的報酬による内発的動機の低下を扱う理論の公式解説 |
 | ジョブ・クラフティング | [Job Crafting Exercise（University of Michigan, Center for Positive Organizations）](https://positiveorgs.bus.umich.edu/cpo-tools/job-crafting-exercise/) | 3 | Wrzesniewski・Dutton・Berg が開発した、仕事の時間と関係を描き直す演習の公式ページ |
 | 自己効力感 | [Teaching Tip Sheet: Self-Efficacy（American Psychological Association）](https://www.apa.org/pi/aids/resources/education/self-efficacy) | 2 | Bandura の自己効力感の定義と、それを高める4つの源泉を整理した心理学会の解説 |
 | 燃え尽き（バーンアウト） | [Burn-out an occupational phenomenon（WHO）](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) | 3 | 燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表 |
+| 〃 | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/) | 3 | 燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ |
 
-### II. 人とチーム（33要素）
+### II. 人とチーム（38要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -89,12 +96,18 @@
 | 健全な衝突 | [The Five Dysfunctions of a Team（The Table Group）](https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/)（再掲） | 2 | 衝突への恐怖を第2の機能不全として位置づけ、健全な対立の必要性を説く |
 | ワーキングアグリーメント | [アジャイルプラクティスマップ（Agile Studio）](https://www.agile-studio.jp/agile-practice-map) | 2 | スクラム（補完）路線の駅としてワーキングアグリーメントを収録している日本語のプラクティスマップ |
 | 信頼の構築 | [Understanding The Trust Equation（Trusted Advisor Associates）](https://trustedadvisor.com/why-trust-matters/understanding-trust/understanding-the-trust-equation) | 2 | 信頼＝(信頼性＋確実性＋親密さ)÷自己志向 という分解を提示した公式解説 |
+| ピープルウエア | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 開発の主要な問題は技術的ではなく社会学的だと論じた『ピープルウエア』の著者本人の所属組織 |
+| エゴレスプログラミング | [The Psychology of Computer Programming（Gerald M. Weinberg）](https://geraldmweinberg.com/Site/Programming_Psychology.html) | 3 | 1971年にエゴレスプログラミングの概念を提示した、人間中心のソフトウェア開発論の原典。著者本人のサイト |
 | タックマンモデル | [Developmental sequence in small groups（Bruce W. Tuckman, 1965）](https://psycnet.apa.org/record/1965-12187-001) | 3 | 形成・混乱・統一・機能の4段階を初めて提示した原論文の書誌（APA PsycNet） |
 | 自己管理型チーム | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | スクラムチームは自己管理型であり、誰が何をいつどのように行うかを内部で決めると定義 |
+| 〃 | [The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）](https://hbr.org/1986/01/the-new-new-product-development-game) | 3 | 自己組織化するプロジェクトチームを、優れた新製品開発に共通する6つの特性の一つとして挙げた原典 |
 | インセプションデッキ | [アジャイルプラクティスマップ（Agile Studio）](https://www.agile-studio.jp/agile-practice-map)（再掲） | 2 | 価値探索路線の駅としてインセプションデッキを収録 |
 | サーバントリーダーシップ | [What is Servant Leadership?（Robert K. Greenleaf Center）](https://www.greenleaf.org/what-is-servant-leadership/) | 3 | 提唱者 Greenleaf の名を冠したセンターによる公式定義 |
 | スキルマップ | [アジャイルプラクティスマップ（Agile Studio）](https://www.agile-studio.jp/agile-practice-map)（再掲） | 2 | チームビルディング路線の駅としてスキルマップを収録 |
 | 幸福指標 | [Niko-niko Calendar（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/niko-niko/) | 3 | 1日の終わりに気分を記号で記録し、チームの傾向を可視化する日本発のプラクティス |
+| 結束したチーム | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』で jelled team という語を用い、噛み合ったチームの特徴を示した著者本人の所属組織 |
+| 〃 | [Tim Lister（The Atlantic Systems Guild）](https://systemsguild.eu/tim-lister) | 3 | 『ピープルウエア』『熊とワルツを』の共著者本人の所属組織 |
+| チーム殺し | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』で teamicide という語を造り、組織がチームを壊す典型的な振る舞いを列挙した著者本人の所属組織 |
 | ファシリテーション | [Facilitation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/facilitation/) | 3 | 議論の内容ではなくプロセスに責任を持つ役割としてのファシリテーションの定義 |
 | コーチング | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/) | 3 | 国際コーチング連盟が定める職業としてのコーチングの中核能力 |
 | 傾聴 | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/)（再掲） | 3 | アクティブリスニングを職業コーチの中核能力の一つとして定義している |
@@ -105,6 +118,7 @@
 | 〃 | [ふりかえり実践会](https://hurikaeri.jp/) | 2 | 日本語で手法とTIPSを体系的に公開しているコミュニティ。手法カタログの一次入口 |
 | 発散と収束 | [The Double Diamond（Design Council）](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) | 3 | 発見・定義・開発・提供の4段階を2つのダイヤモンドで表した枠組みの公式解説 |
 | 合意形成の作法 | [Consent Decision Making（Sociocracy For All）](https://www.sociocracyforall.org/consent-decision-making/) | 2 | 全員の積極的賛成ではなく、重大な反対の不在で決めるという手続きの解説 |
+| 場（Ba） | [知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）](https://str.toyokeizai.net/books/9784492522325/)（再掲） | 3 | 知識創造が起きるための共有された文脈として「場」を位置づけた原典の出版社ページ |
 | ペアプログラミング | [Pair Programming（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/pair-programming/) | 3 | 2人が1台で協働し、役割を交代しながら進めるXPのプラクティスの定義 |
 | 〃 | [On Pair Programming（Martin Fowler）](https://martinfowler.com/articles/on-pair-programming.html) | 3 | ペアの型・効用・向かない状況を整理した実務的な解説 |
 | モブプログラミング | [Mob Programming（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/mob-programming/) | 3 | チーム全員が同じ課題に同じ時間・場所で取り組む進め方の定義 |
@@ -114,12 +128,13 @@
 | 分散チーム | [The Remote Playbook（GitLab Handbook）](https://about.gitlab.com/company/culture/all-remote/guide/) | 3 | 全社リモートの運用を体系的に公開している一次資料 |
 | 〃 | [Team Room（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/team-room/) | 3 | 同席を前提としたチームルームの定義。分散チームではこの機能を別手段で置き換える必要がある |
 
-### III. 流れとものづくり（47要素）
+### III. 流れとものづくり（50要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
 | スクラム | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | Schwaber と Sutherland による公式の定義。スクラムの目的・責任・イベント・作成物・コミットメントを規定 |
 | 〃 | [Scrum（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/scrum/) | 3 | 反復で複雑な製品を開発するフレームワークとしての簡潔な定義 |
+| 〃 | [The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）](https://hbr.org/1986/01/the-new-new-product-development-game)（再掲） | 3 | スクラムという名称の由来になったラグビーの比喩を示した論文。フレームワークの直接の源流 |
 | スプリント（タイムボックス） | [Timebox（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/timebox/) | 3 | あらかじめ決めた時間枠を延長しないという規律の定義 |
 | 〃 | [Iteration（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/iteration/) | 3 | 一定期間ごとに動くものを作る反復の単位 |
 | デイリースクラム | [Daily Meeting（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/daily-meeting/) | 3 | 毎日同じ時刻に短時間で行う同期のためのミーティングの定義 |
@@ -134,6 +149,7 @@
 | 準備完了の定義 | [Definition of Ready（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/definition-of-ready/) | 3 | 着手可能とみなす条件の定義。硬直化すると段階的なゲートに戻る危険も指摘されている |
 | 反復型・漸進型開発 | [Iterative Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/iterative-development/) | 3 | 同じ部分を繰り返し作り直して改善する進め方の定義 |
 | 〃 | [Incremental Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/incremental-development/) | 3 | 機能を小さな単位で積み増していく進め方の定義 |
+| ラグビー型の開発 | [The New New Product Development Game（Hirotaka Takeuchi & Ikujiro Nonaka, HBR 1986）](https://hbr.org/1986/01/the-new-new-product-development-game)（再掲） | 3 | ラグビーのスクラムに喩えて全体一体型の開発を提示した原典。スクラムという名称はここから来ている |
 | リトルの法則 | [The Official Kanban Guide（Kanban University）](https://kanban.university/kanban-guide/)（再掲） | 3 | フローの計測指標（WIP・スループット・リードタイム）とその関係を定義 |
 | WIP制限 | [The Official Kanban Guide（Kanban University）](https://kanban.university/kanban-guide/)（再掲） | 3 | WIPを明示的に制限することをカンバンの必須実践として定義 |
 | リードタイムとサイクルタイム | [Lead Time（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/lead-time/) | 3 | 要求が発生してから提供されるまでの経過時間の定義 |
@@ -143,6 +159,7 @@
 | フロー効率とリソース効率 | [This is Lean（Niklas Modig & Pär Åhlström）](https://thisislean.com/) | 3 | リソース効率とフロー効率の対立（効率性のパラドックス）を提示した書籍の公式サイト |
 | 制約理論 | [Theory of Constraints（TOC Institute）](https://www.tocinstitute.org/theory-of-constraints.html) | 2 | Goldratt の制約理論と、制約を特定し従属させる5段階の解説 |
 | 待ち行列の効果 | [Work in process limits（DORA）](https://dora.dev/capabilities/wip-limits/) | 3 | 仕掛りを制限することがデリバリー性能を高めるという調査結果。待ち行列が伸びる仕組みへの実務的な対処 |
+| ゆとり（スラック） | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/)（再掲） | 3 | 完全効率という神話を退け、組織が変化するために必要な余白を論じた書籍の出版社ページ |
 | テスト駆動開発 | [Test Driven Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/tdd/) | 3 | テストを先に書いて設計を駆動する開発サイクルの定義 |
 | 〃 | [TestDrivenDevelopment（Martin Fowler）](https://martinfowler.com/bliki/TestDrivenDevelopment.html) | 3 | TDDの3ステップと、設計技法としての位置づけの解説 |
 | リファクタリング | [Refactoring（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/refactoring/) | 3 | 外部から見た振る舞いを保ったまま内部構造を改善する作業の定義 |
@@ -182,8 +199,9 @@
 | クネビン・フレームワーク | [About the Cynefin Framework（The Cynefin Company）](https://thecynefin.co/about-us/about-cynefin-framework/)（再掲） | 3 | Dave Snowden が創設した組織による公式解説。5つのドメインと対応する行動様式 |
 | スパイク | [Estimation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/estimation/) | 2 | 見積りの不確実性を減らすための調査作業としてスパイクが位置づけられる文脈 |
 | 不確実性のコーン | [Estimation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/estimation/)（再掲） | 2 | 見積りの不確実性が進行とともに縮小することを含む、見積りの位置づけの解説 |
+| リスクを織り込む計画 | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『熊とワルツを』でソフトウェアプロジェクトの代表的リスク（スケジュール欠陥・要求の膨張・離職・仕様の崩壊・性能未達）と管理法を示した著者本人の所属組織 |
 
-### IV. 価値と事業（36要素）
+### IV. 価値と事業（37要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -217,6 +235,7 @@
 | North Star指標 | [North Star Metric（Amplitude）](https://amplitude.com/blog/product-north-star-metric) | 2 | プロダクトの価値を代表する単一指標の選び方と、入力指標との関係の解説 |
 | ビルドトラップ | [Escaping the Build Trap（Melissa Perri, Mind the Product）](https://www.mindtheproduct.com/escaping-build-trap-melissa-perri/) | 3 | 提唱者本人の講演を収録した記事。価値を機能の産出量で測ることが組織を罠に閉じ込めると説明 |
 | 虚栄の指標 | [The Lean Startup Methodology](https://theleanstartup.com/principles)（再掲） | 2 | イノベーション会計の文脈で、行動につながらない指標を退ける考え方を提示 |
+| 品質とは誰かにとっての価値 | [Gerald M. Weinberg（本人サイト）](https://geraldmweinberg.com/Site/Home.html)（再掲） | 3 | 『Quality Software Management: Systems Thinking』で品質を「誰かにとっての価値」と定義した著者の公式サイト |
 | ユーザーストーリー | [User Stories（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/user-stories/) | 3 | 利用者にとっての価値を短く記述し、詳細は会話で詰めるという要求形式の定義 |
 | 3つのC | [The Three C's（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/three-cs/) | 3 | Ron Jeffries によるカード・会話・確認の3要素の定義 |
 | INVEST | [INVEST（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/invest/) | 3 | Bill Wake による、良いユーザーストーリーの6つの性質の定義 |
@@ -227,7 +246,7 @@
 | プロダクトバックログ | [Product Backlog（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/backlog/) | 3 | プロダクトに必要な作業を優先順位づけて並べた一覧の定義 |
 | 〃 | [Backlog Refinement（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/backlog-refinement/) | 3 | バックログ項目を継続的に分割・見直し・詳細化する活動の定義 |
 
-### V. 組織とガバナンス（30要素）
+### V. 組織とガバナンス（34要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -258,6 +277,10 @@
 | 成功の循環モデル | [What is Your Organization's Core Theory of Success?（The Systems Thinker）](https://thesystemsthinker.com/what-is-your-organizations-core-theory-of-success/) | 3 | MIT組織学習センター共同創設者 Daniel Kim による、関係・思考・行動・結果が強化ループをなすモデルの解説 |
 | 学習する組織 | [The Systems Thinker](https://thesystemsthinker.com/)（再掲） | 2 | Peter Senge らの系譜にあるシステム思考と学習する組織の論考を集めた媒体 |
 | Westrumの組織文化類型 | [Generative organizational culture（DORA）](https://dora.dev/capabilities/generative-organizational-culture/)（再掲） | 3 | Westrum の3類型と、創造的（generative）な文化がデリバリー性能と組織成果に効くという調査結果。DORAでは現在この名称で扱われている |
+| SECIモデル | [知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）](https://str.toyokeizai.net/books/9784492522325/)（再掲） | 3 | SECIモデルを提示し、日本企業のイノベーションの仕組みを知識創造として説明した原典の出版社ページ |
+| 〃 | [知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）](http://nonaka-ik.org/nonaka/books/219.html)（再掲） | 3 | 著者本人の研究所による書籍紹介 |
+| ミドル・アップダウン | [知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）](https://str.toyokeizai.net/books/9784492522325/)（再掲） | 3 | トップダウンでもボトムアップでもない第三のマネジメント様式としてミドル・アップダウンを提示した原典 |
+| 失敗の本質 | [『失敗の本質 ― 日本軍の組織論的研究』特設サイト（中央公論新社）](https://www.chuko.co.jp/special/shippaino-honshitsu/) | 3 | 戸部良一・寺本義也・鎌田伸一・杉之尾孝生・村井友秀・野中郁次郎による共著。日本型組織の失敗の構造を6つの作戦から分析した研究書の出版社特設ページ |
 | DORAの4つの指標 | [DORA's software delivery metrics: the four keys](https://dora.dev/guides/dora-metrics-four-keys/)（再掲） | 3 | 4指標の定義と使い方、性能の分布としての扱い方を示した公式ガイド |
 | SPACEフレームワーク | [The SPACE of Developer Productivity（ACM Queue）](https://queue.acm.org/detail.cfm?id=3454124) | 3 | Forsgren らによる原論文。生産性を5次元で捉え単一指標を避けるべき理由を示す |
 | エビデンスベースドマネジメント | [Evidence-Based Management（Scrum.org）](https://www.scrum.org/resources/evidence-based-management)（再掲） | 3 | Ken Schwaber と Scrum.org による4つの価値領域（KVA）の公式定義 |
@@ -265,6 +288,7 @@
 | 統制と俊敏さの両立 | [Streamlining change approval（DORA）](https://dora.dev/capabilities/streamlining-change-approval/) | 3 | 外部承認プロセスがデリバリー性能を下げ、安定性も改善しないという調査結果と代替案 |
 | ビジネスアジリティ | [Business Agility（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/business-agility/) | 3 | 組織が市場の変化に素早く適応する能力としての定義 |
 | 〃 | [The Domains of Business Agility（Business Agility Institute）](https://businessagility.institute/domains/overview) | 3 | 5つのドメインと18のケイパビリティからなるモデルの公式入口 |
+| 計測の限界 | [Software Engineering: An Idea Whose Time Has Come and Gone?（Tom DeMarco, IEEE Software 2009）](https://www.computer.org/csdl/magazine/so/2009/04/mso2009040096/13rRUxYIN5T) | 3 | 自著の「測れないものは管理できない」を本人が撤回し、厳密な管理が効くのは価値の低いプロジェクトだけだと述べた論考 |
 
 ---
 

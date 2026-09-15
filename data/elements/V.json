@@ -1337,6 +1337,194 @@
     ]
   },
   {
+    "id": "seci-model",
+    "name": "SECIモデル",
+    "name_en": "SECI Model",
+    "aka": [
+      "共同化・表出化・連結化・内面化",
+      "知識創造の螺旋",
+      "野中郁次郎"
+    ],
+    "aka_en": [
+      "Socialization, Externalization, Combination, Internalization",
+      "Ikujiro Nonaka"
+    ],
+    "summary": "暗黙知と形式知が4つの変換を回ることで、組織の知が生まれ育つという理論。",
+    "category": "V",
+    "subcategory": "V-4",
+    "affinity": {
+      "I": {
+        "score": 3,
+        "why": "内面化は個人の中で起きる"
+      },
+      "II": {
+        "score": 4,
+        "why": "共同化は人と人が同じ体験を共有することで起きる"
+      },
+      "III": {
+        "score": 2,
+        "why": "開発プロセスとは別軸"
+      },
+      "IV": {
+        "score": 2,
+        "why": "新しい価値が生まれる源泉として語られる"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織が知を生み出す仕組みを説明した理論そのもの"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C4"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "形式知どうしを組み合わせる連結化はAIが最も得意な一方、共同化と表出化は人の体験に依存したまま残る"
+    },
+    "includes": [
+      "共同化",
+      "表出化",
+      "連結化",
+      "内面化",
+      "知識創造の螺旋"
+    ],
+    "sources": [
+      {
+        "url": "https://str.toyokeizai.net/books/9784492522325/",
+        "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+        "note": "SECIモデルを提示し、日本企業のイノベーションの仕組みを知識創造として説明した原典の出版社ページ",
+        "strength": 3
+      },
+      {
+        "url": "http://nonaka-ik.org/nonaka/books/219.html",
+        "title": "知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）",
+        "note": "著者本人の研究所による書籍紹介",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "middle-up-down",
+    "name": "ミドル・アップダウン",
+    "name_en": "Middle-Up-Down Management",
+    "aka": [
+      "中間管理職が知を繋ぐ",
+      "野中郁次郎"
+    ],
+    "aka_en": [
+      "Ikujiro Nonaka"
+    ],
+    "summary": "中間管理職が経営の理想と現場の現実を結び、知を生み出す担い手になるという型。",
+    "category": "V",
+    "subcategory": "V-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の技法ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームと経営のあいだの橋渡しとして現れる"
+      },
+      "III": {
+        "score": 1,
+        "why": "開発プロセスとは別軸"
+      },
+      "IV": {
+        "score": 2,
+        "why": "戦略を具体的な施策に落とす役割を含む"
+      },
+      "V": {
+        "score": 5,
+        "why": "トップダウンでもボトムアップでもない組織マネジメント様式の定義そのもの"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C1"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "情報の伝達はAIで代替できるが、理想と現実の矛盾を引き受けて翻訳する役割は人に残る"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://str.toyokeizai.net/books/9784492522325/",
+        "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+        "note": "トップダウンでもボトムアップでもない第三のマネジメント様式としてミドル・アップダウンを提示した原典",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "essence-of-failure",
+    "name": "失敗の本質",
+    "name_en": "The Essence of Failure",
+    "aka": [
+      "日本軍の組織論的研究",
+      "野中郁次郎"
+    ],
+    "aka_en": [
+      "Ikujiro Nonaka"
+    ],
+    "summary": "日本軍の敗北を組織論で分析し、日本型組織が同じ失敗を繰り返す構造を示した研究。",
+    "category": "V",
+    "subcategory": "V-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "個人の資質の問題としては扱わない"
+      },
+      "II": {
+        "score": 2,
+        "why": "現場の空気として現れる部分がある"
+      },
+      "III": {
+        "score": 2,
+        "why": "計画と現実の乖離がなぜ放置されるかの説明になる"
+      },
+      "IV": {
+        "score": 2,
+        "why": "目的が曖昧なまま資源を投じる構造を扱う"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織が学習できなくなる構造を分析した組織論そのもの"
+      }
+    },
+    "capabilities": [
+      "C3",
+      "C1"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 3,
+      "why": "新しい道具を入れても、目的が曖昧で学習しない組織の構造はそのまま残る"
+    },
+    "includes": [
+      "戦略の曖昧さ",
+      "空気の支配",
+      "学習の欠如",
+      "人的ネットワーク偏重",
+      "結果よりも動機を重視する評価"
+    ],
+    "sources": [
+      {
+        "url": "https://www.chuko.co.jp/special/shippaino-honshitsu/",
+        "title": "『失敗の本質 ― 日本軍の組織論的研究』特設サイト（中央公論新社）",
+        "note": "戸部良一・寺本義也・鎌田伸一・杉之尾孝生・村井友秀・野中郁次郎による共著。日本型組織の失敗の構造を6つの作戦から分析した研究書の出版社特設ページ",
+        "strength": 3
+      }
+    ]
+  },
+  {
     "id": "dora-metrics",
     "name": "DORAの4つの指標",
     "name_en": "DORA Four Keys",
@@ -1670,6 +1858,65 @@
         "url": "https://businessagility.institute/domains/overview",
         "title": "The Domains of Business Agility（Business Agility Institute）",
         "note": "5つのドメインと18のケイパビリティからなるモデルの公式入口",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "limits-of-measurement",
+    "name": "計測の限界",
+    "name_en": "Limits of Measurement",
+    "aka": [
+      "測れないものは管理できないの再考",
+      "デマルコ"
+    ],
+    "aka_en": [
+      "Tom DeMarco"
+    ],
+    "summary": "測れないものは管理できないという通説を、言い出した本人が後に否定した論点。",
+    "category": "V",
+    "subcategory": "V-5",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "数字で自分の仕事を証明しようとする心理に関わる"
+      },
+      "II": {
+        "score": 2,
+        "why": "チームを数字で比べることの弊害として現れる"
+      },
+      "III": {
+        "score": 3,
+        "why": "生産性指標をどう扱うかに直結する"
+      },
+      "IV": {
+        "score": 4,
+        "why": "アウトカムをどこまで数字にできるのかという問いを含む"
+      },
+      "V": {
+        "score": 5,
+        "why": "組織として何を測り何で統制するかという、ガバナンスの前提そのものへの問い直し"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C3"
+    ],
+    "flow": "B4",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIで作業量の指標が意味を失い、何を測るべきかの問い直しが避けられなくなった"
+    },
+    "includes": [
+      "制御の幻想",
+      "プロジェクトの価値と厳密な管理の関係"
+    ],
+    "sources": [
+      {
+        "url": "https://www.computer.org/csdl/magazine/so/2009/04/mso2009040096/13rRUxYIN5T",
+        "title": "Software Engineering: An Idea Whose Time Has Come and Gone?（Tom DeMarco, IEEE Software 2009）",
+        "note": "自著の「測れないものは管理できない」を本人が撤回し、厳密な管理が効くのは価値の低いプロジェクトだけだと述べた論考",
         "strength": 3
       }
     ]

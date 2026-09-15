@@ -45,7 +45,9 @@
       "score": 5,
       "why": "AIが個々の作業を速くするほど同時に抱える案件数が増え、切替コストが相対的に最大のボトルネックになる"
     },
-    "includes": [],
+    "includes": [
+      "20%ルール（ワインバーグ）"
+    ],
     "sources": [
       {
         "url": "https://www.apa.org/topics/research/multitasking",
@@ -163,6 +165,12 @@
     },
     "includes": [],
     "sources": [
+      {
+        "url": "https://systemsguild.eu/tom-demarco",
+        "title": "Tom DeMarco（The Atlantic Systems Guild）",
+        "note": "『ピープルウエア』でフロー状態に入るまでの立ち上がり時間と、中断がそれを毎回ゼロに戻すことを論じた著者本人の所属組織",
+        "strength": 3
+      },
       {
         "url": "https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness",
         "title": "Flow, the secret to happiness（Mihaly Csikszentmihalyi, TED）",
@@ -339,6 +347,66 @@
         "url": "https://agilemanifesto.org/iso/ja/principles.html",
         "title": "アジャイル宣言の背後にある原則",
         "note": "第8原則が一定のペースを継続的に維持できることを求めている（日本語公式）",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "quiet-workspace",
+    "name": "中断のない作業環境",
+    "name_en": "Quiet Workspace",
+    "aka": [
+      "コーディング・ウォー・ゲーム",
+      "デマルコ"
+    ],
+    "aka_en": [
+      "Coding War Games",
+      "Tom DeMarco"
+    ],
+    "summary": "静かで中断のない環境が、個人の生産性を何倍も左右するという実測にもとづく主張。",
+    "category": "I",
+    "subcategory": "I-1",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人の集中が環境条件によって決まるという話"
+      },
+      "II": {
+        "score": 3,
+        "why": "チームで静かな時間帯を守る運用として実践される"
+      },
+      "III": {
+        "score": 2,
+        "why": "生産性の差の説明として持ち出される"
+      },
+      "IV": {
+        "score": 0,
+        "why": "無関係"
+      },
+      "V": {
+        "score": 4,
+        "why": "オフィス設計と会議文化という、組織が金を出す判断に直結する"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C2"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "通知とAIとの細かい往復で中断が増えるほど、まとまった無中断時間の価値が上がる"
+    },
+    "includes": [
+      "コーディング・ウォー・ゲーム",
+      "環境要因による生産性差"
+    ],
+    "sources": [
+      {
+        "url": "https://systemsguild.eu/tom-demarco",
+        "title": "Tom DeMarco（The Atlantic Systems Guild）",
+        "note": "『ピープルウエア』の著者本人の所属組織による紹介。数百人規模の実測から職場環境と生産性の関係を示した Coding War Games を含む",
         "strength": 3
       }
     ]
@@ -1009,6 +1077,129 @@
     ]
   },
   {
+    "id": "tacit-explicit-knowledge",
+    "name": "暗黙知と形式知",
+    "name_en": "Tacit and Explicit Knowledge",
+    "aka": [
+      "言葉にできない知",
+      "野中郁次郎"
+    ],
+    "aka_en": [
+      "Ikujiro Nonaka"
+    ],
+    "summary": "経験や勘として身体に宿る知（暗黙知）と、書き表して渡せる知（形式知）の区別。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "言葉にならない知は個人の身体と経験に宿るという、知の所在そのものの話"
+      },
+      "II": {
+        "score": 4,
+        "why": "暗黙知は同じ体験を共有することでしか人から人へ渡らない"
+      },
+      "III": {
+        "score": 3,
+        "why": "ドキュメントで渡せる知と、一緒に手を動かさないと渡らない知の線引きになる"
+      },
+      "IV": {
+        "score": 1,
+        "why": "価値の議論とは別軸"
+      },
+      "V": {
+        "score": 4,
+        "why": "組織の知識資産をどう扱うかという経営の問題に直結する"
+      }
+    },
+    "capabilities": [
+      "C5",
+      "C3"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIが扱えるのは形式知であり、言葉になっていない知をどう表に出すかが人に残る仕事になった"
+    },
+    "includes": [],
+    "sources": [
+      {
+        "url": "https://str.toyokeizai.net/books/9784492522325/",
+        "title": "知識創造企業（新装版）野中郁次郎・竹内弘高（東洋経済新報社）",
+        "note": "暗黙知と形式知の区別を経営学に持ち込み、知識創造のメカニズムを示した原典の出版社ページ",
+        "strength": 3
+      },
+      {
+        "url": "http://nonaka-ik.org/nonaka/books/219.html",
+        "title": "知識創造企業（野中郁次郎 / Nonaka Institute of Knowledge）",
+        "note": "著者本人の研究所による書籍紹介",
+        "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "phronesis",
+    "name": "フロネシス（実践知）",
+    "name_en": "Phronesis / Practical Wisdom",
+    "aka": [
+      "賢慮",
+      "賢慮型リーダーシップ",
+      "野中郁次郎"
+    ],
+    "aka_en": [
+      "Practical Wisdom",
+      "Ikujiro Nonaka"
+    ],
+    "summary": "個別具体の文脈のただ中で、何が善いかを判断して動ける実践的な知恵。",
+    "category": "I",
+    "subcategory": "I-3",
+    "affinity": {
+      "I": {
+        "score": 5,
+        "why": "個人に宿る判断能力そのもので、マニュアルや手順に外部化できない"
+      },
+      "II": {
+        "score": 4,
+        "why": "共に経験することでしか育たず、チームの中で受け継がれる"
+      },
+      "III": {
+        "score": 2,
+        "why": "プロセスで代替できない部分として現れる"
+      },
+      "IV": {
+        "score": 3,
+        "why": "何を作るべきかという価値判断の土台になる"
+      },
+      "V": {
+        "score": 4,
+        "why": "賢慮型リーダーシップとして、組織を率いる者の資質として論じられる"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C5"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 5,
+      "why": "AIは一般解を即座に出せるが、この状況でいま何をすべきかという個別具体の判断は人に残る"
+    },
+    "includes": [
+      "共通善の判断",
+      "本質を直観する力"
+    ],
+    "sources": [
+      {
+        "url": "https://hbr.org/2011/05/the-big-idea-the-wise-leader",
+        "title": "The Big Idea: The Wise Leader（Ikujiro Nonaka & Hirotaka Takeuchi, HBR 2011）",
+        "note": "知識創造の次の段階として、実践知を備えたリーダーの6つの能力を提示した本人らの論文",
+        "strength": 3
+      }
+    ]
+  },
+  {
     "id": "self-determination-theory",
     "name": "自己決定理論",
     "name_en": "Self-Determination Theory",
@@ -1316,6 +1507,12 @@
         "url": "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
         "title": "Burn-out an occupational phenomenon（WHO）",
         "note": "燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表",
+        "strength": 3
+      },
+      {
+        "url": "https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/",
+        "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）",
+        "note": "燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ",
         "strength": 3
       }
     ]
