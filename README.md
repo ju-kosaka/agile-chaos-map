@@ -7,6 +7,10 @@
 
 ## まず見る
 
+### https://ju-kosaka.github.io/agile-chaos-map/
+
+手元で開くなら:
+
 ```bash
 open docs/index.html
 ```
