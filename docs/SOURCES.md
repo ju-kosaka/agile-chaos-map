@@ -2,16 +2,16 @@
 
 生成物です。`scripts/build_sources.py` が `data/elements.json` と `data/research_refs.json` から生成します。**手で編集しないでください。**
 
-- 要素数: **196件**
-- 要素の出典として参照しているURL: **184件**（延べ 241本）
+- 要素数: **198件**
+- 要素の出典として参照しているURL: **190件**（延べ 248本）
 - 設計に使った参照URL: **17件**
 
 ## 出典強度の見方
 
 | 強度 | 意味 | 本数 |
 |---|---|---|
-| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 155件 |
-| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 28件 |
+| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 156件 |
+| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 33件 |
 | 1（解説のみ） | 一般の解説記事のみ。次フェーズで一次ソースを探し直す対象 | 1件 |
 
 **強度1のまま残っているもの（要再調査）**
@@ -78,7 +78,7 @@
 | 燃え尽き（バーンアウト） | [Burn-out an occupational phenomenon（WHO）](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) | 3 | 燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表 |
 | 〃 | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/) | 3 | 燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ |
 
-### II. 人とチーム（39要素）
+### II. 人とチーム（41要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -110,6 +110,12 @@
 | チーム殺し | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』で teamicide という語を造り、組織がチームを壊す典型的な振る舞いを列挙した著者本人の所属組織 |
 | エンジニアリングマネージャー | [エンジニアのためのマネジメントキャリアパス（Camille Fournier『The Manager's Path』邦訳・オライリー・ジャパン）](https://www.oreilly.co.jp/books/9784873118482/) | 3 | メンターからテックリード・エンジニアリングリード・技術部長・CTOまで、段階ごとの役割を定義した書籍 |
 | 〃 | [The Engineering Manager 101（LeadDev）](https://leaddev.com/career-development/engineering-manager-101) | 2 | チームの成果・生産性・個人の成長に責任を持つ役割という説明。自分ではコードを書かずレビューと方向づけに回る |
+| テックリード | [Talking with Tech Leads（Patrick Kua・Thoughtworks）](https://www.thoughtworks.com/insights/books/talking-with-tech-leads) | 2 | 初めてテックリードになった人と熟練者への聞き取りを集めた書籍。1つのチームに専念する役割として説明している |
+| 〃 | [The Definition of a Tech Lead（Patrick Kua）](https://www.patkua.com/blog/the-definition-of-a-tech-lead/) | 2 | チームを率い技術的な方向づけに責任を持つソフトウェアエンジニア、という提唱者本人による定義。EMやチームリードと共同で率いる場合もあるとする |
+| 〃 | [エンジニアのためのマネジメントキャリアパス（Camille Fournier『The Manager's Path』邦訳・オライリー・ジャパン）](https://www.oreilly.co.jp/books/9784873118482/)（再掲） | 3 | テックリードを、メンターの次・エンジニアリングリードの手前に置かれた1つの段階として定義した書籍 |
+| オンボーディング | [Toward a theory of organizational socialization（Van Maanen & Schein・MIT Sloan・1977）](https://dspace.mit.edu/handle/1721.1/1934) | 3 | 新しく入った人が組織の一員になる過程を組織社会化として定式化した論文。オンボーディングの理論的な源流 |
+| 〃 | [スクラム未経験者がチームに加わるときに、どうオンボーディングするとよいでしょうか？（Ryuzee.com）](https://www.ryuzee.com/faq/0086/) | 2 | 経験や力量にあわせて段階的に受け入れる。価値観・ワーキングアグリーメント・完成の定義を先に渡してから作業に入れる |
+| 〃 | [新たに開発者が増えたときにどうフォローすればいいですか？（Ryuzee.com）](https://www.ryuzee.com/faq/0069/) | 2 | ペア作業と助走期間を勧め、その間チームの処理量が一時的に落ちることを計画に織り込むべきとする |
 | ファシリテーション | [Facilitation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/facilitation/) | 3 | 議論の内容ではなくプロセスに責任を持つ役割としてのファシリテーションの定義 |
 | コーチング | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/) | 3 | 国際コーチング連盟が定める職業としてのコーチングの中核能力 |
 | 傾聴 | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/)（再掲） | 3 | アクティブリスニングを職業コーチの中核能力の一つとして定義している |
@@ -137,7 +143,8 @@
 | スクラム | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | Schwaber と Sutherland による公式の定義。スクラムの目的・責任・イベント・作成物・コミットメントを規定 |
 | 〃 | [Scrum（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/scrum/) | 3 | 反復で複雑な製品を開発するフレームワークとしての簡潔な定義 |
 | 〃 | [The New New Product Development Game（Takeuchi & Nonaka, HBR 1986）](https://hbr.org/1986/01/the-new-new-product-development-game)（再掲） | 3 | スクラムという名称の由来になったラグビーの比喩を示した論文。フレームワークの直接の源流 |
-| スプリント（タイムボックス） | [Timebox（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/timebox/) | 3 | あらかじめ決めた時間枠を延長しないという規律の定義 |
+| スプリント（タイムボックス） | [スプリントにおけるコミットメントとは何か（Ryuzee.com）](https://www.ryuzee.com/contents/blog/3567) | 2 | スプリントでのコミットメントは「量を約束する」ことではなく「選んだものを完了させようと全力を尽くす」ことだとする整理 |
+| 〃 | [Timebox（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/timebox/) | 3 | あらかじめ決めた時間枠を延長しないという規律の定義 |
 | 〃 | [Iteration（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/iteration/) | 3 | 一定期間ごとに動くものを作る反復の単位 |
 | デイリースクラム | [Daily Meeting（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/daily-meeting/) | 3 | 毎日同じ時刻に短時間で行う同期のためのミーティングの定義 |
 | 〃 | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | デイリースクラムは開発者のための15分のイベントであり、進捗報告の場ではないと規定 |

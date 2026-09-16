@@ -125,9 +125,17 @@
     },
     "includes": [
       "スプリントゴール",
-      "イテレーションプランニング"
+      "イテレーションプランニング",
+      "スプリントへのコミットメント",
+      "予測（フォーキャスト）"
     ],
     "sources": [
+      {
+        "url": "https://www.ryuzee.com/contents/blog/3567",
+        "title": "スプリントにおけるコミットメントとは何か（Ryuzee.com）",
+        "note": "スプリントでのコミットメントは「量を約束する」ことではなく「選んだものを完了させようと全力を尽くす」ことだとする整理",
+        "strength": 2
+      },
       {
         "url": "https://www.agilealliance.org/glossary/timebox/",
         "title": "Timebox（Agile Alliance Glossary）",

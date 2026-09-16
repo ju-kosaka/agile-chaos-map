@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "updated": "2026-09-16",
-  "digest": "6b837d57ec75c12c",
-  "count": 196,
+  "digest": "509526c2007582c7",
+  "count": 198,
   "elements": [
     {
       "id": "agile-manifesto",
@@ -3567,6 +3567,156 @@
       "affinity_gap": 1
     },
     {
+      "id": "tech-lead",
+      "name": "テックリード",
+      "name_en": "Tech Lead",
+      "aka": [
+        "技術リード",
+        "リードエンジニア"
+      ],
+      "aka_en": [
+        "Technical Lead",
+        "Lead Engineer"
+      ],
+      "summary": "コードを書き続けながら、チームの技術的な方向づけと品質に責任を持つ役割。",
+      "category": "II",
+      "subcategory": "II-3",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "一人の技術者が担う役割ではあるが、評価されるのは自分の成果ではなくチームの成果"
+        },
+        "II": {
+          "score": 5,
+          "why": "1つのチームに張り付き、その技術的な意思決定と育成を引き受ける役割そのもの"
+        },
+        "III": {
+          "score": 4,
+          "why": "設計・レビュー・技術的負債の扱いという作り方の判断がそのまま職務になる"
+        },
+        "IV": {
+          "score": 1,
+          "why": "何を作るかはプロダクト側の責任で、テックリードはどう作るかを持つ"
+        },
+        "V": {
+          "score": 3,
+          "why": "管理職に上がらず技術で伸びるキャリアの受け皿として、等級制度の設計に関わる"
+        }
+      },
+      "capabilities": [
+        "C1",
+        "C4"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "AIが実装の大半を出すほど、出てきたものを採るか捨てるかを決める技術判断の担い手が要る"
+      },
+      "includes": [],
+      "sources": [
+        {
+          "url": "https://www.thoughtworks.com/insights/books/talking-with-tech-leads",
+          "title": "Talking with Tech Leads（Patrick Kua・Thoughtworks）",
+          "note": "初めてテックリードになった人と熟練者への聞き取りを集めた書籍。1つのチームに専念する役割として説明している",
+          "strength": 2
+        },
+        {
+          "url": "https://www.patkua.com/blog/the-definition-of-a-tech-lead/",
+          "title": "The Definition of a Tech Lead（Patrick Kua）",
+          "note": "チームを率い技術的な方向づけに責任を持つソフトウェアエンジニア、という提唱者本人による定義。EMやチームリードと共同で率いる場合もあるとする",
+          "strength": 2
+        },
+        {
+          "url": "https://www.oreilly.co.jp/books/9784873118482/",
+          "title": "エンジニアのためのマネジメントキャリアパス（Camille Fournier『The Manager's Path』邦訳・オライリー・ジャパン）",
+          "note": "テックリードを、メンターの次・エンジニアリングリードの手前に置かれた1つの段階として定義した書籍",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "III"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1
+    },
+    {
+      "id": "onboarding",
+      "name": "オンボーディング",
+      "name_en": "Onboarding",
+      "aka": [
+        "受け入れ",
+        "立ち上がり支援"
+      ],
+      "aka_en": [],
+      "summary": "新しく加わった人が、チームの一員として動けるようになるまでを設計して支える営み。",
+      "category": "II",
+      "subcategory": "II-3",
+      "affinity": {
+        "I": {
+          "score": 4,
+          "why": "受け入れる側の設計次第で、新しい人が一度に抱える認知の負荷が決まる"
+        },
+        "II": {
+          "score": 5,
+          "why": "人が1人増えたときにチームの側が何をするか、という小集団の受け入れ過程"
+        },
+        "III": {
+          "score": 2,
+          "why": "立ち上がり中はチームの処理量が一時的に落ちるので、計画に織り込む必要がある"
+        },
+        "IV": {
+          "score": 0,
+          "why": "無関係"
+        },
+        "V": {
+          "score": 3,
+          "why": "採用・配置・異動の制度とチームの現場をつなぐ接点になる"
+        }
+      },
+      "capabilities": [
+        "C4",
+        "C5"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 3,
+        "why": "コードや文書の読み解きはAIが肩代わりする一方、価値観と暗黙の前提を渡す部分が人に残る"
+      },
+      "includes": [
+        "助走期間",
+        "バディ制度"
+      ],
+      "sources": [
+        {
+          "url": "https://dspace.mit.edu/handle/1721.1/1934",
+          "title": "Toward a theory of organizational socialization（Van Maanen & Schein・MIT Sloan・1977）",
+          "note": "新しく入った人が組織の一員になる過程を組織社会化として定式化した論文。オンボーディングの理論的な源流",
+          "strength": 3
+        },
+        {
+          "url": "https://www.ryuzee.com/faq/0086/",
+          "title": "スクラム未経験者がチームに加わるときに、どうオンボーディングするとよいでしょうか？（Ryuzee.com）",
+          "note": "経験や力量にあわせて段階的に受け入れる。価値観・ワーキングアグリーメント・完成の定義を先に渡してから作業に入れる",
+          "strength": 2
+        },
+        {
+          "url": "https://www.ryuzee.com/faq/0069/",
+          "title": "新たに開発者が増えたときにどうフォローすればいいですか？（Ryuzee.com）",
+          "note": "ペア作業と助走期間を勧め、その間チームの処理量が一時的に落ちることを計画に織り込むべきとする",
+          "strength": 2
+        }
+      ],
+      "crossing": [
+        "I"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1
+    },
+    {
       "id": "facilitation",
       "name": "ファシリテーション",
       "name_en": "Facilitation",
@@ -4724,9 +4874,17 @@
       },
       "includes": [
         "スプリントゴール",
-        "イテレーションプランニング"
+        "イテレーションプランニング",
+        "スプリントへのコミットメント",
+        "予測（フォーキャスト）"
       ],
       "sources": [
+        {
+          "url": "https://www.ryuzee.com/contents/blog/3567",
+          "title": "スプリントにおけるコミットメントとは何か（Ryuzee.com）",
+          "note": "スプリントでのコミットメントは「量を約束する」ことではなく「選んだものを完了させようと全力を尽くす」ことだとする整理",
+          "strength": 2
+        },
         {
           "url": "https://www.agilealliance.org/glossary/timebox/",
           "title": "Timebox（Agile Alliance Glossary）",
