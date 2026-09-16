@@ -5,3 +5,6 @@ __pycache__/
 # URL到達性チェックの実行ログ（scripts/check_urls.py で再生成できる）
 scripts/.url_check.log
 scripts/.url_check.tsv
+
+# ローカル専用の運用フォルダ（作業ログ・更新履歴・キュー）。push しない
+/ops/

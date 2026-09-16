@@ -3,8 +3,9 @@
 data/elements.json を出力する。手で also_in を書かないための装置。
 
 使い方:
-    python3 scripts/build.py          # 検証 + 出力
-    python3 scripts/build.py --check  # 検証のみ（出力しない）
+    python3 scripts/build.py             # 検証 + 出力
+    python3 scripts/build.py --check     # 検証のみ（出力しない）
+    python3 scripts/build.py --fix-docs  # README / DESIGN.md の手書き数値を実データに追従させる
 """
 import json
 import re
@@ -63,15 +64,15 @@ def build_prior_index(prior):
     return index
 
 
-def check_docs_numbers(elements):
-    """README.md / docs/DESIGN.md に手書きされた数値が、実データと合っているか検査する。
+def docs_number_specs(elements):
+    """README.md / docs/DESIGN.md に手書きされている数値と、実データの対応表を返す。
 
-    要素を足すたびにドキュメントの数値が黙って古くなる事故を止めるための装置。
-    これらは生成物ではないので build では直さない。ズレを報告するだけにしている。
+    (パス, 正規表現, 実データの値, ラベル) の並び。正規表現の第1グループが数値。
+    検査（--check）と書き戻し（--fix-docs）が同じ表を見るので、片方だけ直る事故が起きない。
     """
     import collections
 
-    issues = []
+    specs = []
     n = len(elements)
     urls = {s["url"] for e in elements for s in e["sources"]}
     cat = collections.Counter(e["category"] for e in elements)
@@ -83,16 +84,7 @@ def check_docs_numbers(elements):
     own_pct = round(100 * own / n) if n else 0
 
     def expect(path, pattern, actual, label):
-        if not path.exists():
-            return
-        text = path.read_text(encoding="utf-8")
-        m = re.search(pattern, text)
-        if not m:
-            issues.append(f"[{path.name}] {label}: 記述が見つからない（書式が変わった？）")
-            return
-        got = int(m.group(1))
-        if got != actual:
-            issues.append(f"[{path.name}] {label}: 記載 {got} ≠ 実データ {actual}")
+        specs.append((path, pattern, actual, label))
 
     readme = ROOT / "README.md"
     design = ROOT / "docs" / "DESIGN.md"
@@ -117,11 +109,48 @@ def check_docs_numbers(elements):
     expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*(\d+)件", own, "先行マップに無い件数")
     expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
 
+    return specs
+
+
+def check_docs_numbers(elements, fix=False):
+    """対応表に沿って手書き数値を検査する。fix=True なら実データの値に書き換える。
+
+    要素を足すたびにドキュメントの数値が黙って古くなる事故を止めるための装置。
+    エージェントが要素を追加する運用では --fix-docs で自動追従させ、
+    人が書式ごと変えたとき（＝正規表現が当たらないとき）だけ止まるようにしてある。
+    """
+    issues = []
+    by_path = {}
+    for path, pattern, actual, label in docs_number_specs(elements):
+        by_path.setdefault(path, []).append((pattern, actual, label))
+
+    for path, specs in by_path.items():
+        if not path.exists():
+            continue
+        original = text = path.read_text(encoding="utf-8")
+        for pattern, actual, label in specs:
+            m = re.search(pattern, text)
+            if not m:
+                issues.append(f"[{path.name}] {label}: 記述が見つからない（書式が変わった？）")
+                continue
+            got = int(m.group(1))
+            if got == actual:
+                continue
+            if fix:
+                s, e = m.span(1)
+                text = text[:s] + str(actual) + text[e:]
+                issues.append(f"[{path.name}] {label}: {got} → {actual} に書き換えた")
+            else:
+                issues.append(f"[{path.name}] {label}: 記載 {got} ≠ 実データ {actual}")
+        if fix and text != original:
+            path.write_text(text, encoding="utf-8")
+
     return issues
 
 
 def main():
     check_only = "--check" in sys.argv
+    fix_docs = "--fix-docs" in sys.argv
     elements = load_elements()
     prior = json.loads((ROOT / "data" / "prior_art.json").read_text(encoding="utf-8"))
     cats = json.loads((ROOT / "data" / "categories.json").read_text(encoding="utf-8"))
@@ -310,9 +339,19 @@ def main():
     print("出典強度の内訳:", ", ".join(f"強度{k}: {v}本" for k, v in sorted(strengths.items(), reverse=True)))
     print("出典URL総数:", sum(len(e["sources"]) for e in elements))
 
-    doc_issues = check_docs_numbers(elements)
-    if doc_issues:
-        problems.extend(doc_issues)
+    doc_issues = check_docs_numbers(elements, fix=fix_docs)
+    # 書式ごと変わった（正規表現が当たらない）ときは書き戻せないので、fix でも問題として止める
+    unfixable = [d for d in doc_issues if "記述が見つからない" in d]
+    rewritten = [d for d in doc_issues if d not in unfixable]
+    problems.extend(unfixable)
+    if fix_docs:
+        if rewritten:
+            print("-" * 62)
+            print(f"ドキュメントの数値を実データに追従させた: {len(rewritten)}件")
+            for d in rewritten:
+                print("  -", d)
+    else:
+        problems.extend(rewritten)
 
     print("=" * 62)
     if problems:
