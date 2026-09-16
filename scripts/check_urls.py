@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""elements.json と prior_art.json に載っている全URLを叩いて到達性を確かめる。
+"""elements.json に載っている全出典URLを叩いて到達性を確かめる。
 
 サンプリングせず全件見る。件数を必ず表示し、0件の「異常なし」を偽の合格にしない。
 200 が返っても中身が空のSPAがあるため、本文の長さも併せて記録する。
@@ -23,11 +23,7 @@ def collect_urls():
     for e in d["elements"]:
         for s in e["sources"]:
             urls.setdefault(s["url"], []).append(e["id"])
-    pa = json.loads((ROOT / "data" / "prior_art.json").read_text(encoding="utf-8"))
-    for m in pa["maps"]:
-        urls.setdefault(m["url"], []).append("prior_art:" + m["id"])
-        if m.get("glossary_url"):
-            urls.setdefault(m["glossary_url"], []).append("prior_art:" + m["id"])
+    # 先行マップのURLは内部の照合用なので、ここでは叩かない（ops/prior_art.json にある）
     return urls
 
 

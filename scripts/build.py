@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""data/elements/*.json を結合し、also_in と crossing を機械的に計算して
-data/elements.json を出力する。手で also_in を書かないための装置。
+"""data/elements/*.json を結合し、crossing（層の越境）を計算して
+data/elements.json を出力する。
+
+先行マップ（Agile Alliance / Agile Studio）との照合も続けているが、
+**これは内部の確認であって公開物には出さない**（閲覧者には関係がなく、
+比較のたびに増えていく記録なので）。原簿は ops/prior_art.json（ローカル専用）、
+結果はこのスクリプトの標準出力にだけ出る。
 
 使い方:
     python3 scripts/build.py             # 検証 + 出力
@@ -84,9 +89,6 @@ def docs_number_specs(elements):
     for e in elements:
         for c in e.get("capabilities", []):
             cap[c] += 1
-    own = sum(1 for e in elements if not e.get("also_in"))
-    own_pct = round(100 * own / n) if n else 0
-
     def expect(path, pattern, actual, label):
         specs.append((path, pattern, actual, label))
 
@@ -95,8 +97,6 @@ def docs_number_specs(elements):
 
     expect(readme, r"現在 \*\*(\d+)要素", n, "要素数")
     expect(readme, r"出典URL (\d+)件\*\*", len(urls), "出典URL数")
-    expect(readme, r"バッジの無い(\d+)件", own, "先行マップに無い件数")
-    expect(readme, r"バッジの無い\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
 
     layer_names = {
         "I": "認知と自己", "II": "人とチーム", "III": "流れとものづくり",
@@ -109,41 +109,26 @@ def docs_number_specs(elements):
     for c in ["C1", "C2", "C3", "C4", "C5"]:
         expect(readme, rf"{c} (\d+)", cap[c], f"{c} の件数")
 
-    # --- docs/DESIGN.md の層別独自率の表 ---
-    own_by_layer = collections.Counter(
-        e["category"] for e in elements if not e.get("also_in"))
-    layer_rows = {
-        "F": "土台", "V": r"V 組織とガバナンス", "I": r"I 認知と自己",
-        "II": r"II 人とチーム", "IV": r"IV 価値と事業", "III": r"III 流れとものづくり",
-    }
-    for layer, label in layer_rows.items():
-        t = cat[layer]
-        o = own_by_layer[layer]
-        expect(design, rf"\| {label} \| (\d+) \| \d+ \| \d+% \|", o, f"{layer}層の独自件数")
-        expect(design, rf"\| {label} \| \d+ \| (\d+) \| \d+% \|", t, f"{layer}層の全体件数")
-        expect(design, rf"\| {label} \| \d+ \| \d+ \| (\d+)% \|",
-               round(100 * o / t) if t else 0, f"{layer}層の独自率")
-
-    # --- 中分類ごとの件数（全件が独自の中分類だけを載せている表） ---
-    sub_tot = collections.Counter(e["subcategory"] for e in elements)
-    sub_own = collections.Counter(
-        e["subcategory"] for e in elements if not e.get("also_in"))
-    for sid, label in (("F-1", "F-1 価値観と原則"), ("F-2", "F-2 ものの見方"),
-                       ("I-3", "I-3 学習と熟達"), ("I-4", "I-4 動機と自律"),
-                       ("III-4", "III-4 運用と信頼性"), ("V-1", "V-1 組織構造とコンウェイ"),
-                       ("V-3", "V-3 お金と意思決定"), ("V-4", "V-4 変革と組織開発")):
-        if sid == "F-1":
-            expect(design, r"\| F-1 価値観と原則 / F-2 ものの見方 \| (\d+) / \d+ \|",
-                   sub_tot["F-1"], "F-1 の件数")
-        elif sid == "F-2":
-            expect(design, r"\| F-1 価値観と原則 / F-2 ものの見方 \| \d+ / (\d+) \|",
-                   sub_tot["F-2"], "F-2 の件数")
-        else:
-            expect(design, rf"\| {label} \| (\d+) \|", sub_tot[sid], f"{sid} の件数")
-
-    expect(design, r"\| 本マップの要素 \| (\d+)件 \|", n, "要素数")
-    expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*(\d+)件", own, "先行マップに無い件数")
-    expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
+    # docs/DESIGN.md の「仕上がりの実測値」の表
+    import collections as _c
+    cross = sum(1 for e in elements if e.get("crossing"))
+    tied = sum(1 for e in elements if e.get("crossing_tied"))
+    ai = _c.Counter(e["ai_impact"]["type"] for e in elements)
+    st = _c.Counter(x["strength"] for e in elements for x in e["sources"])
+    n_src = sum(len(e["sources"]) for e in elements)
+    expect(design, r"\| 要素数 \| (\d+)件 \|", n, "要素数")
+    expect(design, r"\| 層別 \| 土台 (\d+) ", cat["F"], "層別:土台")
+    for layer in ("I", "II", "III", "IV", "V"):
+        expect(design, rf"\| 層別 \|[^|]*?/ {layer} (\d+)", cat[layer], f"層別:{layer}")
+    expect(design, r"1点差以内で4点以上） \| (\d+)件", cross, "越境要素")
+    expect(design, r"1点差以内で4点以上） \| \d+件。うち同点の真の越境が (\d+)件", tied, "同点の越境")
+    expect(design, r"\| AI時代インパクト \| 反転増 (\d+)件", ai["反転増"], "AI:反転増")
+    expect(design, r"\| AI時代インパクト \|[^|]*増幅 (\d+)件", ai["増幅"], "AI:増幅")
+    expect(design, r"\| AI時代インパクト \|[^|]*代替 (\d+)件", ai["代替"], "AI:代替")
+    expect(design, r"\| 出典 \| (\d+)本", n_src, "出典の本数")
+    expect(design, r"\| 出典 \|[^|]*ユニークURL (\d+)件", len(urls), "ユニーク出典URL")
+    for k in (3, 2, 1):
+        expect(design, rf"\| 出典 \|[^|]*強度{k}が (\d+)本", st[k], f"強度{k}の本数")
 
     return specs
 
@@ -181,38 +166,6 @@ def check_docs_numbers(elements, fix=False):
         if fix and text != original:
             path.write_text(text, encoding="utf-8")
 
-    issues += check_fully_own_subcategories(elements)
-    return issues
-
-
-def check_fully_own_subcategories(elements):
-    """「全件が独自の中分類」の**顔ぶれ**が、DESIGN.md の表と一致しているか。
-
-    数値の突き合わせでは、行そのものが増えた/減ったときに気づけない。
-    ここは自動で直せない（説明文つきの行なので）ため、報告だけする。
-    """
-    import collections
-    design = ROOT / "docs" / "DESIGN.md"
-    if not design.exists():
-        return []
-    tot = collections.Counter(e["subcategory"] for e in elements)
-    own = collections.Counter(
-        e["subcategory"] for e in elements if not e.get("also_in"))
-    actual = {k for k in tot if own[k] == tot[k]}
-
-    text = design.read_text(encoding="utf-8")
-    m = re.search(r"\*\*中分類の単位で、先行マップに1件も入っていないもの\*\*.*?\n\n(\|.*?)\n\n",
-                  text, re.S)
-    if not m:
-        return [f"[DESIGN.md] 中分類の表: 記述が見つからない（書式が変わった？）{UNFIXABLE}"]
-    listed = set(re.findall(r"\b([FIVX]+-\d)\b", m.group(1)))
-
-    issues = []
-    for sid in sorted(actual - listed):
-        issues.append(f"[DESIGN.md] 中分類の表: {sid} が全件独自になったのに載っていない{UNFIXABLE}")
-    for sid in sorted(listed - actual):
-        issues.append(f"[DESIGN.md] 中分類の表: {sid} は全件独自ではなくなった"
-                      f"（{own[sid]}/{tot[sid]}）のに載っている{UNFIXABLE}")
     return issues
 
 
@@ -220,7 +173,11 @@ def main():
     check_only = "--check" in sys.argv
     fix_docs = "--fix-docs" in sys.argv
     elements = load_elements()
-    prior = json.loads((ROOT / "data" / "prior_art.json").read_text(encoding="utf-8"))
+    # 先行マップの原簿は ops/（ローカル専用）に置いてある。公開物には出さない。
+    # 「再発明していないか」の照合は続けるが、結果は内部にだけ残す。
+    prior_path = ROOT / "ops" / "prior_art.json"
+    prior = (json.loads(prior_path.read_text(encoding="utf-8"))
+             if prior_path.exists() else {"maps": []})
     cats = json.loads((ROOT / "data" / "categories.json").read_text(encoding="utf-8"))
     prior_index = build_prior_index(prior)
 
@@ -435,7 +392,8 @@ def main():
         # updated は「中身が変わった日」。毎回 today を入れると、内容が同じでも
         # ビルドのたびに差分が出て、未コミット差分でループが止まってしまう。
         # 中身のハッシュが前回と同じなら、前回の日付をそのまま持ち越す。
-        body = json.dumps(elements, ensure_ascii=False, sort_keys=True)
+        body = json.dumps([{k: v for k, v in e.items() if k != "also_in"} for e in elements],
+                          ensure_ascii=False, sort_keys=True)
         digest = hashlib.sha256(body.encode("utf-8")).hexdigest()[:16]
         updated = str(date.today())
         if OUT.exists():
@@ -445,12 +403,15 @@ def main():
                     updated = prev["updated"]
             except (json.JSONDecodeError, OSError):
                 pass
+        # also_in（先行マップ収録）は内部の照合結果なので公開物には入れない。
+        # 閲覧者には関係のない話で、比較のたびに増えていく記録でもある。
+        public = [{k: v for k, v in e.items() if k != "also_in"} for e in elements]
         payload = {
             "version": "1.0",
             "updated": updated,
             "digest": digest,
-            "count": len(elements),
-            "elements": elements,
+            "count": len(public),
+            "elements": public,
         }
         OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"出力: {OUT.relative_to(ROOT)}（updated {updated} / digest {digest}）")

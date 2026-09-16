@@ -19,7 +19,7 @@ open docs/index.html
 
 - **ビュー切替** — レイヤー（既定）／ AI時代の能力 ／ 活動の流れ の3つで同じデータを並べ替えられる
 - **要素をクリック** — 5つの大枠すべてへの帰属スコアと配置理由、AI時代のインパクト、出典が出る
-- **フィルタ** — AI時代の3類型、先行マップ収録の有無、絞り込み（要素名だけでなく**人名・出典名でも引ける**。「ワインバーグ」「デマルコ」「野中」「Nonaka」など）
+- **フィルタ** — AI時代の3類型、絞り込み（要素名だけでなく**人名・出典名でも引ける**。「ワインバーグ」「デマルコ」「野中」「Nonaka」など）
 
 ## 大枠
 
@@ -32,13 +32,8 @@ open docs/index.html
 | V | 組織とガバナンス | 組織 | 34 |
 | 土台 | 根っこにある考え方 | 5層すべての下敷き | 7 |
 
-分類の物差しは「**対象の単位**」ひとつです。先行するプラクティスマップ
-（[Agile Alliance の Subway Map](https://www.agilealliance.org/agile101/subway-map-to-agile-practices/)、
-[Agile Studio のアジャイルプラクティスマップ](https://www.agile-studio.jp/agile-practice-map)）は
-「**出自**（どの手法から来たか）」で切っており、軸が異なります。
-
-先行マップ2つの収録項目は全件取得して照合してあり、重なる要素には「収録済」バッジが付きます。
-**バッジの無い148件（76%）がこのマップの足している部分**です（機械判定・完全一致）。
+分類の物差しは「**対象の単位**」ひとつです。どの手法から来たか（出自）では分けていません。
+同じ手法の中の要素が別の層に散り、違う手法の要素が同じ層に並びます。
 
 ## ファイル構成
 
@@ -48,7 +43,6 @@ agile-chaos-map/
 │   ├── elements/            ← ★編集するのはここ。層ごとの要素定義
 │   │   ├── F.json  I.json  II.json  III.json  IV.json  V.json
 │   ├── categories.json      ← 大枠・中分類・ケイパビリティ・フローの定義
-│   ├── prior_art.json       ← 先行マップの収録項目（also_in 判定の原簿）
 │   ├── research_refs.json   ← 設計に使った参照
 │   └── elements.json        ← 生成物。編集しない
 ├── docs/                    ← GitHub Pages の配信元（Settings → Pages: main / docs）
@@ -57,7 +51,7 @@ agile-chaos-map/
 │   ├── SOURCES.md           ← 生成物。編集しない
 │   └── .nojekyll            ← Jekyll を通さず素通しで配信するための空ファイル
 └── scripts/
-    ├── build.py             ← 結合＋検証＋also_in/crossing の計算
+    ├── build.py             ← 結合＋検証＋crossing（層の越境）の計算
     ├── build_sources.py     ← SOURCES.md の生成
     ├── build_site.py        ← docs/index.html の生成
     └── check_urls.py        ← 全出典URLの到達性チェック
@@ -84,9 +78,9 @@ python3 scripts/build_site.py     # docs/index.html 生成
 - 出典のURL形式・概要（note）・強度（1〜3）
 - 日本語以外の文字（ハングル・キリル）の混入
 - **このREADMEと `docs/DESIGN.md` に書いてある数値が実データと合っているか**
-  （要素数・層別の件数・出典URL数・先行マップに無い件数と割合・ケイパビリティ別の件数）
+  （要素数・層別の件数・出典URL数・ケイパビリティ別の件数）
 
-`also_in`（先行マップ収録）と `crossing`（越境）は**計算値**です。手で書かないでください。
+`crossing`（層の越境）は**計算値**です。手で書かないでください。
 
 要素を足すと、この文書の数値は黙って古くなります。`--fix-docs` を付けると
 実データに合わせて書き換えます（書式ごと変わって当たらなくなったときだけ止まります）。
@@ -135,7 +129,7 @@ python3 scripts/build.py --fix-docs   # 検証 + 生成 + ドキュメントの�
 python3 scripts/check_urls.py
 ```
 
-全出典URL＋先行マップのURLを1件ずつ叩き、ステータスと本文サイズを記録します。
+全出典URLを1件ずつ叩き、ステータスと本文サイズを記録します。
 
 **注意**: `agilealliance.org` / `scaledagile.com` / `thesystemsthinker.com` などは
 連続アクセスに対して 403 / 202 / 406 を返します。これは **bot対策であって URL の無効ではありません**。
@@ -143,9 +137,6 @@ python3 scripts/check_urls.py
 スクリプトはドメイン単位で直列化して間隔を空けていますが、それでも弾かれることがあります。
 **403が出たら「URLが死んでいる」と結論せず、逐次アクセスで確かめてください。**
 UA偽装などでの回避はしません（規約はサイト提供者のものです）。
-
-Agile Alliance の用語集URLについては、ネットワークに依存しない照合ができます
-（`data/prior_art.json` に記録した公式用語集78語のスラッグと突き合わせる）。
 
 ### 出典の中身まで確かめる
 
@@ -169,26 +160,6 @@ python3 scripts/verify_sources.py --all    # 全出典（1本ずつ間隔をあ�
 | `dead` | 404 / 410 / 接続失敗 | **止める** |
 | `bot` | 403 / 202 / 406 など | 実在も架空も同じ応答を返すので実在の証拠にならない。**強度2以下を要求** |
 | `unverif` | 本文からテキストを取り出せない | 同上 |
-
-### 最新の検証結果（2026-09-16・`scripts/.url_check.tsv`）
-
-検査対象 **180URL**（出典178 ＋ 先行マップ2）。
-
-| ステータス | 件数 | 判断 |
-|---|---|---|
-| 200 | 114 | 到達 |
-| 403 | 43 | bot対策（`www.agilealliance.org` 36 ほか `asq.org` / `queue.acm.org` / `odnetwork.org` / `pmi.org` / `coachingfederation.org` / `positiveorgs` / `about.gitlab.com`） |
-| 202 | 16 | 同上（`agilealliance.org` 12・`scrum.org` 4） |
-| 000（接続失敗） | 7 | 連続アクセスによる一時的な失敗。**7件すべて単発では 200 を確認済み**（`agilealliance.org` の1件のみ 202） |
-| **404・URLの死** | **0** | — |
-
-**403 と 000 は URL の死ではありません。** 実際に 000 だった7件を間隔をあけて単発で叩き直すと、
-`dora.dev` 18,817バイト / `martinfowler.com` 79,854バイト / `sre.google` 32,548バイト /
-`christenseninstitute.org` 403,674バイト / `producttalk.org` 91,430バイト と、いずれも実体が返ります。
-
-2026-09-15 の初回検証では 404 が12件・接続不可が2件見つかり、**全14本を差し替え済み**です
-（うちDORAの2件は先方の改名によるもの: Westrum organizational culture → `generative-organizational-culture`、
-shifting left on security → `pervasive-security`）。
 
 ## 見た目の検証
 
@@ -231,7 +202,4 @@ python3 <スクショスクリプト>
 **及ばないもの**:
 
 - 各要素の `sources` が指す先のコンテンツ。それぞれの権利者のものです
-- 先行マップ（Agile Alliance の Subway Map、Agile Studio のアジャイルプラクティスマップ）の
-  収録項目そのもの。`data/prior_art.json` は照合のための事実の記録であって、
-  先行マップの著作物を再配布する意図はありません
 - Scrum、SAFe、Team Topologies などの各フレームワークの名称・内容。各提唱者・団体のものです

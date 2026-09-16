@@ -367,9 +367,6 @@ footer a { color: var(--ink-soft); }
     <div class="group" id="ai-filters">
       <span class="label">AI時代</span>
     </div>
-    <div class="group" id="prior-filters">
-      <span class="label">先行マップ</span>
-    </div>
     <div class="group">
       <input type="search" id="q" placeholder="名前・人名・出典で絞り込む" aria-label="名前・人名・出典で絞り込む">
       <span class="count" id="count"></span>
@@ -385,7 +382,6 @@ footer a { color: var(--ink-soft); }
     （<a href="https://www.agilealliance.org/agile101/subway-map-to-agile-practices/">Agile Alliance の Subway Map</a>、
     <a href="https://www.agile-studio.jp/agile-practice-map">Agile Studio のアジャイルプラクティスマップ</a>）は
     「出自（どの手法から来たか）」で切っており、軸が異なります。
-    重なる要素には <b>収録済み</b> のバッジを付けているので、バッジの無い要素がこのマップの足している部分です。
   </p>
   <p>出典は全要素に付いています。要素をクリックすると根拠とリンクが出ます。一覧は <code>docs/SOURCES.md</code>。</p>
 </footer>
@@ -399,7 +395,7 @@ footer a { color: var(--ink-soft); }
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
-const { elements, categories, priorMaps } = DATA;
+const { elements, categories } = DATA;
 
 const LAYERS = {};
 categories.layers.forEach(l => LAYERS[l.id] = l);
@@ -411,22 +407,15 @@ const SUBNOTE = {};
 [categories.foundation, ...categories.layers].forEach(l =>
   l.subcategories.forEach(s => SUBNOTE[s.id] = s));
 
-const PRIOR_LABEL = {
-  'agile-alliance-subway': 'Agile Alliance',
-  'agile-studio-apm': 'Agile Studio'
-};
-
 const state = {
   view: 'layer',
   ai: new Set(categories.ai_impact_types.map(t => t.id)),
   minScore: 0,
-  prior: new Set(['in', 'out']),
   q: ''
 };
 
 /* ---------- 統計 ---------- */
 function renderStats() {
-  const own = elements.filter(e => e.also_in.length === 0).length;
   const tied = elements.filter(e => e.crossing_tied && e.crossing_tied.length).length;
   const flip5 = elements.filter(e =>
     e.ai_impact.type === '反転増' && e.ai_impact.score === 5).length;
@@ -435,7 +424,6 @@ function renderStats() {
   const items = [
     [elements.length, '要素'],
     [`${categories.layers.length}＋1`, '大枠（5層＋土台）'],
-    [own, '先行マップに無い要素'],
     [flip5, 'AIで人間側の重要度が最も上がる要素'],
     [tied, '大枠をまたぐ要素'],
     [srcs.size, '出典URL']
@@ -476,20 +464,6 @@ function renderFilters() {
     apply();
   };
   aiWrap.appendChild(sb);
-  const pWrap = document.getElementById('prior-filters');
-  [['out', '未収録（本マップ独自）'], ['in', '収録済み']].forEach(([k, label]) => {
-    const b = document.createElement('button');
-    b.className = 'tog';
-    b.textContent = label;
-    b.setAttribute('aria-pressed', 'true');
-    b.onclick = () => {
-      state.prior.has(k) ? state.prior.delete(k) : state.prior.add(k);
-      b.setAttribute('aria-pressed', state.prior.has(k));
-      b.dataset.dim = !state.prior.has(k);
-      apply();
-    };
-    pWrap.appendChild(b);
-  });
   document.querySelectorAll('button.seg').forEach(b => {
     b.onclick = () => {
       state.view = b.dataset.view;
@@ -530,13 +504,6 @@ function chip(e) {
     g.textContent = '↔' + (LAYERS[e.crossing_tied[0]] || {}).id;
     g.title = '越境: ' + e.crossing_tied
       .map(l => LAYERS[l].name).join('・') + ' の話でもある';
-    b.appendChild(g);
-  }
-  if (e.also_in.length) {
-    const g = document.createElement('span');
-    g.className = 'badge';
-    g.textContent = '収録済';
-    g.title = e.also_in.map(k => PRIOR_LABEL[k]).join(' / ') + ' に収録';
     b.appendChild(g);
   }
   b.onclick = () => openDetail(e);
@@ -636,9 +603,6 @@ function fillSubs(host, subs, items, keyFn) {
 function visible(e) {
   if (!state.ai.has(e.ai_impact.type)) return false;
   if (e.ai_impact.score < state.minScore) return false;
-  const inPrior = e.also_in.length > 0;
-  if (inPrior && !state.prior.has('in')) return false;
-  if (!inPrior && !state.prior.has('out')) return false;
   if (state.q) {
     const hay = [e.name, e.name_en, ...(e.aka || []), ...(e.aka_en || []), e.summary,
                  ...(e.includes || []),
@@ -705,10 +669,6 @@ function openDetail(e) {
   const caps = e.capabilities.map(c =>
     `<span style="color:${CAPS[c].color}">${CAPS[c].name}</span>`).join('');
 
-  const priorLine = e.also_in.length
-    ? e.also_in.map(k => PRIOR_LABEL[k]).join(' / ') + ' に同名の項目あり'
-    : '先行マップ2つ（Agile Alliance / Agile Studio）には無い要素';
-
   box.innerHTML = `
     <span class="where" style="background:${color}">${e.category}. ${home.name} ／ ${sub.name || e.subcategory}</span>
     <h2>${e.name}</h2>
@@ -735,9 +695,6 @@ function openDetail(e) {
 
     ${(e.includes || []).length ? `<h3>この要素に含めたもの</h3>
       <div class="taglist">${e.includes.map(i => `<span>${i}</span>`).join('')}</div>` : ''}
-
-    <h3>先行マップとの関係</h3>
-    <p style="font-size:12.5px;color:var(--ink-soft);margin:0">${priorLine}</p>
 
     <h3>出典</h3>
     ${srcs}
@@ -769,13 +726,9 @@ render();
 def main():
     elements = json.loads((ROOT / "data" / "elements.json").read_text(encoding="utf-8"))
     cats = json.loads((ROOT / "data" / "categories.json").read_text(encoding="utf-8"))
-    prior = json.loads((ROOT / "data" / "prior_art.json").read_text(encoding="utf-8"))
-
     payload = {
         "elements": elements["elements"],
         "categories": cats,
-        "priorMaps": [{"id": m["id"], "name": m["name"], "url": m["url"]}
-                      for m in prior["maps"]],
     }
     blob = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     # <script> の中に埋めるので、終了タグとして解釈されうる文字列を無害化する
