@@ -107,8 +107,16 @@ def judge(url, title, pause=2.0):
     if code != "200":
         return "dead", f"HTTP {code}", []
     text = norm(body)
-    if len(text.strip()) < 200:
-        return "unverif", f"本文を取り出せない（{len(text)}文字・{ctype}）", []
+    squeezed = " ".join(text.split())
+    # JSで中身を後から入れるページは、200で返ってくるのに本文が空に近い。
+    # これを mismatch（＝中身が違う）と判定すると誤検出になる。実測: APA PsycNET は
+    # 本文226文字の "loading..." だけを返す。しきい値は余裕を持って500にしてある。
+    js_shell = any(k in squeezed[:400] for k in
+                   ("loading...", "javascript is required", "enable javascript",
+                    "お使いのブラウザ", "please enable"))
+    if len(squeezed) < 500 or js_shell:
+        why = "JSで本文を読み込むページ" if js_shell else "本文が短すぎる"
+        return "unverif", f"{why}（{len(squeezed)}文字・{ctype}）", []
     toks = tokens_from_title(title)
     hits = [t for t in toks if t in text]
     if hits:
