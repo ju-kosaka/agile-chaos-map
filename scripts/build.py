@@ -7,10 +7,12 @@ data/elements.json を出力する。手で also_in を書かないための装�
     python3 scripts/build.py --check     # 検証のみ（出力しない）
     python3 scripts/build.py --fix-docs  # README / DESIGN.md の手書き数値を実データに追従させる
 """
+import hashlib
 import json
 import re
 import sys
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -362,14 +364,28 @@ def main():
         print("検証: 問題なし")
 
     if not check_only:
+        # updated は「中身が変わった日」。毎回 today を入れると、内容が同じでも
+        # ビルドのたびに差分が出て、未コミット差分でループが止まってしまう。
+        # 中身のハッシュが前回と同じなら、前回の日付をそのまま持ち越す。
+        body = json.dumps(elements, ensure_ascii=False, sort_keys=True)
+        digest = hashlib.sha256(body.encode("utf-8")).hexdigest()[:16]
+        updated = str(date.today())
+        if OUT.exists():
+            try:
+                prev = json.loads(OUT.read_text(encoding="utf-8"))
+                if prev.get("digest") == digest and prev.get("updated"):
+                    updated = prev["updated"]
+            except (json.JSONDecodeError, OSError):
+                pass
         payload = {
             "version": "1.0",
-            "updated": "2026-09-15",
+            "updated": updated,
+            "digest": digest,
             "count": len(elements),
             "elements": elements,
         }
         OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"出力: {OUT.relative_to(ROOT)}")
+        print(f"出力: {OUT.relative_to(ROOT)}（updated {updated} / digest {digest}）")
 
     return 1 if problems else 0
 
