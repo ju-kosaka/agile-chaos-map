@@ -176,12 +176,14 @@
     "name": "4つのチームタイプ",
     "name_en": "Four Team Types",
     "aka": [
+      "チームトポロジー",
       "ストリームアラインド",
       "イネイブリング",
       "コンプリケイテッド・サブシステム",
       "プラットフォーム"
     ],
     "aka_en": [
+      "Team Topologies",
       "Stream-aligned",
       "Enabling",
       "Complicated Subsystem",
@@ -288,6 +290,73 @@
         "title": "Key Concepts（Team Topologies）",
         "note": "チームを長期に維持し、仕事の側をチームへ流すという組織設計の原則",
         "strength": 3
+      }
+    ]
+  },
+  {
+    "id": "dynamic-reteaming",
+    "name": "ダイナミックリチーミング",
+    "name_en": "Dynamic Reteaming",
+    "aka": [
+      "リチーミング"
+    ],
+    "aka_en": [
+      "Reteaming"
+    ],
+    "summary": "チームの顔ぶれが変わることを避けられない前提に置き、変え方を型で扱う考え方。",
+    "category": "II",
+    "subcategory": "II-1",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "個人にとっては所属と学ぶ相手が変わる出来事になる"
+      },
+      "II": {
+        "score": 5,
+        "why": "チームの顔ぶれをいつどう入れ替えるかというチーム設計そのもの"
+      },
+      "III": {
+        "score": 2,
+        "why": "編成が変われば流れは乱れるが、作業や技術の型の話ではない"
+      },
+      "IV": {
+        "score": 1,
+        "why": "何を作るかを決める話ではない"
+      },
+      "V": {
+        "score": 4,
+        "why": "人数が増えた組織をどう分け直すかという再編の進め方でもある"
+      }
+    },
+    "capabilities": [
+      "C4",
+      "C5"
+    ],
+    "flow": "B5",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "AIで必要なスキルの組み合わせが変わる速さが上がり、編成を組み替える機会そのものが増えた"
+    },
+    "includes": [
+      "1人ずつ（One by One）",
+      "成長と分割（Grow and Split）",
+      "分離（Isolation）",
+      "統合（Merging）",
+      "入れ替え（Switching）"
+    ],
+    "sources": [
+      {
+        "url": "https://leanpub.com/dynamicreteaming",
+        "title": "Dynamic Reteaming: The Art and Wisdom of Changing Teams（Heidi Helfand）",
+        "note": "著者自身による原著の刊行ページ。チームの変え方を Isolation / One by One / Grow and Split / Merging / Switching の5つのパターンとして定義",
+        "strength": 3
+      },
+      {
+        "url": "https://www.ryuzee.com/contents/blog/14599",
+        "title": "【資料公開】チームトポロジーで紐解くプロダクト開発組織の進化とスケーリング",
+        "note": "チーム構造を変更するときにチームトポロジーと組み合わせて5つのパターンを使う、という実務での位置づけ",
+        "strength": 2
       }
     ]
   },

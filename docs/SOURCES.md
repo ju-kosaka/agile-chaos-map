@@ -2,16 +2,16 @@
 
 生成物です。`scripts/build_sources.py` が `data/elements.json` と `data/research_refs.json` から生成します。**手で編集しないでください。**
 
-- 要素数: **198件**
-- 要素の出典として参照しているURL: **190件**（延べ 248本）
+- 要素数: **199件**
+- 要素の出典として参照しているURL: **192件**（延べ 250本）
 - 設計に使った参照URL: **17件**
 
 ## 出典強度の見方
 
 | 強度 | 意味 | 本数 |
 |---|---|---|
-| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 156件 |
-| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 33件 |
+| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 157件 |
+| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 34件 |
 | 1（解説のみ） | 一般の解説記事のみ。次フェーズで一次ソースを探し直す対象 | 1件 |
 
 **強度1のまま残っているもの（要再調査）**
@@ -78,7 +78,7 @@
 | 燃え尽き（バーンアウト） | [Burn-out an occupational phenomenon（WHO）](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) | 3 | 燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表 |
 | 〃 | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/) | 3 | 燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ |
 
-### II. 人とチーム（41要素）
+### II. 人とチーム（42要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -88,6 +88,8 @@
 | クロスファンクショナルチーム | [The Scrum Guide](https://scrumguides.org/scrum-guide.html)（再掲） | 3 | スクラムチームは機能横断であり、各スプリントで価値を生むために必要なすべてのスキルを備えると定義 |
 | 4つのチームタイプ | [Key Concepts（Team Topologies）](https://teamtopologies.com/key-concepts)（再掲） | 3 | 4つのチームタイプと3つのインタラクションモード（コラボレーション／X-as-a-Service／ファシリテーション）の公式定義 |
 | 安定したチーム | [Key Concepts（Team Topologies）](https://teamtopologies.com/key-concepts)（再掲） | 3 | チームを長期に維持し、仕事の側をチームへ流すという組織設計の原則 |
+| ダイナミックリチーミング | [Dynamic Reteaming: The Art and Wisdom of Changing Teams（Heidi Helfand）](https://leanpub.com/dynamicreteaming) | 3 | 著者自身による原著の刊行ページ。チームの変え方を Isolation / One by One / Grow and Split / Merging / Switching の5つのパターンとして定義 |
+| 〃 | [【資料公開】チームトポロジーで紐解くプロダクト開発組織の進化とスケーリング](https://www.ryuzee.com/contents/blog/14599) | 2 | チーム構造を変更するときにチームトポロジーと組み合わせて5つのパターンを使う、という実務での位置づけ |
 | コミュニケーションパスの爆発 | [When Teams Grow Too Large（Team Topologies）](https://teamtopologies.com/news-blogs-newsletters/when-teams-grow-too-large-solving-cognitive-load-issues)（再掲） | 3 | 20人で190通りの経路が生じるという、規模と調整コストの関係の説明 |
 | フィーチャーチーム | [Feature Teams（LeSS）](https://less.works/less/structure/feature-teams) | 3 | コンポーネントチームとの違いと、顧客中心に機能を丸ごと担う単位の定義 |
 | 心理的安全性 | [The Fearless Organization（Amy C. Edmondson）](https://fearlessorganization.com/) | 3 | 概念の提唱者本人による公式サイト。学習する組織の前提としての心理的安全性を扱う |
