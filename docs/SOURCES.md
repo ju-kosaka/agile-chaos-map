@@ -2,16 +2,16 @@
 
 生成物です。`scripts/build_sources.py` が `data/elements.json` と `data/research_refs.json` から生成します。**手で編集しないでください。**
 
-- 要素数: **193件**
-- 要素の出典として参照しているURL: **178件**（延べ 235本）
+- 要素数: **196件**
+- 要素の出典として参照しているURL: **184件**（延べ 241本）
 - 設計に使った参照URL: **17件**
 
 ## 出典強度の見方
 
 | 強度 | 意味 | 本数 |
 |---|---|---|
-| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 151件 |
-| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 26件 |
+| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 155件 |
+| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 28件 |
 | 1（解説のみ） | 一般の解説記事のみ。次フェーズで一次ソースを探し直す対象 | 1件 |
 
 **強度1のまま残っているもの（要再調査）**
@@ -78,7 +78,7 @@
 | 燃え尽き（バーンアウト） | [Burn-out an occupational phenomenon（WHO）](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) | 3 | 燃え尽きを個人の疾患ではなく職場に起因する現象としてICD-11に位置づけた公式発表 |
 | 〃 | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/) | 3 | 燃え尽きと無駄な忙しさを、完全効率を目指す組織構造の帰結として扱った書籍の出版社ページ |
 
-### II. 人とチーム（38要素）
+### II. 人とチーム（39要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -108,6 +108,8 @@
 | 結束したチーム | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』で jelled team という語を用い、噛み合ったチームの特徴を示した著者本人の所属組織 |
 | 〃 | [Tim Lister（The Atlantic Systems Guild）](https://systemsguild.eu/tim-lister) | 3 | 『ピープルウエア』『熊とワルツを』の共著者本人の所属組織 |
 | チーム殺し | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『ピープルウエア』で teamicide という語を造り、組織がチームを壊す典型的な振る舞いを列挙した著者本人の所属組織 |
+| エンジニアリングマネージャー | [エンジニアのためのマネジメントキャリアパス（Camille Fournier『The Manager's Path』邦訳・オライリー・ジャパン）](https://www.oreilly.co.jp/books/9784873118482/) | 3 | メンターからテックリード・エンジニアリングリード・技術部長・CTOまで、段階ごとの役割を定義した書籍 |
+| 〃 | [The Engineering Manager 101（LeadDev）](https://leaddev.com/career-development/engineering-manager-101) | 2 | チームの成果・生産性・個人の成長に責任を持つ役割という説明。自分ではコードを書かずレビューと方向づけに回る |
 | ファシリテーション | [Facilitation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/facilitation/) | 3 | 議論の内容ではなくプロセスに責任を持つ役割としてのファシリテーションの定義 |
 | コーチング | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/) | 3 | 国際コーチング連盟が定める職業としてのコーチングの中核能力 |
 | 傾聴 | [ICF Core Competencies（International Coaching Federation）](https://coachingfederation.org/about/credentials/core-competencies/)（再掲） | 3 | アクティブリスニングを職業コーチの中核能力の一つとして定義している |
@@ -128,7 +130,7 @@
 | 分散チーム | [The Remote Playbook（GitLab Handbook）](https://about.gitlab.com/company/culture/all-remote/guide/) | 3 | 全社リモートの運用を体系的に公開している一次資料 |
 | 〃 | [Team Room（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/team-room/) | 3 | 同席を前提としたチームルームの定義。分散チームではこの機能を別手段で置き換える必要がある |
 
-### III. 流れとものづくり（50要素）
+### III. 流れとものづくり（52要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -150,6 +152,8 @@
 | 反復型・漸進型開発 | [Iterative Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/iterative-development/) | 3 | 同じ部分を繰り返し作り直して改善する進め方の定義 |
 | 〃 | [Incremental Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/incremental-development/) | 3 | 機能を小さな単位で積み増していく進め方の定義 |
 | ラグビー型の開発 | [The New New Product Development Game（Hirotaka Takeuchi & Ikujiro Nonaka, HBR 1986）](https://hbr.org/1986/01/the-new-new-product-development-game)（再掲） | 3 | ラグビーのスクラムに喩えて全体一体型の開発を提示した原典。スクラムという名称はここから来ている |
+| ウォーターフォール | [Managing the Development of Large Software Systems（Winston W. Royce, 1970）](https://web.archive.org/web/20240120100744/https://www.praxisframework.org/files/royce1970.pdf) | 3 | 段階型の図を最初に示した原論文。著者自身は一度流すだけでは失敗すると書いている（Wayback保存版） |
+| 〃 | [The New Methodology（Martin Fowler）](https://martinfowler.com/articles/newMethodology.html) | 2 | 設計と施工を分ける計画駆動の重量級プロセスと、アジャイルの対比を整理した解説 |
 | リトルの法則 | [The Official Kanban Guide（Kanban University）](https://kanban.university/kanban-guide/)（再掲） | 3 | フローの計測指標（WIP・スループット・リードタイム）とその関係を定義 |
 | WIP制限 | [The Official Kanban Guide（Kanban University）](https://kanban.university/kanban-guide/)（再掲） | 3 | WIPを明示的に制限することをカンバンの必須実践として定義 |
 | リードタイムとサイクルタイム | [Lead Time（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/lead-time/) | 3 | 要求が発生してから提供されるまでの経過時間の定義 |
@@ -160,6 +164,8 @@
 | 制約理論 | [Theory of Constraints（TOC Institute）](https://www.tocinstitute.org/theory-of-constraints.html) | 2 | Goldratt の制約理論と、制約を特定し従属させる5段階の解説 |
 | 待ち行列の効果 | [Work in process limits（DORA）](https://dora.dev/capabilities/wip-limits/) | 3 | 仕掛りを制限することがデリバリー性能を高めるという調査結果。待ち行列が伸びる仕組みへの実務的な対処 |
 | ゆとり（スラック） | [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency（Tom DeMarco）](https://www.penguinrandomhouse.com/books/39276/slack-by-tom-demarco/)（再掲） | 3 | 完全効率という神話を退け、組織が変化するために必要な余白を論じた書籍の出版社ページ |
+| トヨタ生産方式 | [トヨタ生産方式（トヨタ自動車）](https://global.toyota/jp/company/vision-and-philosophy/production-system/) | 3 | 自働化とジャスト・イン・タイムの2本柱を、生み出した企業自身が説明した一次資料 |
+| 〃 | [Toyota Production System（Lean Enterprise Institute）](https://www.lean.org/lexicon-terms/toyota-production-system/) | 3 | ムダの排除で品質・コスト・リードタイムを改善する仕組みとして用語を定義している |
 | テスト駆動開発 | [Test Driven Development（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/tdd/) | 3 | テストを先に書いて設計を駆動する開発サイクルの定義 |
 | 〃 | [TestDrivenDevelopment（Martin Fowler）](https://martinfowler.com/bliki/TestDrivenDevelopment.html) | 3 | TDDの3ステップと、設計技法としての位置づけの解説 |
 | リファクタリング | [Refactoring（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/refactoring/) | 3 | 外部から見た振る舞いを保ったまま内部構造を改善する作業の定義 |

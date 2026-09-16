@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "updated": "2026-09-16",
-  "digest": "268436476e04f249",
-  "count": 193,
+  "digest": "25822838e47e65f3",
+  "count": 196,
   "elements": [
     {
       "id": "agile-manifesto",
@@ -3568,6 +3568,78 @@
       "also_in": []
     },
     {
+      "id": "engineering-manager",
+      "name": "エンジニアリングマネージャー",
+      "name_en": "Engineering Manager",
+      "aka": [
+        "EM",
+        "開発組織の管理職"
+      ],
+      "aka_en": [
+        "EM"
+      ],
+      "summary": "人の育成と技術の意思決定の両方に責任を持つ、開発チームの管理職。",
+      "category": "II",
+      "subcategory": "II-3",
+      "affinity": {
+        "I": {
+          "score": 3,
+          "why": "1対1の対話と育成を通じて個人の動機と成長に直接関わる"
+        },
+        "II": {
+          "score": 5,
+          "why": "チームの成果と成長に責任を持つ役割そのもの"
+        },
+        "III": {
+          "score": 2,
+          "why": "技術的な意思決定に関わるが、自ら手を動かす役割ではない"
+        },
+        "IV": {
+          "score": 1,
+          "why": "何を作るかはプロダクト側の責任"
+        },
+        "V": {
+          "score": 4,
+          "why": "採用・評価・体制という組織の制度とチームを繋ぐ結び目にいる"
+        }
+      },
+      "capabilities": [
+        "C4",
+        "C1"
+      ],
+      "flow": "B5",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "実装をAIが担うほど、育成・評価・人を動かす判断という人間側の仕事の比重が上がる"
+      },
+      "includes": [
+        "ピープルマネジメント",
+        "テクノロジーマネジメント"
+      ],
+      "sources": [
+        {
+          "url": "https://www.oreilly.co.jp/books/9784873118482/",
+          "title": "エンジニアのためのマネジメントキャリアパス（Camille Fournier『The Manager's Path』邦訳・オライリー・ジャパン）",
+          "note": "メンターからテックリード・エンジニアリングリード・技術部長・CTOまで、段階ごとの役割を定義した書籍",
+          "strength": 3
+        },
+        {
+          "url": "https://leaddev.com/career-development/engineering-manager-101",
+          "title": "The Engineering Manager 101（LeadDev）",
+          "note": "チームの成果・生産性・個人の成長に責任を持つ役割という説明。自分ではコードを書かずレビューと方向づけに回る",
+          "strength": 2
+        }
+      ],
+      "crossing": [
+        "V"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "II",
+      "affinity_gap": 1,
+      "also_in": []
+    },
+    {
       "id": "facilitation",
       "name": "ファシリテーション",
       "name_en": "Facilitation",
@@ -4597,7 +4669,8 @@
       },
       "includes": [
         "コアタイム",
-        "チームルームのオンライン版"
+        "チームルームのオンライン版",
+        "オフショア開発"
       ],
       "sources": [
         {
@@ -5195,7 +5268,8 @@
       "name_en": "Definition of Ready",
       "aka": [
         "DoR",
-        "Ready"
+        "Ready",
+        "Readyの定義"
       ],
       "aka_en": [
         "DoR"
@@ -5395,6 +5469,76 @@
       "crossing_tied": [],
       "affinity_top": "III",
       "affinity_gap": 1,
+      "also_in": []
+    },
+    {
+      "id": "waterfall",
+      "name": "ウォーターフォール",
+      "name_en": "Waterfall",
+      "aka": [
+        "ウォーターフォール開発",
+        "一方向の段階型開発"
+      ],
+      "aka_en": [
+        "Waterfall Model"
+      ],
+      "summary": "要件・設計・実装・テストを工程に分け、前に戻らない前提で順に流す型。",
+      "category": "III",
+      "subcategory": "III-1",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の認知を扱う考え方ではない"
+        },
+        "II": {
+          "score": 2,
+          "why": "工程ごとに担当を分けるため職能の分断を招きやすい"
+        },
+        "III": {
+          "score": 5,
+          "why": "作業と成果物をどの順に流すかを定めた進め方の型そのもの"
+        },
+        "IV": {
+          "score": 2,
+          "why": "価値が確かめられるのが最後の工程まで遅れる"
+        },
+        "V": {
+          "score": 3,
+          "why": "一括請負契約や承認ゲートと結びついて残りやすい"
+        }
+      },
+      "capabilities": [
+        "C1",
+        "C2"
+      ],
+      "flow": "B2",
+      "ai_impact": {
+        "type": "代替",
+        "score": 3,
+        "why": "工程間の受け渡し物（仕様書・設計書）の作成をAIが肩代わりし、段階を分けて手戻りを防ぐ前提が弱まる"
+      },
+      "includes": [
+        "V字モデル",
+        "要件凍結"
+      ],
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20240120100744/https://www.praxisframework.org/files/royce1970.pdf",
+          "title": "Managing the Development of Large Software Systems（Winston W. Royce, 1970）",
+          "note": "段階型の図を最初に示した原論文。著者自身は一度流すだけでは失敗すると書いている（Wayback保存版）",
+          "strength": 3
+        },
+        {
+          "url": "https://martinfowler.com/articles/newMethodology.html",
+          "title": "The New Methodology（Martin Fowler）",
+          "note": "設計と施工を分ける計画駆動の重量級プロセスと、アジャイルの対比を整理した解説",
+          "strength": 2
+        }
+      ],
+      "crossing": [],
+      "crossing_tied": [],
+      "affinity_top": "III",
+      "affinity_gap": 2,
       "also_in": []
     },
     {
@@ -5960,6 +6104,82 @@
       ],
       "affinity_top": "III",
       "affinity_gap": 0,
+      "also_in": []
+    },
+    {
+      "id": "toyota-production-system",
+      "name": "トヨタ生産方式",
+      "name_en": "Toyota Production System",
+      "aka": [
+        "TPS",
+        "リーンの源流"
+      ],
+      "aka_en": [
+        "TPS"
+      ],
+      "summary": "ムダを徹底して省き、必要なものを必要なときに必要な量だけ作る生産の仕組み。",
+      "category": "III",
+      "subcategory": "III-2",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "個人の認知を扱う考え方ではない"
+        },
+        "II": {
+          "score": 3,
+          "why": "現場の小集団が自ら改善し続けることを前提にしている"
+        },
+        "III": {
+          "score": 5,
+          "why": "工程を停滞させないことを中心に据えたものづくりの仕組み"
+        },
+        "IV": {
+          "score": 4,
+          "why": "何が価値で何がムダかを定義した、リーンの原則の源流"
+        },
+        "V": {
+          "score": 3,
+          "why": "全社の仕組みと人の育成に及ぶが、組織構造の理論ではない"
+        }
+      },
+      "capabilities": [
+        "C2",
+        "C3"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "増幅",
+        "score": 3,
+        "why": "個々の工程が速くなるほど、作りすぎと停滞を見る全体の流れの設計が効いてくる"
+      },
+      "includes": [
+        "ジャストインタイム",
+        "自働化",
+        "平準化",
+        "カイゼン",
+        "なぜなぜ分析",
+        "現地現物"
+      ],
+      "sources": [
+        {
+          "url": "https://global.toyota/jp/company/vision-and-philosophy/production-system/",
+          "title": "トヨタ生産方式（トヨタ自動車）",
+          "note": "自働化とジャスト・イン・タイムの2本柱を、生み出した企業自身が説明した一次資料",
+          "strength": 3
+        },
+        {
+          "url": "https://www.lean.org/lexicon-terms/toyota-production-system/",
+          "title": "Toyota Production System（Lean Enterprise Institute）",
+          "note": "ムダの排除で品質・コスト・リードタイムを改善する仕組みとして用語を定義している",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "IV"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "III",
+      "affinity_gap": 1,
       "also_in": []
     },
     {

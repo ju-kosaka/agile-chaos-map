@@ -16,6 +16,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# --fix-docs でも自動では直せない指摘につける印。main() はこれを見て止まる。
+UNFIXABLE = "（自動では直せない・手で直す）"
 ELEM_DIR = ROOT / "data" / "elements"
 OUT = ROOT / "data" / "elements.json"
 LAYER_FILES = ["F", "I", "II", "III", "IV", "V"]
@@ -107,6 +109,38 @@ def docs_number_specs(elements):
     for c in ["C1", "C2", "C3", "C4", "C5"]:
         expect(readme, rf"{c} (\d+)", cap[c], f"{c} の件数")
 
+    # --- docs/DESIGN.md の層別独自率の表 ---
+    own_by_layer = collections.Counter(
+        e["category"] for e in elements if not e.get("also_in"))
+    layer_rows = {
+        "F": "土台", "V": r"V 組織とガバナンス", "I": r"I 認知と自己",
+        "II": r"II 人とチーム", "IV": r"IV 価値と事業", "III": r"III 流れとものづくり",
+    }
+    for layer, label in layer_rows.items():
+        t = cat[layer]
+        o = own_by_layer[layer]
+        expect(design, rf"\| {label} \| (\d+) \| \d+ \| \d+% \|", o, f"{layer}層の独自件数")
+        expect(design, rf"\| {label} \| \d+ \| (\d+) \| \d+% \|", t, f"{layer}層の全体件数")
+        expect(design, rf"\| {label} \| \d+ \| \d+ \| (\d+)% \|",
+               round(100 * o / t) if t else 0, f"{layer}層の独自率")
+
+    # --- 中分類ごとの件数（全件が独自の中分類だけを載せている表） ---
+    sub_tot = collections.Counter(e["subcategory"] for e in elements)
+    sub_own = collections.Counter(
+        e["subcategory"] for e in elements if not e.get("also_in"))
+    for sid, label in (("F-1", "F-1 価値観と原則"), ("F-2", "F-2 ものの見方"),
+                       ("I-3", "I-3 学習と熟達"), ("I-4", "I-4 動機と自律"),
+                       ("III-4", "III-4 運用と信頼性"), ("V-1", "V-1 組織構造とコンウェイ"),
+                       ("V-3", "V-3 お金と意思決定"), ("V-4", "V-4 変革と組織開発")):
+        if sid == "F-1":
+            expect(design, r"\| F-1 価値観と原則 / F-2 ものの見方 \| (\d+) / \d+ \|",
+                   sub_tot["F-1"], "F-1 の件数")
+        elif sid == "F-2":
+            expect(design, r"\| F-1 価値観と原則 / F-2 ものの見方 \| \d+ / (\d+) \|",
+                   sub_tot["F-2"], "F-2 の件数")
+        else:
+            expect(design, rf"\| {label} \| (\d+) \|", sub_tot[sid], f"{sid} の件数")
+
     expect(design, r"\| 本マップの要素 \| (\d+)件 \|", n, "要素数")
     expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*(\d+)件", own, "先行マップに無い件数")
     expect(design, r"どちらにも無い（本マップが足した分）\*\* \| \*\*\d+件（(\d+)%）", own_pct, "先行マップに無い割合")
@@ -133,7 +167,7 @@ def check_docs_numbers(elements, fix=False):
         for pattern, actual, label in specs:
             m = re.search(pattern, text)
             if not m:
-                issues.append(f"[{path.name}] {label}: 記述が見つからない（書式が変わった？）")
+                issues.append(f"[{path.name}] {label}: 記述が見つからない（書式が変わった？）{UNFIXABLE}")
                 continue
             got = int(m.group(1))
             if got == actual:
@@ -147,6 +181,38 @@ def check_docs_numbers(elements, fix=False):
         if fix and text != original:
             path.write_text(text, encoding="utf-8")
 
+    issues += check_fully_own_subcategories(elements)
+    return issues
+
+
+def check_fully_own_subcategories(elements):
+    """「全件が独自の中分類」の**顔ぶれ**が、DESIGN.md の表と一致しているか。
+
+    数値の突き合わせでは、行そのものが増えた/減ったときに気づけない。
+    ここは自動で直せない（説明文つきの行なので）ため、報告だけする。
+    """
+    import collections
+    design = ROOT / "docs" / "DESIGN.md"
+    if not design.exists():
+        return []
+    tot = collections.Counter(e["subcategory"] for e in elements)
+    own = collections.Counter(
+        e["subcategory"] for e in elements if not e.get("also_in"))
+    actual = {k for k in tot if own[k] == tot[k]}
+
+    text = design.read_text(encoding="utf-8")
+    m = re.search(r"\*\*中分類の単位で、先行マップに1件も入っていないもの\*\*.*?\n\n(\|.*?)\n\n",
+                  text, re.S)
+    if not m:
+        return [f"[DESIGN.md] 中分類の表: 記述が見つからない（書式が変わった？）{UNFIXABLE}"]
+    listed = set(re.findall(r"\b([FIVX]+-\d)\b", m.group(1)))
+
+    issues = []
+    for sid in sorted(actual - listed):
+        issues.append(f"[DESIGN.md] 中分類の表: {sid} が全件独自になったのに載っていない{UNFIXABLE}")
+    for sid in sorted(listed - actual):
+        issues.append(f"[DESIGN.md] 中分類の表: {sid} は全件独自ではなくなった"
+                      f"（{own[sid]}/{tot[sid]}）のに載っている{UNFIXABLE}")
     return issues
 
 
@@ -285,15 +351,17 @@ def main():
     none = stats["also_in"]["none"]
     print(f"  Agile Alliance 収録    : {aa:3}件")
     print(f"  Agile Studio APM 収録  : {apm:3}件")
+    # 割合は round で出す。docs_number_specs（ドキュメントの数値検査）も round なので、
+    # ここを切り捨てにすると同じ値が 75% と 76% に割れる（実測 148/196 = 75.51% で発生した）。
     print(f"  どちらにも無い（本マップ独自）: {none:3}件 / {total}件 "
-          f"({none * 100 // total}%)")
+          f"({round(none * 100 / total)}%)")
     print("  層別の独自率:")
     for layer in LAYER_FILES:
         items = by_layer.get(layer, [])
         if not items:
             continue
         n = sum(1 for e in items if not e["also_in"])
-        print(f"    {layer:4} {n:3}/{len(items):3}件が独自 ({n * 100 // len(items):3}%)")
+        print(f"    {layer:4} {n:3}/{len(items):3}件が独自 ({round(n * 100 / len(items)):3}%)")
 
     # --- 先行マップ側から見た被覆（照合の取りこぼしを可視化する） ---
     print("-" * 62)
@@ -342,8 +410,8 @@ def main():
     print("出典URL総数:", sum(len(e["sources"]) for e in elements))
 
     doc_issues = check_docs_numbers(elements, fix=fix_docs)
-    # 書式ごと変わった（正規表現が当たらない）ときは書き戻せないので、fix でも問題として止める
-    unfixable = [d for d in doc_issues if "記述が見つからない" in d]
+    # 自動で直せない指摘（書式が変わった・表の行そのものが増減した）は fix でも止める
+    unfixable = [d for d in doc_issues if UNFIXABLE in d]
     rewritten = [d for d in doc_issues if d not in unfixable]
     problems.extend(unfixable)
     if fix_docs:
