@@ -143,9 +143,14 @@ def judge(url, title, pause=2.0):
     # JSで中身を後から入れるページは、200で返ってくるのに本文が空に近い。
     # これを mismatch（＝中身が違う）と判定すると誤検出になる。実測: APA PsycNET は
     # 本文226文字の "loading..." だけを返す。しきい値は余裕を持って500にしてある。
-    js_shell = any(k in squeezed[:400] for k in
-                   ("loading...", "javascript is required", "enable javascript",
-                    "お使いのブラウザ", "please enable"))
+    # JSシェルの判定は「本文がほぼ空なのに noscript の文言だけある」ときに限る。
+    # 実測: thoughtworks.com は本文35,918文字あるのに先頭に "enable javascript" の
+    # 案内を置いていて、これだけで unverif に落としていた（誤爆）。
+    # 中身のあるページを unverif にすると、正当な強度3の出典が採れなくなる。
+    js_shell = (len(squeezed) < 1500 and
+                any(k in squeezed[:400] for k in
+                    ("loading...", "javascript is required", "enable javascript",
+                     "お使いのブラウザ", "please enable")))
     if len(squeezed) < 500 or js_shell:
         why = "JSで本文を読み込むページ" if js_shell else "本文が短すぎる"
         return "unverif", f"{why}（{len(squeezed)}文字・{ctype}）", []
