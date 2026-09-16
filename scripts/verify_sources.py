@@ -98,7 +98,39 @@ def fetch(url, pause=2.0):
     return code, ctype, body
 
 
+def offline_ok(url):
+    """ネットワークに依らずに実在を確かめられる場合だけ True。
+
+    Agile Alliance の用語集は bot対策で 202（本文0バイト）を返すので、叩いても
+    実在の証拠にならない。ただし公式用語集のスラッグ一覧を ops/prior_art.json に
+    記録してあるので、それと突き合わせれば到達性に頼らず確かめられる。
+    （原簿はローカル専用。無ければこの照合は行わない）
+    """
+    import urllib.parse
+    if "agilealliance.org/glossary/" not in url:
+        return False
+    pa = ROOT / "ops" / "prior_art.json"
+    if not pa.exists():
+        return False
+    try:
+        prior = json.loads(pa.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    slugs = set()
+    for m in prior.get("maps", []):
+        for it in m.get("items", []):
+            if it.get("slug"):
+                slugs.add(it["slug"])
+            v = it.get("url") or ""
+            if "glossary" in v:
+                slugs.add(urllib.parse.urlparse(v).path.strip("/").split("/")[-1])
+    slug = urllib.parse.urlparse(url).path.strip("/").split("/")[-1]
+    return slug in slugs
+
+
 def judge(url, title, pause=2.0):
+    if offline_ok(url):
+        return "ok", "公式用語集の一覧（ops/prior_art.json）と一致。到達性に依らず確認", []
     code, ctype, body = fetch(url, pause)
     if code in DEAD_CODES:
         return "dead", f"HTTP {code}", []
