@@ -377,13 +377,9 @@ footer a { color: var(--ink-soft); }
 <main id="map"></main>
 
 <footer>
-  <p>
-    大枠は「対象の単位」で切っています。先行するプラクティスマップ
-    （<a href="https://www.agilealliance.org/agile101/subway-map-to-agile-practices/">Agile Alliance の Subway Map</a>、
-    <a href="https://www.agile-studio.jp/agile-practice-map">Agile Studio のアジャイルプラクティスマップ</a>）は
-    「出自（どの手法から来たか）」で切っており、軸が異なります。
-  </p>
-  <p>出典は全要素に付いています。要素をクリックすると根拠とリンクが出ます。一覧は <code>docs/SOURCES.md</code>。</p>
+  <p>出典の一覧は <a href="SOURCES.md">SOURCES.md</a>。
+     ソースと作り方は <a href="https://github.com/ju-kosaka/agile-chaos-map">GitHub</a>。
+     <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a></p>
 </footer>
 
 <div class="overlay" id="overlay"></div>
