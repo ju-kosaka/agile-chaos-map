@@ -2386,10 +2386,12 @@
     "name_en": "Distributed Team",
     "aka": [
       "リモートチーム",
+      "リモートワーク",
       "ハイブリッドワーク"
     ],
     "aka_en": [
-      "Remote Team"
+      "Remote Team",
+      "Remote Work"
     ],
     "summary": "同じ場所に集まらずに働くチーム。同席を前提としたプラクティスの読み替えが要る。",
     "category": "II",

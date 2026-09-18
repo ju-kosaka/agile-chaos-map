@@ -2,16 +2,16 @@
 
 生成物です。`scripts/build_sources.py` が `data/elements.json` と `data/research_refs.json` から生成します。**手で編集しないでください。**
 
-- 要素数: **199件**
-- 要素の出典として参照しているURL: **192件**（延べ 250本）
+- 要素数: **201件**
+- 要素の出典として参照しているURL: **197件**（延べ 255本）
 - 設計に使った参照URL: **17件**
 
 ## 出典強度の見方
 
 | 強度 | 意味 | 本数 |
 |---|---|---|
-| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 157件 |
-| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 34件 |
+| 3（一次） | 一次ソース（原論文・原典・策定団体の公式ページ） | 160件 |
+| 2（準一次） | 権威ある二次ソース（策定者本人の記事、標準団体・研究機関の解説） | 36件 |
 | 1（解説のみ） | 一般の解説記事のみ。次フェーズで一次ソースを探し直す対象 | 1件 |
 
 **強度1のまま残っているもの（要再調査）**
@@ -138,7 +138,7 @@
 | 分散チーム | [The Remote Playbook（GitLab Handbook）](https://about.gitlab.com/company/culture/all-remote/guide/) | 3 | 全社リモートの運用を体系的に公開している一次資料 |
 | 〃 | [Team Room（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/team-room/) | 3 | 同席を前提としたチームルームの定義。分散チームではこの機能を別手段で置き換える必要がある |
 
-### III. 流れとものづくり（52要素）
+### III. 流れとものづくり（53要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -195,6 +195,8 @@
 | 〃 | [UbiquitousLanguage（Martin Fowler）](https://martinfowler.com/bliki/UbiquitousLanguage.html) | 3 | Eric Evans のDDDにおける共通言語の位置づけの解説 |
 | フィーチャーフラグ | [Feature Toggles (aka Feature Flags)（Martin Fowler）](https://martinfowler.com/articles/feature-toggles.html) | 3 | トグルの種類（リリース／実験／運用／許可）と管理の指針を整理した記事 |
 | コードレビュー | [Google Engineering Practices – Code Review](https://google.github.io/eng-practices/review/) | 3 | レビューの目的・観点・速度についてGoogleが公開している実務ガイド |
+| マイクロサービス | [Microservices（James Lewis・Martin Fowler）](https://martinfowler.com/articles/microservices.html) | 3 | 2014年の定義記事。技術層ではなく業務機能で分け、チームがプロダクトとして所有し続けるという組織の主張を含む |
+| 〃 | [Microservice Architecture pattern（Chris Richardson）](https://microservices.io/patterns/microservices.html) | 3 | 独立してデプロイでき疎結合な複数のサービスとして構成し、各サービスをチームが所有する、というパターンの定義 |
 | DevOps | [DORA（DevOps Research and Assessment）](https://dora.dev/) | 3 | DevOpsの実践と組織の成果の関係を継続的に調査・公開している研究プログラムの公式サイト |
 | 〃 | [The DevOps Handbook（IT Revolution）](https://itrevolution.com/product/the-devops-handbook-second-edition/)（再掲） | 3 | フロー・フィードバック・継続的学習という三つの道を体系化した書籍の公式ページ |
 | サイト信頼性エンジニアリング | [Site Reliability Engineering（Google SRE Book）](https://sre.google/sre-book/introduction/) | 3 | Googleが公開しているSREの原典。運用をソフトウェアの問題として扱う立場を説明 |
@@ -216,7 +218,7 @@
 | 不確実性のコーン | [Estimation（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/estimation/)（再掲） | 2 | 見積りの不確実性が進行とともに縮小することを含む、見積りの位置づけの解説 |
 | リスクを織り込む計画 | [Tom DeMarco（The Atlantic Systems Guild）](https://systemsguild.eu/tom-demarco)（再掲） | 3 | 『熊とワルツを』でソフトウェアプロジェクトの代表的リスク（スケジュール欠陥・要求の膨張・離職・仕様の崩壊・性能未達）と管理法を示した著者本人の所属組織 |
 
-### IV. 価値と事業（37要素）
+### IV. 価値と事業（38要素）
 
 | 要素 | 出典 | 強度 | 概要 |
 |---|---|---|---|
@@ -251,6 +253,9 @@
 | ビルドトラップ | [Escaping the Build Trap（Melissa Perri, Mind the Product）](https://www.mindtheproduct.com/escaping-build-trap-melissa-perri/) | 3 | 提唱者本人の講演を収録した記事。価値を機能の産出量で測ることが組織を罠に閉じ込めると説明 |
 | 虚栄の指標 | [The Lean Startup Methodology](https://theleanstartup.com/principles)（再掲） | 2 | イノベーション会計の文脈で、行動につながらない指標を退ける考え方を提示 |
 | 品質とは誰かにとっての価値 | [Gerald M. Weinberg（本人サイト）](https://geraldmweinberg.com/Site/Home.html)（再掲） | 3 | 『Quality Software Management: Systems Thinking』で品質を「誰かにとっての価値」と定義した著者の公式サイト |
+| プロダクトマネージャー | [Behind Every Great Product（Marty Cagan・Silicon Valley Product Group）](https://www.svpg.com/behind-every-great-product/) | 3 | プロダクトの定義だけでなく事業の成果に責任を持つ役割だ、と提唱者本人が6つの実例で定義した記事 |
+| 〃 | [What, exactly, is a Product Manager?（Martin Eriksson）](https://www.mindtheproduct.com/what-exactly-is-a-product-manager/) | 2 | 事業・技術・ユーザー体験の交点に立つ役割という2011年の定番の定義 |
+| 〃 | [プロダクトマネージャーとプロダクトオーナーは別のものですか？（Ryuzee.com）](https://www.ryuzee.com/faq/0078/) | 2 | 業務範囲はプロダクトマネージャー＞プロダクトオーナーで、POはスクラムチームのデリバリー中心という日本語圏での整理 |
 | ユーザーストーリー | [User Stories（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/user-stories/) | 3 | 利用者にとっての価値を短く記述し、詳細は会話で詰めるという要求形式の定義 |
 | 3つのC | [The Three C's（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/three-cs/) | 3 | Ron Jeffries によるカード・会話・確認の3要素の定義 |
 | INVEST | [INVEST（Agile Alliance Glossary）](https://www.agilealliance.org/glossary/invest/) | 3 | Bill Wake による、良いユーザーストーリーの6つの性質の定義 |

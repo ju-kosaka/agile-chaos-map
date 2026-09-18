@@ -1629,6 +1629,76 @@
     ]
   },
   {
+    "id": "product-manager",
+    "name": "プロダクトマネージャー",
+    "name_en": "Product Manager",
+    "aka": [
+      "PdM"
+    ],
+    "aka_en": [
+      "PM"
+    ],
+    "summary": "プロダクト全体の成果に責任を持ち、何を作り何を作らないかを決める役割。",
+    "category": "IV",
+    "subcategory": "IV-4",
+    "affinity": {
+      "I": {
+        "score": 1,
+        "why": "一人が担う役割ではあるが、個人の頭の仕様を扱う話ではない"
+      },
+      "II": {
+        "score": 3,
+        "why": "開発チームのすぐ隣で判断するが、チームの育成や評価に責任を持つ役割ではない"
+      },
+      "III": {
+        "score": 2,
+        "why": "どう作るかは開発側に委ね、出す順番と範囲の判断で関わる"
+      },
+      "IV": {
+        "score": 5,
+        "why": "顧客と事業の成果に責任を持つ、という役割の定義そのもの"
+      },
+      "V": {
+        "score": 3,
+        "why": "プロジェクトからプロダクトへの転換で、組織のどこに置くかが問われる"
+      }
+    },
+    "capabilities": [
+      "C1",
+      "C3"
+    ],
+    "flow": "B2",
+    "ai_impact": {
+      "type": "反転増",
+      "score": 4,
+      "why": "AIが調査も実装も速くするほど、作らない判断とその説明という人の仕事が残る"
+    },
+    "includes": [
+      "価値・ユーザビリティ・実現可能性・事業実現性の4つのリスク",
+      "プロダクトロードマップ"
+    ],
+    "sources": [
+      {
+        "url": "https://www.svpg.com/behind-every-great-product/",
+        "title": "Behind Every Great Product（Marty Cagan・Silicon Valley Product Group）",
+        "note": "プロダクトの定義だけでなく事業の成果に責任を持つ役割だ、と提唱者本人が6つの実例で定義した記事",
+        "strength": 3
+      },
+      {
+        "url": "https://www.mindtheproduct.com/what-exactly-is-a-product-manager/",
+        "title": "What, exactly, is a Product Manager?（Martin Eriksson）",
+        "note": "事業・技術・ユーザー体験の交点に立つ役割という2011年の定番の定義",
+        "strength": 2
+      },
+      {
+        "url": "https://www.ryuzee.com/faq/0078/",
+        "title": "プロダクトマネージャーとプロダクトオーナーは別のものですか？（Ryuzee.com）",
+        "note": "業務範囲はプロダクトマネージャー＞プロダクトオーナーで、POはスクラムチームのデリバリー中心という日本語圏での整理",
+        "strength": 2
+      }
+    ]
+  },
+  {
     "id": "user-story",
     "name": "ユーザーストーリー",
     "name_en": "User Story",

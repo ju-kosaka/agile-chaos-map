@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "updated": "2026-09-16",
-  "digest": "7b8c9ad8b1132c45",
-  "count": 199,
+  "digest": "bfc73e59022beb96",
+  "count": 201,
   "elements": [
     {
       "id": "agile-manifesto",
@@ -4751,10 +4751,12 @@
       "name_en": "Distributed Team",
       "aka": [
         "リモートチーム",
+        "リモートワーク",
         "ハイブリッドワーク"
       ],
       "aka_en": [
-        "Remote Team"
+        "Remote Team",
+        "Remote Work"
       ],
       "summary": "同じ場所に集まらずに働くチーム。同席を前提としたプラクティスの読み替えが要る。",
       "category": "II",
@@ -7053,6 +7055,79 @@
       ],
       "crossing": [
         "II"
+      ],
+      "crossing_tied": [],
+      "affinity_top": "III",
+      "affinity_gap": 1
+    },
+    {
+      "id": "microservices",
+      "name": "マイクロサービス",
+      "name_en": "Microservices",
+      "aka": [
+        "マイクロサービスアーキテクチャ"
+      ],
+      "aka_en": [
+        "Microservice Architecture"
+      ],
+      "summary": "業務機能ごとに小さく分けたサービスを、チームが独立して出せるようにする設計。",
+      "category": "III",
+      "subcategory": "III-3",
+      "affinity": {
+        "I": {
+          "score": 2,
+          "why": "全体を1人の頭に載せることを諦め、担当範囲を持てる大きさに切る前提がある"
+        },
+        "II": {
+          "score": 4,
+          "why": "1つのサービスを1チームが所有し、作ってからも持ち続ける形とセットで成り立つ"
+        },
+        "III": {
+          "score": 5,
+          "why": "独立してデプロイできるように切る、という設計とデリバリーの作法そのもの"
+        },
+        "IV": {
+          "score": 2,
+          "why": "技術層ではなく業務機能で切るが、何を作るかを決める話ではない"
+        },
+        "V": {
+          "score": 4,
+          "why": "コンウェイの法則どおり、組織の分け方とサービスの分け方が連動する"
+        }
+      },
+      "capabilities": [
+        "C2",
+        "C5"
+      ],
+      "flow": "B3",
+      "ai_impact": {
+        "type": "増幅",
+        "score": 3,
+        "why": "サービスをまたぐ定型のコードと運用設定をAIが書けるので、分割の手間が下がった"
+      },
+      "includes": [
+        "独立したデプロイ",
+        "サービスごとのデータ管理",
+        "モノリスファースト",
+        "分散モノリス"
+      ],
+      "sources": [
+        {
+          "url": "https://martinfowler.com/articles/microservices.html",
+          "title": "Microservices（James Lewis・Martin Fowler）",
+          "note": "2014年の定義記事。技術層ではなく業務機能で分け、チームがプロダクトとして所有し続けるという組織の主張を含む",
+          "strength": 3
+        },
+        {
+          "url": "https://microservices.io/patterns/microservices.html",
+          "title": "Microservice Architecture pattern（Chris Richardson）",
+          "note": "独立してデプロイでき疎結合な複数のサービスとして構成し、各サービスをチームが所有する、というパターンの定義",
+          "strength": 3
+        }
+      ],
+      "crossing": [
+        "II",
+        "V"
       ],
       "crossing_tied": [],
       "affinity_top": "III",
@@ -9970,6 +10045,80 @@
       "crossing_tied": [],
       "affinity_top": "IV",
       "affinity_gap": 1
+    },
+    {
+      "id": "product-manager",
+      "name": "プロダクトマネージャー",
+      "name_en": "Product Manager",
+      "aka": [
+        "PdM"
+      ],
+      "aka_en": [
+        "PM"
+      ],
+      "summary": "プロダクト全体の成果に責任を持ち、何を作り何を作らないかを決める役割。",
+      "category": "IV",
+      "subcategory": "IV-4",
+      "affinity": {
+        "I": {
+          "score": 1,
+          "why": "一人が担う役割ではあるが、個人の頭の仕様を扱う話ではない"
+        },
+        "II": {
+          "score": 3,
+          "why": "開発チームのすぐ隣で判断するが、チームの育成や評価に責任を持つ役割ではない"
+        },
+        "III": {
+          "score": 2,
+          "why": "どう作るかは開発側に委ね、出す順番と範囲の判断で関わる"
+        },
+        "IV": {
+          "score": 5,
+          "why": "顧客と事業の成果に責任を持つ、という役割の定義そのもの"
+        },
+        "V": {
+          "score": 3,
+          "why": "プロジェクトからプロダクトへの転換で、組織のどこに置くかが問われる"
+        }
+      },
+      "capabilities": [
+        "C1",
+        "C3"
+      ],
+      "flow": "B2",
+      "ai_impact": {
+        "type": "反転増",
+        "score": 4,
+        "why": "AIが調査も実装も速くするほど、作らない判断とその説明という人の仕事が残る"
+      },
+      "includes": [
+        "価値・ユーザビリティ・実現可能性・事業実現性の4つのリスク",
+        "プロダクトロードマップ"
+      ],
+      "sources": [
+        {
+          "url": "https://www.svpg.com/behind-every-great-product/",
+          "title": "Behind Every Great Product（Marty Cagan・Silicon Valley Product Group）",
+          "note": "プロダクトの定義だけでなく事業の成果に責任を持つ役割だ、と提唱者本人が6つの実例で定義した記事",
+          "strength": 3
+        },
+        {
+          "url": "https://www.mindtheproduct.com/what-exactly-is-a-product-manager/",
+          "title": "What, exactly, is a Product Manager?（Martin Eriksson）",
+          "note": "事業・技術・ユーザー体験の交点に立つ役割という2011年の定番の定義",
+          "strength": 2
+        },
+        {
+          "url": "https://www.ryuzee.com/faq/0078/",
+          "title": "プロダクトマネージャーとプロダクトオーナーは別のものですか？（Ryuzee.com）",
+          "note": "業務範囲はプロダクトマネージャー＞プロダクトオーナーで、POはスクラムチームのデリバリー中心という日本語圏での整理",
+          "strength": 2
+        }
+      ],
+      "crossing": [],
+      "crossing_tied": [],
+      "affinity_top": "IV",
+      "affinity_gap": 2
     },
     {
       "id": "user-story",

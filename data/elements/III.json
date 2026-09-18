@@ -2046,6 +2046,72 @@
     ]
   },
   {
+    "id": "microservices",
+    "name": "マイクロサービス",
+    "name_en": "Microservices",
+    "aka": [
+      "マイクロサービスアーキテクチャ"
+    ],
+    "aka_en": [
+      "Microservice Architecture"
+    ],
+    "summary": "業務機能ごとに小さく分けたサービスを、チームが独立して出せるようにする設計。",
+    "category": "III",
+    "subcategory": "III-3",
+    "affinity": {
+      "I": {
+        "score": 2,
+        "why": "全体を1人の頭に載せることを諦め、担当範囲を持てる大きさに切る前提がある"
+      },
+      "II": {
+        "score": 4,
+        "why": "1つのサービスを1チームが所有し、作ってからも持ち続ける形とセットで成り立つ"
+      },
+      "III": {
+        "score": 5,
+        "why": "独立してデプロイできるように切る、という設計とデリバリーの作法そのもの"
+      },
+      "IV": {
+        "score": 2,
+        "why": "技術層ではなく業務機能で切るが、何を作るかを決める話ではない"
+      },
+      "V": {
+        "score": 4,
+        "why": "コンウェイの法則どおり、組織の分け方とサービスの分け方が連動する"
+      }
+    },
+    "capabilities": [
+      "C2",
+      "C5"
+    ],
+    "flow": "B3",
+    "ai_impact": {
+      "type": "増幅",
+      "score": 3,
+      "why": "サービスをまたぐ定型のコードと運用設定をAIが書けるので、分割の手間が下がった"
+    },
+    "includes": [
+      "独立したデプロイ",
+      "サービスごとのデータ管理",
+      "モノリスファースト",
+      "分散モノリス"
+    ],
+    "sources": [
+      {
+        "url": "https://martinfowler.com/articles/microservices.html",
+        "title": "Microservices（James Lewis・Martin Fowler）",
+        "note": "2014年の定義記事。技術層ではなく業務機能で分け、チームがプロダクトとして所有し続けるという組織の主張を含む",
+        "strength": 3
+      },
+      {
+        "url": "https://microservices.io/patterns/microservices.html",
+        "title": "Microservice Architecture pattern（Chris Richardson）",
+        "note": "独立してデプロイでき疎結合な複数のサービスとして構成し、各サービスをチームが所有する、というパターンの定義",
+        "strength": 3
+      }
+    ]
+  },
+  {
     "id": "devops",
     "name": "DevOps",
     "name_en": "DevOps",
