@@ -29,6 +29,11 @@ LAYER_FILES = ["F", "I", "II", "III", "IV", "V"]
 LAYERS = ["I", "II", "III", "IV", "V"]
 
 
+# DESIGN.md「目標規模」の打ち切りライン。ここを変えるなら DESIGN.md も直す。
+SUB_MAX = 12   # これを超えたら分割を検討
+SUB_MIN = 3    # これを切ったら統合を検討
+
+
 def norm(s):
     """照合用の正規化。全角半角・大小・記号・空白の揺れを潰す。"""
     if not s:
@@ -129,6 +134,12 @@ def docs_number_specs(elements):
     expect(design, r"\| 出典 \|[^|]*ユニークURL (\d+)件", len(urls), "ユニーク出典URL")
     for k in (3, 2, 1):
         expect(design, rf"\| 出典 \|[^|]*強度{k}が (\d+)本", st[k], f"強度{k}の本数")
+
+    # 打ち切りラインは実データ由来ではなく設定値。それでもここに載せるのは、
+    # DESIGN.md の本文と build.py の定数が別々に動くと、書いてある規則と
+    # 実際に鳴る規則が食い違うため（手書き数値が黙って嘘になる、の一種）。
+    expect(design, r"1つの中分類が(\d+)要素を超えたら分割", SUB_MAX, "中分類の上限")
+    expect(design, r"分割を検討、(\d+)要素を切ったら統合", SUB_MIN, "中分類の下限")
 
     return specs
 
@@ -379,6 +390,27 @@ def main():
                 print("  -", d)
     else:
         problems.extend(rewritten)
+
+    # DESIGN.md の目標規模「1つの中分類が12要素を超えたら分割を検討、
+    # 3要素を切ったら統合を検討」を、書いてあるだけの状態から検査に載せる。
+    # ★problems にしないのは、ルールの語が「検討」だから。止めると、要素が1件増えた
+    #   だけで自律ループが verify で落ちて進まなくなる（人の判断を機械が代行してしまう）。
+    #   見えるようにするところまでが機械の仕事。
+    import collections as _c
+    sub_counts = _c.Counter(e["subcategory"] for e in elements)
+    over = sorted((k, v) for k, v in sub_counts.items() if v > SUB_MAX)
+    under = sorted((k, v) for k, v in sub_counts.items() if v < SUB_MIN)
+    if over or under:
+        print("-" * 62)
+        print("中分類の規模（DESIGN.md の目標規模。止めないが、判断は人が要る）")
+        for k, v in over:
+            print(f"  ★{k}: {v}件 — {SUB_MAX}を超えた。分割を検討")
+        for k, v in under:
+            print(f"  ★{k}: {v}件 — {SUB_MIN}を切った。統合を検討")
+        near = sorted((k, v) for k, v in sub_counts.items() if v == SUB_MAX)
+        if near:
+            print("  （境界: " + " / ".join(f"{k} {v}件" for k, v in near)
+                  + " — 次の1件で超える）")
 
     print("=" * 62)
     if problems:
