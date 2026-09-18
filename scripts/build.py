@@ -29,8 +29,9 @@ LAYER_FILES = ["F", "I", "II", "III", "IV", "V"]
 LAYERS = ["I", "II", "III", "IV", "V"]
 
 
-# DESIGN.md「目標規模」の打ち切りライン。ここを変えるなら DESIGN.md も直す。
-SUB_MAX = 12   # これを超えたら分割を検討
+# DESIGN.md「規模の考え方」。★上限は置かない（2026-09-18 に撤廃）。
+# 件数の上限で鳴らすと、分割＝中分類を増やすことになり、分類を守る判断と衝突する。
+# 残すのは下限だけ。薄い中分類は「分類として仕事をしていない」という別種の信号。
 SUB_MIN = 3    # これを切ったら統合を検討
 
 
@@ -138,8 +139,7 @@ def docs_number_specs(elements):
     # 打ち切りラインは実データ由来ではなく設定値。それでもここに載せるのは、
     # DESIGN.md の本文と build.py の定数が別々に動くと、書いてある規則と
     # 実際に鳴る規則が食い違うため（手書き数値が黙って嘘になる、の一種）。
-    expect(design, r"1つの中分類が(\d+)要素を超えたら分割", SUB_MAX, "中分類の上限")
-    expect(design, r"分割を検討、(\d+)要素を切ったら統合", SUB_MIN, "中分類の下限")
+    expect(design, r"中分類が(\d+)要素を切ったら統合", SUB_MIN, "中分類の下限")
 
     return specs
 
@@ -391,26 +391,21 @@ def main():
     else:
         problems.extend(rewritten)
 
-    # DESIGN.md の目標規模「1つの中分類が12要素を超えたら分割を検討、
-    # 3要素を切ったら統合を検討」を、書いてあるだけの状態から検査に載せる。
-    # ★problems にしないのは、ルールの語が「検討」だから。止めると、要素が1件増えた
-    #   だけで自律ループが verify で落ちて進まなくなる（人の判断を機械が代行してしまう）。
-    #   見えるようにするところまでが機械の仕事。
+    # 中分類ごとの分布。★上限では鳴らさない（2026-09-18 に撤廃）。
+    # 「12超えたら分割」で鳴らすと、分割＝中分類を増やすことになり、
+    # 「箱を足す前に既存の箱に収まらないか考える」という分類の規律と正面衝突する。
+    # 成長は見えるようにするが、判断は人に渡す。下限だけは健全性の信号として残す。
     import collections as _c
     sub_counts = _c.Counter(e["subcategory"] for e in elements)
-    over = sorted((k, v) for k, v in sub_counts.items() if v > SUB_MAX)
     under = sorted((k, v) for k, v in sub_counts.items() if v < SUB_MIN)
-    if over or under:
-        print("-" * 62)
-        print("中分類の規模（DESIGN.md の目標規模。止めないが、判断は人が要る）")
-        for k, v in over:
-            print(f"  ★{k}: {v}件 — {SUB_MAX}を超えた。分割を検討")
+    print("-" * 62)
+    print("中分類ごとの件数（上限は無い。分布を見るためのもの）")
+    for cat_id in sorted(sub_counts, key=lambda x: (x.split("-")[0], x)):
+        bar = "█" * sub_counts[cat_id]
+        print(f"  {cat_id:7s} {sub_counts[cat_id]:3d}  {bar}")
+    if under:
         for k, v in under:
-            print(f"  ★{k}: {v}件 — {SUB_MIN}を切った。統合を検討")
-        near = sorted((k, v) for k, v in sub_counts.items() if v == SUB_MAX)
-        if near:
-            print("  （境界: " + " / ".join(f"{k} {v}件" for k, v in near)
-                  + " — 次の1件で超える）")
+            print(f"  ★{k}: {v}件 — {SUB_MIN}を切った。統合を検討（中分類を減らすのは人が決める）")
 
     print("=" * 62)
     if problems:
